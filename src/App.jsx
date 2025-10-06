@@ -1,34 +1,33 @@
+import Navbar from './components/navbar'
+import {SVGs, JPG} from './utility/images'
+import { Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home"
+import About from './pages/About'
+import Initiative from './pages/Initiative'
+import BeCon from './pages/BeCon'
+import Resources from './pages/Resources'
+import Gallery from './pages/Gallery'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [shrink,setShrink] = useState(false)
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='bg-black h-screen  flex items-center flex-col '>
+      <div className='w-full h-full px-8 z-20 sticky top-5 left-0'>
+        <Navbar SVGs={SVGs} shrink={shrink} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      <main className='w-full h-full absolute top-0 left-0'>
+        <Routes>
+          <Route path='/' element={<Home JPG={JPG} setShrink={setShrink} />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/initial' element={<Initiative />} />
+          <Route path='/becon' element={<BeCon />} />
+          <Route path='/resources' element={<Resources />} />
+          <Route path='/gallery' element={<Gallery />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
