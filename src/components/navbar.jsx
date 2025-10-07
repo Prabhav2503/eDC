@@ -6,7 +6,12 @@ const linkClass = ({ isActive }) =>
 
 const Navbar = ({ SVGs, shrink }) => {
   return (
-    <div className='w-full bg-[#262626] rounded-3xl sticky top-5 left-0 flex items-center justify-between px-8 z-20'>
+    <div
+  className={`w-full bg-[#262626] flex items-center justify-between px-8 z-20 transition-all duration-300 ${
+    shrink ? 'scale-80 rounded-3xl font-semibold text-xl opacity-90' : ''
+  }`}
+>
+
       <img src={SVGs.logo} alt="logo" className='w-16' />
 
       <div className='flex gap-3'>
