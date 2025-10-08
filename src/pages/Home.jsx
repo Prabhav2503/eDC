@@ -20,9 +20,9 @@ const Home = ({ JPG, setShrink }) => {
       <div ref={ref}>
         <AboutUs JPG={JPG} />
         <Stats />
-        <AboutUs JPG={JPG} />
+                <Incentive />
         <PastSpeakers />
-        {/* <Incentive /> */}
+
       </div>
     </div>
   );

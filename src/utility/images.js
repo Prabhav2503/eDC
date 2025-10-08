@@ -7,3 +7,7 @@ export const SVGs = {
 export const JPG = {
   iitbuilding:iitbuilding
 }
+
+export const Incentive = {
+  
+}

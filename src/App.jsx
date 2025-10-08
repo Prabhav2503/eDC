@@ -1,5 +1,5 @@
 import Navbar from './components/navbar'
-import { SVGs, JPG } from './utility/images'
+import { SVGs, JPG, Incentive } from './utility/images'
 import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home"
 import About from './pages/About'
@@ -8,7 +8,6 @@ import BeCon from './pages/BeCon'
 import Resources from './pages/Resources'
 import Gallery from './pages/Gallery'
 import { useState } from 'react'
-
 function App() {
   const [shrink, setShrink] = useState(false)
 
@@ -22,7 +21,7 @@ function App() {
       {/* Scrollable main content */}
       <main className="w-full flex flex-col ">
         <Routes>
-          <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} />} />
+          <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} Incentive={Incentive} />} />
           <Route path="/about" element={<About />} />
           <Route path="/initial" element={<Initiative />} />
           <Route path="/becon" element={<BeCon />} />
