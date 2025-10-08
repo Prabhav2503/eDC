@@ -29,7 +29,7 @@ const StatItem = ({ icon, endValue, label }) => {
   }, [endValue]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-6 text-center  bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105">
+    <div className="flex flex-col items-center justify-center w-3/10 h-full p-6 text-center  bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105">
       <div className="text-blue-400 mb-2">{icon}</div>
       <div className="text-3xl font-bold text-blue-400">{value}+</div>
       <div className="text-gray-400">{label}</div>
@@ -40,7 +40,7 @@ const StatItem = ({ icon, endValue, label }) => {
 const Stats = () => {
   return (
     <div>
-      <div className="flex justify-center gap-10 items-center p-4 bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white">
+      <div className="flex flex-wrap justify-center gap-10 items-center p-4 bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white">
         <StatItem icon={<TrendingUp />} endValue={50} label="Startups Incubated" />
         <StatItem icon={<Users />} endValue={10000} label="Social Media Reach" />
         <StatItem icon={<Calendar />} endValue={100} label="Events Hosted" />

@@ -1,90 +1,82 @@
-import React from "react";
-import ScrollStack, { ScrollStackItem } from "./scrollstack"; // ✅ correct import path
-import iit from "../assets/IIT.jpg";
+import { NavLink } from "react-router-dom";
+import {ArrowRight }  from  "lucide-react"
+import IIT from '../assets/IIT.jpg'
 
-const InitiativeCard = ({ title, description, image }) => (
-  <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#000046] to-[#1CB5E0] p-8 md:p-12 rounded-3xl shadow-2xl">
-    <div className="w-full md:w-1/2 flex flex-col gap-5">
-      <h3 className="text-3xl md:text-4xl font-bold text-white">{title}</h3>
-      <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-        {description}
-      </p>
-    </div>
-    <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
-      <img
-        src={image}
-        alt={title}
-        className="w-4/5 md:w-3/4 rounded-2xl shadow-lg"
-      />
+
+
+
+const initiatives = [
+  {
+    title: 'Hackathons',
+    description: 'Intensive coding competitions where innovation meets execution. Build solutions to real-world problems.',
+    image: IIT,
+  },
+  {
+    title: 'Pitch Competitions',
+    description: 'Showcase your startup ideas to investors and industry experts. Win funding and mentorship.',
+    image: IIT,
+  },
+  {
+    title: 'Networking Events',
+    description: 'Connect with fellow entrepreneurs, investors, and industry leaders to expand your network.',
+    image: IIT,
+  },
+  {
+    title: 'Mentorship Program',
+    description: 'Get personalized guidance from successful entrepreneurs and industry veterans.',
+    image: IIT,
+  },
+  {
+    title: 'Startup Incubator',
+    description: 'Access resources, workspace, and support to transform your idea into a thriving business.',
+    image: IIT,
+  },
+  {
+    title: 'Workshop Series',
+    description: 'Learn essential entrepreneurial skills through hands-on workshops and training sessions.',
+    image: IIT,
+  },
+];
+
+
+const InitiativeCard = ({ index, title, description, image }) => (
+  <div
+    key={index}
+    className="w-[30%] rounded-xl overflow-hidden flex flex-col items-center bg-gray-900 relative group transform transition-all duration-300 hover:-translate-y-3 hover:shadow-xl"
+  >
+    {/* white overlay that fades in on hover */}
+    <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300 pointer-events-none z-10" />
+
+    <img src={image} alt={title} className="w-full object-cover" />
+
+    <div className="flex-1 flex flex-col items-center p-4 relative z-20">
+      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <p className="text-gray-400 text-center ">{description}</p>
+      <NavLink to="/initial" className="inline-flex items-center gap-2 text-blue-400  mt-4">
+        <span>Know More</span>
+        <ArrowRight className="w-4 h-4 inline-block" />
+      </NavLink>
     </div>
   </div>
 );
 
+
 export default function Incentive() {
   return (
-    <section className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center py-24 px-4 md:px-20">
+    <div className="w-full bg-black text-white flex flex-col items-center justify-center p-20">
       {/* Heading */}
-      <div className="text-center mb-24">
+      <div className="text-center mb-14">
         <h2 className="text-5xl font-bold mb-4">Our Flagship Initiatives</h2>
         <p className="text-2xl text-gray-400 max-w-3xl mx-auto">
           Comprehensive programs designed to support every stage of your
           entrepreneurial journey
         </p>
       </div>
-
-      {/* ScrollStack */}
-      <div className="w-full max-w-6xl">
-        <ScrollStack
-          useWindowScroll
-          baseScale={0.85}
-          itemScale={0.05}
-          itemDistance={120}
-          stackPosition="center"
-        >
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Pitch Competition"
-              description="Showcase your startup idea and win exclusive funding & mentorship opportunities."
-              image={iit}
-            />
-          </ScrollStackItem>
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Incubation Program"
-              description="Get workspace, funding, and strategic mentorship to grow your startup."
-              image={iit}
-            />
-          </ScrollStackItem>
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Hackathons & Ideathons"
-              description="Collaborate, innovate, and turn your ideas into reality through tech-driven events."
-              image={iit}
-            />
-          </ScrollStackItem>
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Startup Bootcamp"
-              description="Refine your business model and pitching skills through intensive bootcamp sessions."
-              image={iit}
-            />
-          </ScrollStackItem>
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Mentorship Network"
-              description="Connect with industry leaders and get guidance for long-term growth."
-              image={iit}
-            />
-          </ScrollStackItem>
-          <ScrollStackItem>
-            <InitiativeCard
-              title="Demo Day"
-              description="Present your startup to VCs, angels, and investors to secure real opportunities."
-              image={iit}
-            />
-          </ScrollStackItem>
-        </ScrollStack>
+      <div className="w-full flex flex-wrap items-center justify-center gap-10 ">
+        {initiatives.map((initiative, index) => (
+            <InitiativeCard key={index} {...initiative} />
+        ))}
       </div>
-    </section>
+      </div>
   );
 }
