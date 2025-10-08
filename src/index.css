@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .bullet-custom ::marker {
+    color: #306ee8; /* Custom color */
+  }
+}
