@@ -21,8 +21,8 @@ function App() {
       {/* Scrollable main content */}
       <main className="w-full flex flex-col ">
         <Routes>
-          <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} Incentive={Incentive} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} />} />
+          <Route path="/about" element={<About JPG={JPG}/>} />
           <Route path="/initial" element={<Initiative setShrink={setShrink} />} />
           <Route path="/becon" element={<BeCon />} />
           <Route path="/resources" element={<Resources />} />
