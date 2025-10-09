@@ -3,7 +3,8 @@ import React from "react";
 const Landing = ({ JPG }) => {
   return (
     <div
-      className="relative w-full h-screen bg-center bg-cover flex flex-col justify-center items-center text-center m-0 p-0"
+  className="relative w-full h-screen bg-center bg-cover flex flex-col justify-center items-center text-center m-0 p-0 overflow-hidden"
+
       style={{ backgroundImage: `url(${JPG.iitbuilding})` }}
     >
       {/* Overlay */}
