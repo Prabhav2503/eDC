@@ -10,6 +10,11 @@ import ScrollStack, { ScrollStackItem } from '../components/scrollstack';
 const Home = ({ JPG, setShrink }) => {
   const { ref, inView } = useInView();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     console.log(inView);
     setShrink(inView);
