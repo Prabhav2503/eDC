@@ -99,6 +99,11 @@ const InitiativeCardReverse = ({ title, icon, description, features, image }) =>
 const Initiative = ({ setShrink }) => {
   const { ref, inView } = useInView();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     console.log(inView);
     setShrink(inView);

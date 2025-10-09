@@ -42,12 +42,12 @@ const initiatives = [
 const InitiativeCard = ({ index, title, description, image }) => (
   <div
     key={index}
-    className="w-[30%] rounded-xl overflow-hidden flex flex-col items-center bg-gray-900 relative group transform transition-all duration-300 hover:-translate-y-3 hover:shadow-xl"
+    className="w-full h-screen rounded-xl overflow-hidden flex flex-col items-center bg-gray-900 relative group transform transition-all duration-300 hover:-translate-y-3 hover:shadow-xl"
   >
     {/* white overlay that fades in on hover */}
     <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300 pointer-events-none z-10" />
 
-    <img src={image} alt={title} className="w-full object-cover" />
+    <img src={image} alt={title} className="w-full h-2/3 object-cover" />
 
     <div className="flex-1 flex flex-col items-center p-4 relative z-20">
       <h3 className="text-xl font-bold text-white">{title}</h3>
@@ -63,7 +63,7 @@ const InitiativeCard = ({ index, title, description, image }) => (
 
 export default function Incentive() {
   return (
-    <div className="w-full bg-black text-white flex flex-col items-center justify-center p-20">
+    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center p-20">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-5xl font-bold mb-4">Our Flagship Initiatives</h2>
@@ -72,7 +72,7 @@ export default function Incentive() {
           entrepreneurial journey
         </p>
       </div>
-      <div className="w-full flex flex-wrap items-center justify-center gap-10 ">
+      <div className="w-full flex flex-col items-center justify-center gap-8">
         {initiatives.map((initiative, index) => (
             <InitiativeCard key={index} {...initiative} />
         ))}
