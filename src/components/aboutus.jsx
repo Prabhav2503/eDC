@@ -6,7 +6,7 @@ const AboutEDC = ({ JPG }) => {
       {/* Left Side - Text */}
       <div className="md:w-1/2 text-left space-y-6">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          About eDC IIT Delhi?
+          About eDC IIT Delhi
         </h2>
         <p className="text-gray-300 text-base md:text-lg leading-relaxed">
           We empower young minds, early-stage startups, and professionals to

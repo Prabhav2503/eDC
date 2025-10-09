@@ -1,10 +1,9 @@
 import React from 'react'
-
-const About = () => {
+import AboutEDC from '../components/aboutus'
+const About = ({JPG}) => {
   return (
     <div className="text-white p-8">
-      <h1 className="text-3xl">About Us (Placeholder)</h1>
-      <p>This is the About page.</p>
+      <AboutEDC JPG={JPG} />
     </div>
   )
 }
