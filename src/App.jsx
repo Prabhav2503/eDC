@@ -1,5 +1,5 @@
 import Navbar from './components/navbar'
-import { SVGs, JPG } from './utility/images'
+import { SVGs, JPG, Incentive } from './utility/images'
 import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home"
 import About from './pages/About'
@@ -8,7 +8,6 @@ import BeCon from './pages/BeCon'
 import Resources from './pages/Resources'
 import Gallery from './pages/Gallery'
 import { useState } from 'react'
-
 function App() {
   const [shrink, setShrink] = useState(false)
 

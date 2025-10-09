@@ -2,9 +2,9 @@ import React from "react";
 
 const AboutEDC = ({ JPG }) => {
   return (
-    <section className="w-full bg-[#0D0F12] text-white py-20 px-8 md:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
+    <section className="w-full bg-[#0D0F12] text-white py-20 px-8 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-10">
       {/* Left Side - Text */}
-      <div className="md:w-1/2 text-left space-y-6">
+      <div className="w-full lg:w-1/2 text-left space-y-6">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           About eDC IIT Delhi
         </h2>
@@ -21,7 +21,7 @@ const AboutEDC = ({ JPG }) => {
       </div>
 
       {/* Right Side - Image */}
-      <div className="md:w-1/2 flex justify-center">
+      <div className="w-full lg:w-1/2 flex justify-center">
         <img
           src={JPG.iitbuilding}
           alt="eDC IIT Delhi Team"
