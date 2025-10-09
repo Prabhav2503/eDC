@@ -3,16 +3,17 @@ import React from "react";
 const Landing = ({ JPG }) => {
   return (
     <div
-      className="relative w-full h-screen bg-center bg-cover flex flex-col justify-center items-center text-center"
+  className="relative w-full h-screen bg-center bg-cover flex flex-col justify-center items-center text-center m-0 p-0 overflow-hidden"
+
       style={{ backgroundImage: `url(${JPG.iitbuilding})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F0C29] via-[#302B63] to-[#24243E] opacity-70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] opacity-70" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center gap-5 px-4">
-        <h1 className="font-bold text-7xl lg:text-9xl text-blue-400">Entrepreneurship</h1>
-        <h3 className="font-bold text-5xl lg:text-7xl text-white">Development Cell</h3>
+        <h1 className="font-bold text-7xl lg:text-[85px] text-blue-400">Entrepreneurship</h1>
+        <h3 className="font-bold text-7xl lg:text-[84px] text-white">Development Cell</h3>
         <h5 className="font-bold text-xl lg:text-2xl text-white">Ideate-Innovate-Incubate</h5>
 
         <div className="mt-8 flex flex-wrap justify-center items-center gap-4">

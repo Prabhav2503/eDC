@@ -40,7 +40,7 @@ const StatItem = ({ icon, endValue, label }) => {
 const Stats = () => {
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-10 items-center p-4 bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white">
+      <div className="flex flex-wrap bg-transparent justify-center gap-10 items-center p-4  text-white">
         <StatItem icon={<TrendingUp />} endValue={50} label="Startups Incubated" />
         <StatItem icon={<Users />} endValue={10000} label="Social Media Reach" />
         <StatItem icon={<Calendar />} endValue={100} label="Events Hosted" />

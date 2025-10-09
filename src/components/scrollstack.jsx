@@ -1,9 +1,10 @@
 import { useLayoutEffect, useRef, useCallback } from 'react';
 import Lenis from 'lenis';
 
+
 export const ScrollStackItem = ({ children, itemClassName = '' }) => (
   <div
-    className={`scroll-stack-card relative w-full h-80 my-8 p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform ${itemClassName}`.trim()}
+    className={`scroll-stack-card relative w-screen min-h-screen m-0 p-0 rounded-none shadow-none overflow-hidden box-border origin-top will-change-transform ${itemClassName}`.trim()}
     style={{
       backfaceVisibility: 'hidden',
       transformStyle: 'preserve-3d'
@@ -13,15 +14,17 @@ export const ScrollStackItem = ({ children, itemClassName = '' }) => (
   </div>
 );
 
+
+
 const ScrollStack = ({
   children,
   className = '',
-  itemDistance = 100,
-  itemScale = 0.06,
-  itemStackDistance = 30,
-  stackPosition = '20%',
-  scaleEndPosition = '10%',
-  baseScale = 0.85,
+  itemDistance = 0,       // no vertical gap between full-screen cards
+  itemScale = 0,          // don't scale cards down
+  itemStackDistance = 0,  // keep them flush unless you want a slight offset
+  stackPosition = '0%',
+  scaleEndPosition = '0%',
+  baseScale = 1,          // keep 1:1 scale
   scaleDuration = 0.5,
   rotationAmount = 0,
   blurAmount = 0,
@@ -323,15 +326,16 @@ const ScrollStack = ({
       };
 
   const containerClassName = useWindowScroll
-    ? `relative w-full ${className}`.trim()
-    : `relative w-full h-full overflow-y-auto overflow-x-visible ${className}`.trim();
+  ? `relative w-full h-full ${className}`.trim()
+  : `relative w-full h-full overflow-y-auto overflow-x-visible ${className}`.trim();
+
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>
-      <div className="scroll-stack-inner pt-[20vh] px-20 pb-[50rem] min-h-screen">
+      <div className="scroll-stack-inner ">
         {children}
         {/* Spacer so the last pin can release cleanly */}
-        <div className="scroll-stack-end w-full h-px" />
+        <div className="scroll-stack-end w-full h-full" />
       </div>
     </div>
   );
