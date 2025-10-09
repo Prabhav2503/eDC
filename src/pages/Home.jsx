@@ -1,6 +1,6 @@
 import React, { use, useEffect } from "react";
 import Landing from "../components/landing";
-import AboutUs from "../components/aboutus";
+import AboutHome from "../components/abouthome";
 import Incentive from "../components/incentive";
 import Stats from "../components/stats";
 import PastSpeakers from "../components/pastSpeakers";
@@ -18,9 +18,9 @@ const Home = ({ JPG, setShrink }) => {
     <div className="w-full h-full ">
       <Landing JPG={JPG} />
       <div ref={ref}>
-        <AboutUs JPG={JPG} />
+        <AboutHome JPG={JPG} />
         <Stats />
-                <Incentive />
+        <Incentive />
         <PastSpeakers />
 
       </div>

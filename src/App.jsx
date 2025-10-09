@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} />} />
           <Route path="/about" element={<About JPG={JPG}/>} />
-          <Route path="/initial" element={<Initiative />} />
+          <Route path="/initial" element={<Initiative setShrink={setShrink} />} />
           <Route path="/becon" element={<BeCon />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/gallery" element={<Gallery />} />
