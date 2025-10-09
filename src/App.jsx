@@ -1,4 +1,5 @@
 import Navbar from './components/navbar'
+import Footer from './components/footer.jsx'
 import { SVGs, JPG, Incentive } from './utility/images'
 import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home"
@@ -11,6 +12,16 @@ import Test from './pages/test'
 import { useState } from 'react'
 function App() {
   const [shrink, setShrink] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simulate loading time for the preloader
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 3800) // 5 seconds loading time
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="bg-black w-full h-screen m-0 p-0 overflow-hidden">
