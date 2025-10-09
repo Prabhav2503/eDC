@@ -21,8 +21,8 @@ const Navbar = ({ SVGs, shrink }) => {
       }`}
     >
       {/* Main Navbar */}
-      <div className="flex items-center justify-between px-8 py-4">
-        <img src={SVGs.logo} alt="logo" className='w-16' />
+      <div className="flex items-center justify-between px-4 ">
+        <img src={SVGs.logo} alt="logo" className='w-20' />
 
         {/* Desktop Navigation - Hidden on Mobile */}
         <div className='hidden md:flex gap-3'>
@@ -44,12 +44,13 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
+          <button className='hidden md:block bg-white text-black px-4 py-2 rounded-md'>
+          Join Us
+        </button>
         </div>
 
         {/* Desktop Join Us Button - Hidden on Mobile */}
-        <button className='hidden md:block bg-white text-black px-4 py-2 rounded-md'>
-          Join Us
-        </button>
+        
 
         {/* Mobile Hamburger Menu Button - Hidden on Desktop */}
         <button 

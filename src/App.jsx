@@ -7,19 +7,16 @@ import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
 import Resources from './pages/Resources'
 import Gallery from './pages/Gallery'
+import Test from './pages/test'
 import { useState } from 'react'
 function App() {
   const [shrink, setShrink] = useState(false)
 
   return (
-    <div className="bg-black min-h-screen ">
-      {/* Sticky Navbar */}
-      <div className="w-full z-30 sticky top-0 bg-transparent">
-        <Navbar SVGs={SVGs} shrink={shrink} />
-      </div>
+    <div className="bg-black w-full h-screen m-0 p-0 overflow-hidden">
+  <main className="w-full h-full flex flex-col m-0 p-0">
 
-      {/* Scrollable main content */}
-      <main className="w-full flex flex-col ">
+        
         <Routes>
           <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} />} />
           <Route path="/about" element={<About JPG={JPG}/>} />
@@ -27,6 +24,7 @@ function App() {
           <Route path="/becon" element={<BeCon />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path='/test' element={<Test />} />
         </Routes>
       </main>
     </div>

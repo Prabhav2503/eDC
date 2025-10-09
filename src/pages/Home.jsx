@@ -5,6 +5,7 @@ import Incentive from "../components/incentive";
 import Stats from "../components/stats";
 import PastSpeakers from "../components/pastSpeakers";
 import { useInView } from "react-intersection-observer";
+import ScrollStack, { ScrollStackItem } from '../components/scrollstack';
 
 const Home = ({ JPG, setShrink }) => {
   const { ref, inView } = useInView();
@@ -14,18 +15,28 @@ const Home = ({ JPG, setShrink }) => {
     setShrink(inView);
   }, [inView]);
 
-  return (
-    <div className="w-full h-full ">
-      <Landing JPG={JPG} />
-      <div ref={ref}>
-        <AboutHome JPG={JPG} />
-        <Stats />
-        <Incentive />
-        <PastSpeakers />
+return (
+    <ScrollStack className="w-full h-full">
+      <ScrollStackItem className="w-full h-full !mt-0 !pt-0">
+        <Landing JPG={JPG} />
+      </ScrollStackItem>
+      <ScrollStackItem className="!mt-0">
+        <div ref={ref} className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
+          <AboutHome JPG={JPG} />
+          <Stats />
+          <Incentive />
+          <PastSpeakers />
+        </div>
+      </ScrollStackItem>
+    </ScrollStack>
+);
 
-      </div>
-    </div>
-  );
 };
 
 export default Home;
+
+
+
+
+
+      
