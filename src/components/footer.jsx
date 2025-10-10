@@ -6,7 +6,7 @@ import logo from '../assets/edciitd.svg';
 const Footer = () => {
   return (
     <footer className="bg-[rgb(16,24,40)] text-white py-12 px-6 md:px-8 lg:px-12">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full px-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
