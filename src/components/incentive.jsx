@@ -42,20 +42,19 @@ const initiatives = [
 const InitiativeCard = ({ index, title, description, image }) => (
   <div
     key={index}
-    className="w-full h-screen rounded-xl overflow-hidden flex flex-col items-center bg-gray-900 relative group transform transition-all duration-300 hover:-translate-y-3 hover:shadow-xl"
+    className="w-full h-150  sticky top-10 "
   >
-    {/* white overlay that fades in on hover */}
-    <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300 pointer-events-none z-10" />
+    <div className="rounded-xl overflow-hidden flex flex-row items-center bg-gray-900">
+      <img src={image} alt={title} className="w-4/10 object-cover" />
 
-    <img src={image} alt={title} className="w-full h-2/3 object-cover" />
-
-    <div className="flex-1 flex flex-col items-center p-4 relative z-20">
-      <h3 className="text-xl font-bold text-white">{title}</h3>
-      <p className="text-gray-400 text-center ">{description}</p>
-      <NavLink to="/initial" className="inline-flex items-center gap-2 text-blue-400  mt-4">
+    <div className="flex-1 flex flex-col items-center gap-10 p-4 relative z-20">
+      <h3 className="text-5xl font-bold text-white">{title}</h3>
+      <p className="text-gray-400 text-xl text-center ">{description}</p>
+      <NavLink to="/initial" className="inline-flex text-2xl items-center gap-2 text-blue-400  mt-4">
         <span>Know More</span>
         <ArrowRight className="w-4 h-4 inline-block" />
       </NavLink>
+    </div>
     </div>
   </div>
 );
@@ -63,7 +62,7 @@ const InitiativeCard = ({ index, title, description, image }) => (
 
 export default function Incentive() {
   return (
-    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center p-20">
+    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center px-20 pt-20">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-5xl font-bold mb-4">Our Flagship Initiatives</h2>
@@ -72,7 +71,7 @@ export default function Incentive() {
           entrepreneurial journey
         </p>
       </div>
-      <div className="w-full flex flex-col items-center justify-center gap-8">
+      <div className="w-full">
         {initiatives.map((initiative, index) => (
             <InitiativeCard key={index} {...initiative} />
         ))}

@@ -32,7 +32,7 @@ const pastSpeakers = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center gap-6 bg-transparent p-4 ">
+    <div className="w-full flex flex-col items-center gap-6 bg-transparent p-4 pb-15 ">
       <div className="w-full flex flex-col items-center gap-2">
         <h1 className="w-full text-white text-center text-4xl font-bold ">
           Past Speakers

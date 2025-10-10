@@ -1,20 +1,23 @@
-import Navbar from './components/navbar'
-import Footer from './components/footer.jsx'
 import { SVGs, JPG, Incentive } from './utility/images'
 import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
 import Home from "./pages/Home"
 import About from './pages/About'
 import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
 import Resources from './pages/Resources'
 import Gallery from './pages/Gallery'
-import Test from './pages/test'
-import { useState } from 'react'
+
+import Footer from './components/footer'
+import Preloader from './components/preloader'
+
 function App() {
   const [shrink, setShrink] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    setIsLoading(true)
     // Simulate loading time for the preloader
     const timer = setTimeout(() => {
       setIsLoading(false)
@@ -24,21 +27,22 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-black w-full h-screen m-0 p-0 overflow-hidden">
-  <main className="w-full h-full flex flex-col m-0 p-0">
-
-        
-        <Routes>
-          <Route path="/" element={<Home JPG={JPG} setShrink={setShrink} />} />
-          <Route path="/about" element={<About JPG={JPG}/>} />
-          <Route path="/initial" element={<Initiative setShrink={setShrink} />} />
-          <Route path="/becon" element={<BeCon />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path='/test' element={<Test />} />
-        </Routes>
-      </main>
-    </div>
+        <div>
+          <Preloader isLoading={isLoading} />
+          {!isLoading && (
+            <>
+              <Routes>
+                <Route path="/" element={<Home JPG={JPG} SVGs={SVGs} setShrink={setShrink} shrink={shrink} />} />
+                <Route path="/about" element={<About JPG={JPG}  SVGs={SVGs} />} />
+                <Route path="/initial" element={<Initiative setShrink={setShrink} shrink={shrink} SVGs={SVGs} />} />
+                <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
+                <Route path="/resources" element={<Resources SVGs={SVGs}/>} />
+                <Route path="/gallery" element={<Gallery SVGs={SVGs} />} />
+              </Routes>
+              <Footer SVGs={SVGs} />
+            </>
+          )}
+        </div>
   )
 }
 

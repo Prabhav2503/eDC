@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import IIT from '../assets/IIT.jpg';
 import { Code, TrendingUp, Users, GraduationCap, Rocket, Briefcase, ArrowRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import Navbar from "../components/navbar";
 
 const initiatives = [
   {
@@ -96,7 +97,7 @@ const InitiativeCardReverse = ({ title, icon, description, features, image }) =>
   </div>
 );
 
-const Initiative = ({ setShrink }) => {
+const Initiative = ({ setShrink,shrink, SVGs }) => {
   const { ref, inView } = useInView();
 
   // Scroll to top when component mounts
@@ -110,7 +111,11 @@ const Initiative = ({ setShrink }) => {
   }, [inView]);
 
   return (
-    <div className="w-full bg-black text-white flex flex-col items-center justify-center px-20 py-10">
+    <div>
+      <div className="absolute top-0 w-full z-20">
+          <Navbar SVGs={SVGs} shrink={shrink} />
+        </div>
+      <div className="w-full bg-black text-white flex flex-col items-center justify-center px-20 py-10">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-7xl font-bold mb-6">Our Initiatives</h2>
@@ -134,6 +139,7 @@ const Initiative = ({ setShrink }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
