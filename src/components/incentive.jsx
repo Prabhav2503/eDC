@@ -42,7 +42,7 @@ const initiatives = [
 const InitiativeCard = ({ index, title, description, image }) => (
   <div
     key={index}
-    className="w-full h-150  sticky top-10 "
+    className="w-full h-150  sticky top-30 "
   >
     <div className="rounded-xl overflow-hidden flex flex-row items-center bg-gray-900">
       <img src={image} alt={title} className="w-4/10 object-cover" />

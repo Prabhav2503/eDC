@@ -8,6 +8,7 @@ import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
 import Resource from './pages/Resource'
 import Gallery from './pages/Gallery'
+import Test from "./components/test"
 
 import Footer from './components/footer'
 import Preloader from './components/preloader'
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
                 <Route path="/resources" element={<Resource SVGs={SVGs}/>} />
                 <Route path="/gallery" element={<Gallery SVGs={SVGs} />} />
+                <Route path="/test" element={<Test />} />
               </Routes>
               <Footer SVGs={SVGs} />
             </>

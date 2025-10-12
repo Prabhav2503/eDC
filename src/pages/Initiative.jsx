@@ -115,7 +115,7 @@ const Initiative = ({ setShrink,shrink, SVGs }) => {
       <div className="absolute top-0 w-full z-20">
           <Navbar SVGs={SVGs} shrink={shrink} />
         </div>
-      <div className="w-full bg-black text-white flex flex-col items-center justify-center px-20 py-10">
+      <div className="w-full bg-black text-white flex flex-col items-center justify-center px-20 py-30">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-7xl font-bold mb-6">Our Initiatives</h2>
