@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AboutEDC from '../components/aboutus'
 import Navbar from "../components/navbar";
-
+import Team from '../components/team';
 
 const About = ({JPG,SVGs}) => {
 
@@ -16,8 +16,9 @@ const About = ({JPG,SVGs}) => {
       <div className="absolute top-0 w-full z-20">
           <Navbar SVGs={SVGs} shrink={true} />
         </div>
-    <div  className="text-white">
+    <div  className="text-white ">
       <AboutEDC JPG={JPG} />
+      <Team  JPG={JPG} />
     </div>
     </div>
   )

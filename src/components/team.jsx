@@ -1,11 +1,9 @@
-import React, {useRef, useEffect} from "react";
+import React from "react";
 import ekansh from '../assets/ekansh.webp';
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
-
+import chirag from '../assets/chirag.png';
 
 // Team data objects
-const Speakers = {
+const coreTeam = {
   abhinavSrivastav: {
     name: "Ekansh Agarwal",
     position: "CO-OC",
@@ -28,10 +26,101 @@ const Speakers = {
   }
 };
 
+const teamMembers = {
+  arunKumar: {
+    name: "Chirag Bhambri",
+    position: "Marketing Head",
+    image: chirag
+  },
+  priyaSharma: {
+    name: "Priya Sharma", 
+    position: "Design Lead",
+    image: "https://via.placeholder.com/400x400/6366F1/FFFFFF?text=PS"
+  },
+  rahulGupta: {
+    name: "Rahul Gupta",
+    position: "Tech Lead",
+    image: "https://via.placeholder.com/400x400/14B8A6/FFFFFF?text=RG"
+  },
+  snehaDevi: {
+    name: "Sneha Devi",
+    position: "Events Head", 
+    image: "https://via.placeholder.com/400x400/F97316/FFFFFF?text=SD"
+  },
+  vikashKumar: {
+    name: "Vikash Kumar",
+    position: "Finance Head",
+    image: "https://via.placeholder.com/400x400/06B6D4/FFFFFF?text=VK"
+  },
+  anjaliPatel: {
+    name: "Anjali Patel",
+    position: "PR Head",
+    image: "https://via.placeholder.com/400x400/84CC16/FFFFFF?text=AP"
+  },
+  mukeshSingh: {
+    name: "Mukesh Singh",
+    position: "Content Head",
+    image: "https://via.placeholder.com/400x400/8B5CF6/FFFFFF?text=MS"
+  },
+  kavyaJain: {
+    name: "Kavya Jain", 
+    position: "Research Head",
+    image: "https://via.placeholder.com/400x400/F43F5E/FFFFFF?text=KJ"
+  },
+  arjunSaxena: {
+    name: "Arjun Saxena",
+    position: "Operations Head",
+    image: "https://via.placeholder.com/400x400/10B981/FFFFFF?text=AS"
+  },
+  nehaTrivedi: {
+    name: "Neha Trivedi",
+    position: "Social Media Head",
+    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=NT"
+  },
+  devMalhotra: {
+    name: "Dev Malhotra",
+    position: "Web Developer",
+    image: "https://via.placeholder.com/400x400/0EA5E9/FFFFFF?text=DM"
+  },
+  shwetaPandey: {
+    name: "Shweta Pandey",
+    position: "UI/UX Designer", 
+    image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SP"
+  },
+  harshYadav: {
+    name: "Harsh Yadav",
+    position: "Photography Head",
+    image: "https://via.placeholder.com/400x400/EF4444/FFFFFF?text=HY"
+  },
+  sakshiMishra: {
+    name: "Sakshi Mishra",
+    position: "Video Editor",
+    image: "https://via.placeholder.com/400x400/64748B/FFFFFF?text=SM"
+  },
+  amitAgarwal: {
+    name: "Amit Agarwal",
+    position: "Business Development",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA"
+  },
+  rituVerma: {
+    name: "Ritu Verma",
+    position: "Partnership Head",
+    image: "https://via.placeholder.com/400x400/3B82F6/FFFFFF?text=RV"
+  },
+  neerajKumar: {
+    name: "Neeraj Kumar",
+    position: "Logistics Head", 
+    image: "https://via.placeholder.com/400x400/A855F7/FFFFFF?text=NK"
+  },
+  poojaThakur: {
+    name: "Pooja Thakur",
+    position: "Alumni Relations",
+    image: "https://via.placeholder.com/400x400/EC4899/FFFFFF?text=PT"
+  }
+};
 
-
-//Card Component
-const Card = ({ member, isCore = false }) => {
+// Team Card Component
+const TeamCard = ({ member, isCore = false }) => {
   return (
     <div className="group cursor-pointer">
       <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl border border-gray-700/30 ${
@@ -94,73 +183,49 @@ const Card = ({ member, isCore = false }) => {
   );
 };
 
-const pastSpeakers = () => {
-  const splideRef = useRef(null);
-
-  useEffect(() => {
-    const splide = splideRef.current?.splide;
-    if (splide) {
-      // Optional: Custom autoplay controls
-    }
-  }, []);
-  
+const Team = ({ JPG }) => {
     return (
         <div className="w-full bg-[#0A0E1A] text-white">
             <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-16">
         {/* Core Team Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            PAST SPEAKERS
+            CORE TEAM
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
         </div>
-        <div className="w-full mx-auto px-8 ">
-        <Splide
-          ref={splideRef}
-          options={{
-            type: "loop",
-            perPage: 4,
-            perMove: 1,
-            autoplay: true,
-            interval: 3000,
-            pauseOnHover: true,
-            pauseOnFocus: true,
-            speed: 800,
-            arrows: true,
-            pagination: true,
-            gap: "1rem",
-            breakpoints: {
-              1024: { perPage: 4 },
-              768: { perPage: 3 },
-              640: { perPage: 2 },
-              480: { perPage: 1 },
-            },
-          }}
-          aria-label="Auto rotating founder carousel"
-        >
-          {Object.values(Speakers).map((item, index) => (
-            <SplideSlide key={index}>
-              <Card member={item} />
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
 
         {/* Core Team Members - 4 in a row */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
           {Object.keys(coreTeam).map((key) => (
-            <Card 
+            <TeamCard 
               key={key}
               member={coreTeam[key]} 
               isCore={true}
             />
           ))}
-        </div> */}
+        </div>
         {/* Additional Team Members Heading */}
-        
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            TEAM MEMBERS
+          </h2>
+          <div className="w-20 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        {/* Team Members Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+          {Object.keys(teamMembers).map((key) => (
+            <TeamCard 
+              key={key}
+              member={teamMembers[key]} 
+              isCore={false}
+            />
+          ))}
+        </div>
       </section>
         </div>
     )
 }
 
-export default pastSpeakers;
+export default Team;
