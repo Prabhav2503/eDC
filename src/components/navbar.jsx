@@ -1,27 +1,26 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const linkClass = ({ isActive }) =>
-  `px-4 py-2 rounded-md ${isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-700'}`
-
-const mobileLinkClass = ({ isActive }) =>
-  `block px-4 py-3 text-white hover:bg-gray-700 ${isActive ? 'bg-white text-black' : ''}`
-
 const Navbar = ({ SVGs, shrink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+  const linkClass = ({ isActive }) =>
+    `px-4 py-2 rounded-lg font-bold ${shrink ? 'text-2xl' : 'text-lg'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 '}`
+
+  const mobileLinkClass = ({ isActive }) =>
+    `block px-4 py-3 ${shrink ? 'text-lg' : 'text-base'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 '}`
 
   return (
     <div
-      className={`w-full bg-[#262626] z-20 transition-all duration-300 ${
+      className={`w-full bg-white/5 backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 ${
         shrink ? 'scale-80 rounded-3xl font-semibold text-xl opacity-90' : ''
-      }`}
+      }`} style={{fontFamily:"Montserrat"}}
     >
       {/* Main Navbar */}
-      <div className="flex items-center justify-between px-4 ">
+  <div className="flex items-center justify-between px-4 py-3">
         <img src={SVGs.logo} alt="logo" className='w-20' />
 
         {/* Desktop Navigation - Hidden on Mobile */}
@@ -66,7 +65,7 @@ const Navbar = ({ SVGs, shrink }) => {
 
       {/* Mobile Navigation Menu - Only visible on mobile when menu is open */}
       <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-        <div className="px-4 py-2 bg-[#262626] border-t border-gray-600">
+        <div className="px-4 py-2 bg-white/5 backdrop-blur-md border-t border-white/10">
           <NavLink to='/' className={mobileLinkClass} end onClick={toggleMenu}>
             Home  
           </NavLink>

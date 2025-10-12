@@ -29,12 +29,16 @@ return (
         <div className="sticky top-0">
           <Landing JPG={JPG} />
         </div>
-      <div ref={ref} className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] sticky top-0">
+        <div className="sticky top-0">
+          <div className="w-full bg-gradient-to-b from to-[#1CB5E0] h-30"/>
+      <div ref={ref} className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
+        
         <AboutHome JPG={JPG} />
         <Stats />
         <Incentive />
         <PastSpeakers />
       </div>
+        </div>
       </div>
 
 );
