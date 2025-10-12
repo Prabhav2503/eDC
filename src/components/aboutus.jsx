@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutEDC = ({ JPG }) => {
   return (
-    <div className="w-full bg-[#100d2c] text-white">
+    <div className="w-full pt-10 bg-[#100d2c] text-white">
       {/* Main Section with Heading */}
       <section className="px-8 md:px-20 pt-16 pb-12">
         {/* Top Heading */}
