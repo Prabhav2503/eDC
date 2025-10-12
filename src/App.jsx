@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 import About from './pages/About'
 import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
-import Resources from './pages/Resources'
+import Resource from './pages/Resource'
 import Gallery from './pages/Gallery'
 
 import Footer from './components/footer'
@@ -36,7 +36,7 @@ function App() {
                 <Route path="/about" element={<About JPG={JPG}  SVGs={SVGs} />} />
                 <Route path="/initial" element={<Initiative setShrink={setShrink} shrink={shrink} SVGs={SVGs} />} />
                 <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
-                <Route path="/resources" element={<Resources SVGs={SVGs}/>} />
+                <Route path="/resources" element={<Resource SVGs={SVGs}/>} />
                 <Route path="/gallery" element={<Gallery SVGs={SVGs} />} />
               </Routes>
               <Footer SVGs={SVGs} />
