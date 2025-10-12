@@ -1,4 +1,5 @@
 import React from "react";
+import ShineBorder from "./shineborder";
 
 const Landing = ({ JPG }) => {
   return (
@@ -14,15 +15,13 @@ const Landing = ({ JPG }) => {
       <div className="relative z-10 flex flex-col items-center justify-center gap-5 px-4">
         <h1 className="font-bold text-7xl lg:text-[85px] text-blue-400">Entrepreneurship</h1>
         <h3 className="font-bold text-7xl lg:text-[84px] text-white">Development Cell</h3>
-        <h5 className="font-bold text-xl lg:text-2xl text-white">Ideate-Innovate-Incubate</h5>
+        <h5 className="font-bold text-xl lg:text-3xl pt-2 text-white">Ideate - Innovate - Incubate</h5>
 
-        <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium flex items-center gap-2">
-            Know More →
+        <div className=" flex flex-wrap justify-center items-center gap-4">
+          <button className=" text-2xl text-white px-8 py-4 rounded-md font-medium flex items-center gap-2">
+            <ShineBorder>Know More →</ShineBorder>
           </button>
-          <button className="bg-transparent border border-gray-400 hover:bg-gray-800 text-white px-6 py-2 rounded-md font-medium">
-            Join Us
-          </button>
+          
         </div>
       </div>
     </div>

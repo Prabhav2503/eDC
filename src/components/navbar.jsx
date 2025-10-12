@@ -15,7 +15,7 @@ const Navbar = ({ SVGs, shrink }) => {
 
   return (
     <div
-      className={`w-full bg-white/5 backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 ${
+      className={`w-full bg-[#262626] backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 ${
         shrink ? 'scale-80 rounded-3xl font-semibold text-xl opacity-90' : ''
       }`} style={{fontFamily:"Montserrat"}}
     >

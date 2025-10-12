@@ -14,7 +14,7 @@ export default function ShineBorder({
         "rounded-xl p-[2px]", // border thickness
         // Animated gradient border
         "before:absolute before:inset-0 before:rounded-xl",
-        "before:bg-[linear-gradient(90deg,#b794f4_0%,#60a5fa_25%,#34d399_50%,#60a5fa_75%,#f472b6_100%)]",
+        "before:bg-[linear-gradient(90deg,#000046_25%,#072D6D_50%,#0E5B93_75%,#1CB5E0_100%)]",
         "before:[background-size:300%_300%] before:animate-[shine_5s_linear_infinite]",
         // Mask trick to make border only (center transparent)
         "before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]",
