@@ -19,14 +19,15 @@
     text-shadow: 0 0 6px rgba(255,255,255,0.6);
   }
 }
-
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-  overflow-x: hidden;
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
+

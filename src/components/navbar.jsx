@@ -20,8 +20,8 @@ const Navbar = ({ SVGs, shrink }) => {
       }`} style={{fontFamily:"Montserrat"}}
     >
       {/* Main Navbar */}
-  <div className="flex items-center justify-between px-4 py-3">
-        <img src={SVGs.logo} alt="logo" className='w-20' />
+  <div className="flex items-center justify-between px-4">
+        <img src={SVGs.logo} alt="logo" className='w-22' />
 
         {/* Desktop Navigation - Hidden on Mobile */}
         <div className='hidden md:flex gap-3'>

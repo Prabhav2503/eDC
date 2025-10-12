@@ -30,7 +30,7 @@ return (
           <Landing JPG={JPG} />
         </div>
         <div className="sticky top-0">
-          <div className="w-full bg-gradient-to-b from to-[#1CB5E0] h-30"/>
+          <div className="w-full bg-gradient-to-b from to-[#0F0C29] h-15"/>
       <div ref={ref} className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
         
         <AboutHome JPG={JPG} />
