@@ -8,7 +8,7 @@ const Navbar = ({ SVGs, shrink }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   const linkClass = ({ isActive }) =>
-    `px-4 py-2 rounded-lg font-bold ${shrink ? 'text-2xl' : 'text-lg'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 '}`
+    `px-4 py-2 rounded-lg font-bold ${shrink ? 'text-sm lg:text-xl' : 'text-sm lg:text-lg'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 '}`
 
   const mobileLinkClass = ({ isActive }) =>
     `block px-4 py-3 ${shrink ? 'text-lg' : 'text-base'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 '}`
@@ -21,10 +21,10 @@ const Navbar = ({ SVGs, shrink }) => {
     >
       {/* Main Navbar */}
   <div className="flex items-center justify-between px-4">
-        <img src={SVGs.logo} alt="logo" className='w-22' />
+        <img src={SVGs.logo} alt="logo" className='w-15 lg:w-22' />
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <div className='hidden md:flex gap-3'>
+        <div className='hidden md:flex gap-1 lg:gap-3'>
           <NavLink to='/' className={linkClass} end>
             Home  
           </NavLink>
@@ -43,7 +43,7 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
-          <button className='hidden md:block bg-white text-black px-4 py-2 rounded-md'>
+          <button className='hidden md:block bg-white text-sm text-black px-4 py-2 rounded-md'>
           Join Us
         </button>
         </div>

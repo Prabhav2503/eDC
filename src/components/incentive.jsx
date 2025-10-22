@@ -40,17 +40,14 @@ const initiatives = [
 
 
 const InitiativeCard = ({ index, title, description, image }) => (
-  <div
-    key={index}
-    className="w-full h-120  sticky top-30 "
-  >
-    <div className="rounded-xl overflow-hidden flex flex-row items-center bg-gray-900">
-      <img src={image} alt={title} className="w-5/10 object-cover" />
+  <div key={index} className="w-full mb-8">
+    <div className="rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch bg-gray-900">
+      <img src={image} alt={title} className="w-full md:w-5/12 object-cover h-56 md:h-auto" />
 
-    <div className="flex-1 flex flex-col items-center gap-10 p-4 relative z-20">
-      <h3 className="text-5xl font-bold text-white">{title}</h3>
-      <p className="text-gray-400 text-xl text-center ">{description}</p>
-      <NavLink to="/initial" className="inline-flex text-2xl items-center gap-2 text-blue-400  mt-4">
+    <div className="flex-1 flex flex-col items-center md:items-start gap-6 p-6 relative z-20">
+      <h3 className="text-3xl lg:text-5xl font-bold text-white">{title}</h3>
+      <p className="text-gray-400 text-lg md:text-xl text-center md:text-left">{description}</p>
+      <NavLink to="/initial" className="inline-flex text-xl md:text-2xl items-center gap-2 text-blue-400 mt-4">
         <span>Know More</span>
         <ArrowRight className="w-4 h-4 inline-block" />
       </NavLink>
@@ -62,11 +59,11 @@ const InitiativeCard = ({ index, title, description, image }) => (
 
 export default function Incentive() {
   return (
-    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center px-20 pt-20">
+    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center px-5 lg:px-20 pt-20">
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-5xl font-bold mb-4">Our Flagship Initiatives</h2>
-        <p className="text-2xl text-gray-400 max-w-3xl mx-auto">
+        <h2 className=" text-3xl lg:text-5xl font-bold mb-4">Our Flagship Initiatives</h2>
+        <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto">
           Comprehensive programs designed to support every stage of your
           entrepreneurial journey
         </p>
