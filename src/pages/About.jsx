@@ -16,7 +16,7 @@ const About = ({JPG,SVGs}) => {
       <div className="absolute top-0 w-full z-20">
           <Navbar SVGs={SVGs} shrink={true} />
         </div>
-    <div  className="text-white ">
+    <div  className="text-white bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] ">
       <AboutEDC JPG={JPG} />
       <Team  JPG={JPG} />
     </div>

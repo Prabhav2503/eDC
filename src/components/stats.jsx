@@ -51,9 +51,9 @@ const Stats = () => {
   return (
     <div ref={ref}>
       <div className="flex flex-wrap bg-transparent justify-center gap-10 items-center p-4  text-white">
-        <StatItem icon={<TrendingUp />} endValue={50} label="Startups Incubated" shouldAnimate={inView} />
-        <StatItem icon={<Users />} endValue={10000} label="Social Media Reach" shouldAnimate={inView} />
-        <StatItem icon={<Calendar />} endValue={100} label="Events Hosted" shouldAnimate={inView} />
+        <StatItem icon={<TrendingUp />} endValue={10000} label="Startups Incubated" shouldAnimate={inView} />
+        <StatItem icon={<Users />} endValue={250000} label="Social Media Reach" shouldAnimate={inView} />
+        <StatItem icon={<Calendar />} endValue={100000} label="Events Hosted" shouldAnimate={inView} />
       </div>
     </div>
   );
