@@ -13,12 +13,12 @@ const Landing = ({ JPG }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center gap-5 px-4">
-        <h1 className="font-bold text-7xl lg:text-[85px] text-blue-400">Entrepreneurship</h1>
-        <h3 className="font-bold text-7xl lg:text-[84px] text-white">Development Cell</h3>
-        <h5 className="font-bold text-xl lg:text-3xl pt-2 text-white">Ideate - Innovate - Incubate</h5>
+  <h1 className="font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[85px] text-blue-400">Entrepreneurship</h1>
+  <h3 className="font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[84px] text-white">Development Cell</h3>
+  <h5 className="font-bold text-lg sm:text-xl lg:text-3xl pt-2 text-white">Ideate - Innovate - Incubate</h5>
 
         <div className=" flex flex-wrap justify-center items-center gap-4">
-          <button className=" text-2xl text-white px-8 py-4 rounded-md font-medium flex items-center gap-2">
+          <button className=" text-base lg:text-2xl text-white px-8 py-4 rounded-md font-medium flex items-center gap-2">
             <ShineBorder>Know More →</ShineBorder>
           </button>
           

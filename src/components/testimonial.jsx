@@ -25,7 +25,7 @@ const Card = ({ member, isCore = true }) => {
         </div>
 
         {/* Foreground Content */}
-        <div className="relative z-10 p-8 text-center transition-opacity duration-300 ease-in-out">
+        <div className="relative z-10 p-2 lg:p-8 text-center transition-opacity duration-300 ease-in-out">
           {/* Profile Image */}
           <div
             className={`mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 ${
@@ -66,7 +66,7 @@ const Card = ({ member, isCore = true }) => {
             >
               <span className="text-yellow-400 text-3xl align-top mr-1">“</span>
               {member.description}
-              <span className="text-yellow-400 text-3xl align-bottom ml-1">”</span>
+              <span className="text-yellow-400 text-xl lg:text-3xl align-bottom ml-1">”</span>
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ const pastSpeakers = () => {
             perPage: 1,
             perMove: 1,
             autoplay: true,
-            interval: 3000,
+            interval: 1000,
             pauseOnHover: true,
             pauseOnFocus: true,
             speed: 800,
@@ -111,9 +111,9 @@ const pastSpeakers = () => {
             pagination: false,
             gap: "1rem",
             breakpoints: {
-              1024: { perPage: 4 },
-              768: { perPage: 3 },
-              640: { perPage: 2 },
+              1024: { perPage: 1 },
+              768: { perPage: 1 },
+              640: { perPage: 1 },
               480: { perPage: 1 },
             },
           }}

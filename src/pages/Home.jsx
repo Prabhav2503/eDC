@@ -31,7 +31,8 @@ return (
           <Landing JPG={JPG} />
         </div>
         <div className="sticky top-0">
-          <div className="w-full bg-gradient-to-b from to-[#0F0C29] h-15"/>
+          {/* small divider gradient to visually separate landing and content on all sizes */}
+          <div className="w-full bg-gradient-to-t from-[#0F0C29] to-transparent h-4" />
       <div ref={ref} className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
         
         <AboutHome JPG={JPG} />

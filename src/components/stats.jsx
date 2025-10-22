@@ -34,7 +34,7 @@ const StatItem = ({ icon, endValue, label, shouldAnimate }) => {
   }, [endValue, shouldAnimate, hasAnimated]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-3/10 h-full p-6 text-center  bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105">
+    <div className="flex flex-col items-center justify-center w-full sm:w-5/12 md:w-1/3 lg:w-1/4 h-full p-6 text-center bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105">
       <div className="text-blue-400 mb-2 scale-150">{icon}</div>
       <div className="text-5xl font-bold text-blue-400">{value}+</div>
       <div className="text-gray-400">{label}</div>
@@ -50,7 +50,7 @@ const Stats = () => {
 
   return (
     <div ref={ref}>
-      <div className="flex flex-wrap bg-transparent justify-center gap-10 items-center p-4  text-white">
+    <div className="flex flex-wrap bg-transparent justify-center gap-6 items-center p-4 text-white">
         <StatItem icon={<TrendingUp />} endValue={10000} label="Startups Incubated" shouldAnimate={inView} />
         <StatItem icon={<Users />} endValue={250000} label="Social Media Reach" shouldAnimate={inView} />
         <StatItem icon={<Calendar />} endValue={100000} label="Events Hosted" shouldAnimate={inView} />
