@@ -2,31 +2,7 @@ import React, {useRef, useEffect} from "react";
 import ekansh from '../assets/ekansh.webp';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-
-
-// Team data objects
-const Speakers = {
-  abhinavSrivastav: {
-    name: "Ekansh Agarwal",
-    position: "CO-OC",
-    image: ekansh
-  },
-  rishavSaha: {
-    name: "Rishav Saha", 
-    position: "CO-OC",
-    image: "https://via.placeholder.com/400x400/059669/FFFFFF?text=RS"
-  },
-  sanchitVijay: {
-    name: "Sanchit Vijay",
-    position: "CO-OC", 
-    image: "https://via.placeholder.com/400x400/374151/FFFFFF?text=SV"
-  },
-  vipinshMehra: {
-    name: "Vipinsh Mehra",
-    position: "CO-OC",
-    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
-  }
-};
+import {Speakers} from "../utility/teams"
 
 
 
@@ -105,14 +81,14 @@ const pastSpeakers = () => {
   }, []);
   
     return (
-        <div className="w-full bg-[#0A0E1A] text-white">
+        <div className="w-full bg-transparent text-white">
             <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-16">
         {/* Core Team Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             PAST SPEAKERS
           </h2>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto"/>
         </div>
         <div className="w-full mx-auto px-8 ">
         <Splide
@@ -127,7 +103,7 @@ const pastSpeakers = () => {
             pauseOnFocus: true,
             speed: 800,
             arrows: true,
-            pagination: true,
+            pagination: false,
             gap: "1rem",
             breakpoints: {
               1024: { perPage: 4 },

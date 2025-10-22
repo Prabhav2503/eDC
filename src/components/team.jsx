@@ -185,7 +185,7 @@ const TeamCard = ({ member, isCore = false }) => {
 
 const Team = ({ JPG }) => {
     return (
-        <div className="w-full bg-[#0A0E1A] text-white">
+        <div className="w-full bg-transparent text-white">
             <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-16">
         {/* Core Team Heading */}
         <div className="text-center mb-16">

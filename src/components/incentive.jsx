@@ -7,33 +7,33 @@ import IIT from '../assets/IIT.jpg'
 
 const initiatives = [
   {
-    title: 'Hackathons',
-    description: 'Intensive coding competitions where innovation meets execution. Build solutions to real-world problems.',
+    title: 'Venture Studio',
+    description: 'A 6-month intensive program designed to transform student startup ideas into market-ready ventures through hands-on workshops, expert mentorship, and pitching sessions.',
     image: IIT,
   },
   {
-    title: 'Pitch Competitions',
-    description: 'Showcase your startup ideas to investors and industry experts. Win funding and mentorship.',
+    title: 'BECon ',
+    description: 'Business and Entrepreneurship Conclave  is the flagship initiative and e-Summit of IIT Delhi, organized by eDC. Spanning 5+ cities with over 200 competitions, workshops, speaker sessions, and fireside chats, BECon stands as India’s largest student-organized entrepreneurship summit.',
     image: IIT,
   },
   {
-    title: 'Networking Events',
-    description: 'Connect with fellow entrepreneurs, investors, and industry leaders to expand your network.',
+    title: 'Regionals',
+    description: ' Regionals takes eDC beyond IIT Delhi, to India’s top startup hubs including Hyderabad, Bengaluru, and Mumbai. With Blueprint, Moonshot, and the Startup Clinic, it brings funding, mentorship, and networking opportunities to student and early-stage founders nationwide.',
     image: IIT,
   },
   {
-    title: 'Mentorship Program',
-    description: 'Get personalized guidance from successful entrepreneurs and industry veterans.',
+    title: 'Anastomosis ',
+    description: 'Anastomosis inspires young innovators by introducing school students to entrepreneurship through interactive bootcamps, competitions, and mentorship. It blends learning with real-world experience, empowering them to think creatively and take their first steps toward building ventures.',
     image: IIT,
   },
   {
-    title: 'Startup Incubator',
-    description: 'Access resources, workspace, and support to transform your idea into a thriving business.',
+    title: 'Industry Connect',
+    description: 'Industry Connect by eDC IIT Delhi bridges academia and industry, giving students real-world exposure through Trend Talks, industry visits, and global startup events. It empowers students to observe operations firsthand, engage with leaders, and apply critical thinking to innovate around real-world challenges.',
     image: IIT,
   },
   {
-    title: 'Workshop Series',
-    description: 'Learn essential entrepreneurial skills through hands-on workshops and training sessions.',
+    title: 'Kinesis ',
+    description: 'Kinesis (Bootcamp, workshops, Musketeers, Hackathons)  is our skill-building entrepreneurship program that helps students turn ideas into ventures. Through bootcamps, workshops on MVP building and venture creation, hackathons, and competitions, it provides mentorship, guidance, and opportunities to innovate, collaborate, and bring ideas to life.',
     image: IIT,
   },
 ];
@@ -42,10 +42,10 @@ const initiatives = [
 const InitiativeCard = ({ index, title, description, image }) => (
   <div
     key={index}
-    className="w-full h-150  sticky top-30 "
+    className="w-full h-120  sticky top-30 "
   >
     <div className="rounded-xl overflow-hidden flex flex-row items-center bg-gray-900">
-      <img src={image} alt={title} className="w-4/10 object-cover" />
+      <img src={image} alt={title} className="w-5/10 object-cover" />
 
     <div className="flex-1 flex flex-col items-center gap-10 p-4 relative z-20">
       <h3 className="text-5xl font-bold text-white">{title}</h3>
