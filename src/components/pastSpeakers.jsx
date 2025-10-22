@@ -2,31 +2,7 @@ import React, {useRef, useEffect} from "react";
 import ekansh from '../assets/ekansh.webp';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-
-
-// Team data objects
-const Speakers = {
-  abhinavSrivastav: {
-    name: "Ekansh Agarwal",
-    position: "CO-OC",
-    image: ekansh
-  },
-  rishavSaha: {
-    name: "Rishav Saha", 
-    position: "CO-OC",
-    image: "https://via.placeholder.com/400x400/059669/FFFFFF?text=RS"
-  },
-  sanchitVijay: {
-    name: "Sanchit Vijay",
-    position: "CO-OC", 
-    image: "https://via.placeholder.com/400x400/374151/FFFFFF?text=SV"
-  },
-  vipinshMehra: {
-    name: "Vipinsh Mehra",
-    position: "CO-OC",
-    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
-  }
-};
+import {Speakers} from "../utility/teams"
 
 
 

@@ -17,14 +17,7 @@ const AboutEDC = ({ JPG }) => {
           {/* Left Side - Text */}
           <div className="w-full lg:w-1/2 text-left space-y-6">
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              We empower young minds, early-stage startups, and professionals to
-              think big, innovate fearlessly, and build impactful ventures. We
-              partner in your journey by providing the right blend of learning,
-              mentorship, and opportunities. Through workshops, bootcamps,
-              hackathons, competitions, mentorship programmes and funding avenues,
-              we create a thriving ecosystem to turn ideas into reality. With a
-              strong legacy since 2007, eDC continues to inspire and shape the next
-              generation of changemakers across India.
+              Entrepreneurship Development Cell (eDC) at IIT Delhi is India’s largest student-run body dedicated to nurturing the spirit of entrepreneurship since 2007. We empower young minds, early-stage startups, and professionals to think big, innovate fearlessly, and build impactful ventures. More than just promoting entrepreneurship, we partner in your journey by providing a dynamic ecosystem of learning, mentorship, and opportunities. Through workshops, bootcamps, hackathons, competitions, boardroom discussions, speaker sessions, and real-time funding avenues, we equip aspiring entrepreneurs with the skills, insights, and networks needed to transform ideas into reality. With a legacy of impact and a vibrant community, eDC continues to inspire and shape the next generation of changemakers across India.
             </p>
           </div>
 

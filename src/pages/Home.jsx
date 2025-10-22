@@ -6,6 +6,7 @@ import Stats from "../components/stats";
 import PastSpeakers from "../components/pastSpeakers";
 import { useInView } from "react-intersection-observer";
 import Navbar from "../components/navbar";
+import Testimonial from "../components/testimonial";
 
 const Home = ({ JPG,SVGs,shrink, setShrink }) => {
   const { ref, inView } = useInView();
@@ -37,6 +38,7 @@ return (
         <Stats />
         <Incentive />
         <PastSpeakers />
+        <Testimonial />
       </div>
         </div>
       </div>
