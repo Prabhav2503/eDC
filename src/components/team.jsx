@@ -1,130 +1,139 @@
 import React from "react";
-import ekansh from '../assets/ekansh.webp';
-import chirag from '../assets/chirag.png';
+import {JPG,PNG} from '../utility/images';
 
 // Team data objects
 const coreTeam = {
-  abhinavSrivastav: {
+  ekansh: {
     name: "Ekansh Agarwal",
-    position: "CO-OC",
-    image: ekansh
+    position: "Overall Coordinator",
+    image: JPG.Ekansh,
   },
-  rishavSaha: {
-    name: "Rishav Saha", 
-    position: "CO-OC",
-    image: "https://via.placeholder.com/400x400/059669/FFFFFF?text=RS"
+  tanmay: {
+    name: "Tanmay Sharma",    
+    position: "Overall Coordinator",
+    image: JPG.Tanmay
   },
-  sanchitVijay: {
-    name: "Sanchit Vijay",
-    position: "CO-OC", 
+  xyz: {
+    name: "xyz",
+    position: "Overall Coordinator", 
     image: "https://via.placeholder.com/400x400/374151/FFFFFF?text=SV"
   },
-  vipinshMehra: {
-    name: "Vipinsh Mehra",
-    position: "CO-OC",
+  abc: {
+    name: "abc",
+    position: "Overall Coordinator",
+    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
+  },
+  pqr: {
+    name: "pqr",
+    position: "Overall Coordinator",
     image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
   }
 };
 
 const teamMembers = {
-  arunKumar: {
-    name: "Chirag Bhambri",
-    position: "Marketing Head",
-    image: chirag
+  tripti: {
+    name: "Tripti",
+    position: "AnF",
+    image: JPG.Tripti
   },
-  priyaSharma: {
-    name: "Priya Sharma", 
-    position: "Design Lead",
+  lmn: {
+    name: "lmn", 
+    position: "AnF ",
     image: "https://via.placeholder.com/400x400/6366F1/FFFFFF?text=PS"
   },
-  rahulGupta: {
-    name: "Rahul Gupta",
-    position: "Tech Lead",
-    image: "https://via.placeholder.com/400x400/14B8A6/FFFFFF?text=RG"
+  chirag: {
+    name: "Chirag Bhambri",
+    position: "Corporate Relations",
+    image: PNG.chirag
   },
-  snehaDevi: {
-    name: "Sneha Devi",
-    position: "Events Head", 
-    image: "https://via.placeholder.com/400x400/F97316/FFFFFF?text=SD"
+  sarthak: {
+    name: "Sarthak Gupta",
+    position: "Corporate Relations", 
+    image: PNG.Sarthak
   },
-  vikashKumar: {
-    name: "Vikash Kumar",
-    position: "Finance Head",
-    image: "https://via.placeholder.com/400x400/06B6D4/FFFFFF?text=VK"
+  nishka: {
+    name: "Nishka Murarka",
+    position: "Design",
+    image: JPG.Nishka
   },
-  anjaliPatel: {
-    name: "Anjali Patel",
-    position: "PR Head",
-    image: "https://via.placeholder.com/400x400/84CC16/FFFFFF?text=AP"
+  pratibha: {
+    name: "Pratibha Kashyap",
+    position: "Design",
+    image: PNG.Pratibha
   },
-  mukeshSingh: {
-    name: "Mukesh Singh",
-    position: "Content Head",
-    image: "https://via.placeholder.com/400x400/8B5CF6/FFFFFF?text=MS"
-  },
-  kavyaJain: {
-    name: "Kavya Jain", 
-    position: "Research Head",
-    image: "https://via.placeholder.com/400x400/F43F5E/FFFFFF?text=KJ"
-  },
-  arjunSaxena: {
-    name: "Arjun Saxena",
-    position: "Operations Head",
-    image: "https://via.placeholder.com/400x400/10B981/FFFFFF?text=AS"
-  },
-  nehaTrivedi: {
-    name: "Neha Trivedi",
-    position: "Social Media Head",
-    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=NT"
-  },
-  devMalhotra: {
-    name: "Dev Malhotra",
-    position: "Web Developer",
+  xyz: {
+    name: "xyz",
+    position: "Design",
     image: "https://via.placeholder.com/400x400/0EA5E9/FFFFFF?text=DM"
   },
-  shwetaPandey: {
-    name: "Shweta Pandey",
-    position: "UI/UX Designer", 
+  dishit: {
+    name: "Dishit Johari",
+    position: "Events",
+    image: JPG.Dishit
+  },
+  kabir: {
+    name: "Kabir", 
+    position: "Events",
+    image: PNG.Kabir
+  },
+  lakshay: {
+    name: "Lakshay Goel",
+    position: "Marketing",
+    image: JPG.Lakshay
+  },
+  sakshi: {
+    name: "Sakshi Sharma",
+    position: "Marketing",
+    image: JPG.Sakshi
+  },
+  tejas: {
+    name: "tejas Kamble",
+    position: "Media",
+    image: PNG.Tejas
+  },
+  pqr: {
+    name: "pqr",
+    position: "Media", 
     image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SP"
   },
-  harshYadav: {
-    name: "Harsh Yadav",
-    position: "Photography Head",
-    image: "https://via.placeholder.com/400x400/EF4444/FFFFFF?text=HY"
+  aghamarsh: {
+    name: "Aghamarsh Chetluru",
+    position: "OC Office",
+    image: JPG.Aghamarsh
   },
-  sakshiMishra: {
-    name: "Sakshi Mishra",
-    position: "Video Editor",
-    image: "https://via.placeholder.com/400x400/64748B/FFFFFF?text=SM"
+  vaibhav: {
+    name: "Vaibhav Pandey",
+    position: "Startup Support",
+    image: JPG.Vaibhav
   },
-  amitAgarwal: {
-    name: "Amit Agarwal",
-    position: "Business Development",
+  mno: {
+    name: "mno",
+    position: "Startup Support",
     image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA"
   },
-  rituVerma: {
-    name: "Ritu Verma",
-    position: "Partnership Head",
-    image: "https://via.placeholder.com/400x400/3B82F6/FFFFFF?text=RV"
-  },
-  neerajKumar: {
-    name: "Neeraj Kumar",
-    position: "Logistics Head", 
-    image: "https://via.placeholder.com/400x400/A855F7/FFFFFF?text=NK"
-  },
-  poojaThakur: {
-    name: "Pooja Thakur",
-    position: "Alumni Relations",
-    image: "https://via.placeholder.com/400x400/EC4899/FFFFFF?text=PT"
-  }
+  // rituVerma: {
+  //   name: "Ritu Verma",
+  //   position: "Partnership Head",
+  //   image: "https://via.placeholder.com/400x400/3B82F6/FFFFFF?text=RV"
+  // },
+  // neerajKumar: {
+  //   name: "Neeraj Kumar",
+  //   position: "Logistics Head", 
+  //   image: "https://via.placeholder.com/400x400/A855F7/FFFFFF?text=NK"
+  // },
+  // poojaThakur: {
+  //   name: "Pooja Thakur",
+  //   position: "Alumni Relations",
+  //   image: "https://via.placeholder.com/400x400/EC4899/FFFFFF?text=PT"
+  // }
 };
 
 // Team Card Component
 const TeamCard = ({ member, isCore = false }) => {
   return (
     <div className="group cursor-pointer">
-      <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl border border-gray-700/30 ${
-        isCore ? 'min-h-[320px]' : 'min-h-[280px]'
+      <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl border border-gray-700/30 ${
+        isCore ? 'min-h-[280px]' : 'min-h-[280px]'
       }`}>
         {/* Background Image that expands on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
@@ -141,7 +150,7 @@ const TeamCard = ({ member, isCore = false }) => {
         <div className="relative z-10 p-8 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
           {/* Profile Image with Zoom Effect */}
           <div className={`mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 ${
-            isCore ? 'w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40' : 'w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36'
+            isCore ? 'w-32 h-32 sm:w-36 sm:h-36 lg:w-36 lg:h-36' : 'w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36'
           }`}>
             <img
               src={member.image}
@@ -195,16 +204,45 @@ const Team = ({ JPG }) => {
           <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
         </div>
 
-        {/* Core Team Members - 4 in a row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
-          {Object.keys(coreTeam).map((key) => (
-            <TeamCard 
+        {/* Core Team Members - custom layout: 3 on first row, 2 centered on second */}
+       {/* Core Team Members - 3 on first row, 2 centered on second */}
+{/* Core Team Members - 3 on first row, 2 centered on second */}
+{
+  (() => {
+    const coreKeys = Object.keys(coreTeam);
+    const firstRow = coreKeys.slice(0, 3);
+    const secondRow = coreKeys.slice(3);
+
+    return (
+      <div className="mb-20 space-y-8">
+        {/* First Row - exactly 3 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          {firstRow.map((key) => (
+            <div
               key={key}
-              member={coreTeam[key]} 
-              isCore={true}
-            />
+              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px]"
+            >
+              <TeamCard member={coreTeam[key]} isCore={true} />
+            </div>
           ))}
         </div>
+
+        {/* Second Row - 2 cards centered */}
+        <div className="flex justify-center gap-8 flex-wrap">
+          {secondRow.map((key) => (
+            <div
+              key={key}
+              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px]"
+            >
+              <TeamCard member={coreTeam[key]} isCore={true} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  })()
+}
+
         {/* Additional Team Members Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">

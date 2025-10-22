@@ -1,4 +1,4 @@
-import ekansh from '../assets/ekansh.webp';
+import ekansh from '../assets/ekansh_core.webp';
 
 export const Speakers = 
   [
@@ -155,3 +155,4 @@ export const Testimonials = [{
   "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure sed, animi soluta dolore incidunt, nihil aut rem reprehenderit eum aspernatur libero, facere atque. Omnis sequi ullam, id adipisci ea aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione voluptates veritatis, veniam qui nobis minus a sed delectus, ipsum velit maxime vero soluta saepe iste quo doloribus sapiente laborum.",
   "image": ekansh
 }]
+

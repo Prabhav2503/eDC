@@ -1,4 +1,4 @@
-import { SVGs, JPG, Incentive } from './utility/images'
+import { SVGs, JPG,PNG, Incentive } from './utility/images'
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -34,7 +34,7 @@ function App() {
             <>
               <Routes>
                 <Route path="/" element={<Home JPG={JPG} SVGs={SVGs} setShrink={setShrink} shrink={shrink} />} />
-                <Route path="/about" element={<About JPG={JPG}  SVGs={SVGs} />} />
+                <Route path="/about" element={<About JPG={JPG}  SVGs={SVGs} PNG={PNG} />} />
                 <Route path="/initial" element={<Initiative setShrink={setShrink} shrink={shrink} SVGs={SVGs} />} />
                 <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
                 <Route path="/resources" element={<Resource SVGs={SVGs}/>} />
