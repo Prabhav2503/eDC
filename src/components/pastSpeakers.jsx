@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from "react";
-import ekansh from '../assets/ekansh.webp';
+import ekansh from '../assets/ekansh_core.webp';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Speakers} from "../utility/teams"

@@ -3,7 +3,7 @@ import AboutEDC from '../components/aboutus'
 import Navbar from "../components/navbar";
 import Team from '../components/team';
 
-const About = ({JPG,SVGs}) => {
+const About = ({JPG,SVGs,PNG}) => {
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -18,7 +18,7 @@ const About = ({JPG,SVGs}) => {
         </div>
     <div  className="text-white bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] ">
       <AboutEDC JPG={JPG} />
-      <Team  JPG={JPG} />
+      <Team  JPG={JPG} PNG={PNG} />
     </div>
     </div>
   )
