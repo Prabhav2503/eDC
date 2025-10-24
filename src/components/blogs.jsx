@@ -6,11 +6,11 @@ const BlogCard = ({ blog }) => {
   return (
     <div className="group cursor-pointer bg-[#1A2332] rounded-2xl overflow-hidden border border-gray-700/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       {/* Blog Image */}
-      <div className="relative h-48 sm:h-52 lg:h-56 overflow-hidden">
+      <div className="relative h-48 sm:h-52 lg:h-66 overflow-hidden">
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-fit transform transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </div>
