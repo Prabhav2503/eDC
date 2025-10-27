@@ -18,7 +18,7 @@ const BlogCard = ({ blog }) => {
       {/* Blog Content */}
       <div className="p-6">
         {/* Title */}
-        <h3 className="text-white text-lg font-bold mb-3 line-clamp-2 ">
+        <h3 className="text-white text-base font-semibold mb-3 line-clamp-2 ">
           {blog.title}
         </h3>
 
