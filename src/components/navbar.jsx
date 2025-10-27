@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+
 
 const Navbar = ({ SVGs, shrink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -21,7 +23,7 @@ const Navbar = ({ SVGs, shrink }) => {
     >
       {/* Main Navbar */}
   <div className="flex items-center justify-between px-4">
-        <img src={SVGs.logo} alt="logo" className='w-15 lg:w-22' />
+        <img src={SVGs.logo} alt="logo" className='w-15 lg:w-22' onClick={() => navigate("/")} />
 
         {/* Desktop Navigation - Hidden on Mobile */}
         <div className='hidden md:flex gap-1 lg:gap-3'>

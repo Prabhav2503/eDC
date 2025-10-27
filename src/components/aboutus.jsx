@@ -64,9 +64,7 @@ const AboutEDC = ({ JPG }) => {
               <h3 className="text-2xl font-bold text-white">Vision</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              To be India's premier hub for student entrepreneurship,
-              driving innovation and creating sustainable impact on
-              society and economy.
+              we strive to empower young minds to create impactful startups that inspire change across the globe. We believe every dreamer - regardless of background, location, or prior experience - deserves the opportunity to pursue entrepreneurship. Standing with every risk-taker who dares to dream, eDC is committed to nurturing innovators and shaping the next generation of entrepreneurs.
             </p>
           </div>
 
