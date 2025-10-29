@@ -15,9 +15,13 @@ import Tanmay from "../assets/TanmaySharma_core.jpg"
 import Tejas from "../assets/TejasKamble_media.png"
 import Tripti from "../assets/tripti_AnF.jpg"
 import Vaibhav from "../assets/VaibhavPandey_SS.jpg"
+import galleryleftarrow from "../assets/galleryleftarrow.svg"
+import galleryrightarrow from "../assets/galleryrightarrow.svg"
 
 export const SVGs = {
-  logo:logo
+  logo:logo,
+  galleryleftarrow:galleryleftarrow,
+  galleryrightarrow:galleryrightarrow
 };
 
 export const JPG = {
@@ -45,4 +49,10 @@ export const PNG = {
 export const Incentive={
   
 }
+
+export const IMAGES = {
+
+}
+
+
 
