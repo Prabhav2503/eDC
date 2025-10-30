@@ -15,17 +15,17 @@ import Preloader from './components/preloader'
 
 function App() {
   const [shrink, setShrink] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    setIsLoading(true)
-    // Simulate loading time for the preloader
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 3800) // 5 seconds loading time
+  // useEffect(() => {
+  //   setIsLoading(true)
+  //   // Simulate loading time for the preloader
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false)
+  //   }, 3800) // 5 seconds loading time
 
-    return () => clearTimeout(timer)
-  }, [])
+  //   return () => clearTimeout(timer)
+  // }, [])
 
   return (
         <div>
