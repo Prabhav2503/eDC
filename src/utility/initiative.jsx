@@ -3,45 +3,65 @@ import { Code, TrendingUp, Users, GraduationCap, Rocket, Briefcase, ArrowRight }
 
 const initiatives = [
   {
-    title: 'Venture Studio',
-    description: 'Venture Studio is eDC IIT Delhi’s flagship initiative - a full-semester, hands-on entrepreneurship program designed to transform bold ideas into impactful ventures. It helps aspiring founders turn bold ideas into impactful ventures by guiding them through every stage of startup creation - from ideation and validation to business strategy and execution. Through weekly sessions, structured learning modules, and personalized guidance from distinguished IIT Delhi alumni such as Pawan Raj Kumar, Alok Mittal, and Vivek Srivastava, Venture Studio bridges the gap between academia and industry. Participants gain direct access to a vibrant ecosystem of mentors, investors, and industry leaders, helping them refine ideas, solve real-world problems, and bring their visions to life.Now in its third edition, Venture Studio continues to empower IIT Delhi students to think big, act bold, and build ventures that define the future of entrepreneurship in India',
-    image: IIT,
-  },
-  {
-    icon: <TrendingUp className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Industry Connect',
-    description: 'Platform for aspiring entrepreneurs to present their startup ideas to a panel of investors, industry veterans, and successful entrepreneurs. Winners receive funding, mentorship, and invaluable feedback.',
-    image: IIT,
-    features: ['Seed funding opportunities', 'Investor connections', 'Media coverage', 'Incubation support'],
-  },
-  {
-    icon: <Users className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Genesis',
-    description: 'Regular meetups, panel discussions, and social events designed to connect students with entrepreneurs, investors, and industry leaders. Build your professional network in a relaxed, engaging environment.',
-    image: IIT,
-    features: ['Meet successful founders', 'Industry insights', 'Career opportunities', 'Collaborative partnerships'],
-  },
-  {
-    icon: <GraduationCap className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Kinesis',
-    description: 'Get paired with experienced entrepreneurs and industry professionals who provide personalized guidance on your startup journey. From ideation to scaling, our mentors have been there and done that.',
-    image: IIT,
-    features: ['1-on-1 mentoring sessions', 'Expert guidance', 'Strategic planning help', 'Long-term support'],
-  },
-  {
-    icon: <Rocket className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Startup Incubator',
-    description: 'Comprehensive support system for early-stage startups including workspace, resources, funding connections, and operational guidance. Transform your idea into a viable business with our incubation program.',
-    image: IIT,
-    features: ['Co-working space', 'Legal & financial support', 'Tech infrastructure', 'Funding assistance'],
-  },
-  {
-    icon: <Briefcase className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Workshop Series',
-    description: 'Hands-on training sessions covering essential entrepreneurial skills like business planning, financial modeling, marketing, product development, and more. Learn from practitioners and apply concepts immediately.',
-    image: IIT,
-    features: ['Expert instructors', 'Practical learning', 'Certificates', 'Networking sessions'],
-  },
+  title: 'Venture Studio',
+  description: 'Venture Studio is eDC IIT Delhi’s flagship semester-long entrepreneurship program that transforms bold ideas into real ventures. Through structured modules, mentorship, and guidance from leading IIT Delhi alumni and investors like Pawan Raj Kumar, Alok Mittal, and Vivek Srivastava, it bridges the gap between academia and industry. Now in its third edition, Venture Studio empowers students to ideate, validate, and execute impactful startups, driving the next generation of innovation and entrepreneurship in India.',
+  image: '',
+},
+
+{
+  title: 'Anastomosis',
+  description: 'Anastomosis is eDC IIT Delhi’s flagship program for school students across India, designed to ignite curiosity, creativity, and an entrepreneurial spirit early on. Through interactive bootcamps, workshops, and competitions, participants learn ideation, problem solving, and business fundamentals. Guided by IIT Delhi mentors and startup leaders, students gain hands-on exposure to innovation and teamwork. Open to students nationwide through a short quiz and nominal fee, Anastomosis nurtures young changemakers ready to dream big and create real impact.',
+  image: '',
+},
+
+{
+  title: 'Regionals',
+  description: 'BECon Regionals takes IIT Delhi’s flagship entrepreneurship conclave nationwide, connecting students, startups, and industry leaders through its three marquee events — Moonshot, Blueprint, and Startup Clinic. After successful editions in Mumbai, Bangalore, and Hyderabad, it now expands to new cities, fostering local innovation. Featuring speakers like Atul Batra, Anoj Viswanathan, Anil Agarwal, and investors such as Kunal Bahl, Ritesh Malik, and Sanjay Mehta, BECon Regionals builds momentum for the Grand Finale at IIT Delhi.',
+  image: '',
+},
+
+{
+  title: 'Moonshot',
+  description: 'Moonshot is eDC IIT Delhi’s flagship startup funding showcase – our version of Shark Tank where early-stage startups pitch to top investors, VCs, and incubators. Since 2021, it has become a premier platform for securing funding, mentorship, and visibility. Featuring 50+ investors and founders, including Alok Mittal, Atul Batra, Pawan Kumar, and Anoj Viswanathan, Moonshot empowers young entrepreneurs to refine ideas, gain real-world feedback, and turn bold visions into impactful ventures on a national stage.',
+  image: '',
+},
+
+{
+  title: 'Blueprint',
+  description: 'Blueprint is eDC IIT Delhi’s flagship Business Plan Competition under the BECon Regionals campaign and aims to empower aspiring entrepreneurs to showcase innovative ideas and business models. Spanning multiple cities, it unites students, startups, and innovators nationwide to compete and collaborate. Participants gain mentorship from industry leaders, investor networking, and hands-on workshops to refine their ventures. With prizes and perks worth ₹1 Cr+, Blueprint serves as the ultimate launchpad where creativity meets strategy and bold ideas evolve into successful startups.',
+  image: '',
+},
+
+{
+  title: 'Startup Clinic',
+  description: 'Startup Clinic is eDC IIT Delhi’s high-impact mentorship program crafted to help early-stage founders refine, validate, and accelerate their ventures. It offers one-on-one guidance from seasoned entrepreneurs, investors, and domain experts who share actionable insights and real-world feedback. Participants gain access to exclusive mentorship sessions, investor insights, and networking opportunities that fast-track their startup journey. Whether you’re building your first prototype or seeking market fit, Startup Clinic helps you take confident steps toward building a successful venture.',
+  image: '',
+},
+
+{
+  title: 'Thesis to Venture',
+  description: '',
+  image: '',
+},
+
+{
+  title: 'Kinesis',
+  description: 'Kinesis is eDC IIT Delhi’s flagship skill-building initiative designed to help students transform innovative ideas into real ventures. Through Hackathons and Case Competitions students are challenged to think fast, innovate under pressure, and present scalable business ideas. The Skill-Building Workshops focus on MVP creation, AI-based solutions, and essential entrepreneurial skills from problem-solving to pitching. Musketeers, a tailored programme for first-year students, pairs them with mentors who guide them through the process of building and refining their first startup idea. Together, Kinesis empowers students to think boldly and create impact through innovation.',
+  image: '',
+},
+
+{
+  title: 'Genesis',
+  description: 'Genesis is eDC IIT Delhi’s pre-incubation program designed to empower early-stage startups beyond the IIT Delhi campus. It offers personalized mentorship from IIT Delhi faculty, industry experts, and successful entrepreneurs, helping founders refine their ideas into scalable ventures. Startups gain exclusive networking access to early-stage VCs, angel investors, and corporate leaders, along with hands-on workshops on business planning, pitching, financial modeling, legal compliance, and marketing strategy. With the prestige of eDC and IIT Delhi’s brand, Genesis provides the perfect platform for innovators to grow, connect, and make an impact. If you have the vision and drive, Genesis is your launchpad to build what’s next.',
+  image: '',
+},
+
+{
+  title: 'Industry Connect',
+  description: 'Industry Connect by eDC IIT Delhi bridges academia and industry through two key initiatives – Trend Talks and Industry Visits. Trend Talks are closed-room, Harvard-style discussions on emerging trends, market shifts, and technologies, fostering critical thinking and innovation. Industry Visits offer selected students firsthand exposure to real-world operations at companies like Vecmocon Technologies, Tsuyo Pvt. Ltd., and Chakr Innovations, enabling them to engage with professionals, understand challenges, and explore how ideas evolve into impactful, scalable solutions.',
+  image: '',
+},
+
 ];
 
 

@@ -10,7 +10,7 @@ const Resource = ({JPG,SVGs}) => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0A0E1A]">
+    <div className="min-h-screen bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
       <div className="absolute top-0 w-full z-20">
         <Navbar SVGs={SVGs} shrink={true} />
       </div>
