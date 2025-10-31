@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
 import IIT from '../assets/IIT.jpg';
-import { useInView } from 'react-intersection-observer';
 import Navbar from '../components/navbar';
 import initiatives from '../utility/initiative.jsx';
 
@@ -34,22 +32,12 @@ const AboutSection = ({ image, title, description, reverse = false }) => {
   );
 };
 
-const Initiative = ({ setShrink, shrink, SVGs }) => {
-  const { ref, inView } = useInView();
-
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    setShrink?.(inView);
-  }, [inView, setShrink]);
+const Initiative = ({ shrink, SVGs }) => {
 
   return (
     <div>
       <div className="absolute top-0 w-full z-20">
-        <Navbar SVGs={SVGs} shrink={shrink} />
+        <Navbar SVGs={SVGs} shrink={true} />
       </div>
 
       <div className="w-full bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] text-white flex flex-col items-center justify-center px-10 py-30">
@@ -61,7 +49,7 @@ const Initiative = ({ setShrink, shrink, SVGs }) => {
           </p>
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center gap-10" ref={ref}>
+        <div className="w-full flex flex-col items-center justify-center gap-10">
           {Array.isArray(initiatives) &&
             initiatives.map((item, idx) => (
               <AboutSection

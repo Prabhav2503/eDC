@@ -40,7 +40,7 @@ const initiatives = [
 
 
 const InitiativeCard = ({ index, title, description, image }) => (
-  <div key={index} className="w-full mb-8 sticky top-30">
+  <div key={index} className="w-full mb-0 sticky top-0">
     <div className="rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch bg-gray-900">
       <img src={image} alt={title} className="w-full md:w-5/12 object-cover h-56 md:h-auto" />
 
@@ -59,7 +59,7 @@ const InitiativeCard = ({ index, title, description, image }) => (
 
 export default function Incentive() {
   return (
-    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center px-5 lg:px-20 pt-20">
+    <div className="w-full bg-transparent text-white flex flex-col items-center justify-center px-0 lg:px-20 pt-20">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className=" text-3xl lg:text-5xl font-bold mb-4">Our Flagship Initiatives</h2>

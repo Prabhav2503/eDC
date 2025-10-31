@@ -46,9 +46,7 @@ const AboutEDC = ({ JPG }) => {
               <h3 className="text-2xl font-bold text-white">Mission</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              To cultivate an entrepreneurial ecosystem that transforms
-              innovative ideas into successful ventures, empowering
-              students to become future business leaders.
+              Fueled by the vision to inspire the next generation of entrepreneurs, eDC IIT Delhi is committed to cultivating a vibrant startup ecosystem on campus. Our mission is to transform innovative ideas into successful ventures by providing mentorship, resources, and experiential learning and empowering students to evolve into visionary leaders who drive meaningful impact and shape the future of business and society.
             </p>
           </div>
 
@@ -59,7 +57,7 @@ const AboutEDC = ({ JPG }) => {
               <h3 className="text-2xl font-bold text-white">Vision</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              we strive to empower young minds to create impactful startups that inspire change across the globe. We believe every dreamer - regardless of background, location, or prior experience - deserves the opportunity to pursue entrepreneurship. Standing with every risk-taker who dares to dream, eDC is committed to nurturing innovators and shaping the next generation of entrepreneurs.
+              At eDC IIT Delhi strive to empower young minds to create impactful startups that inspire change across the globe. We believe every dreamer, regardless of background, location, or prior experience, deserves the opportunity to pursue entrepreneurship. Standing with every risk-taker who dares to dream, eDC is committed to nurturing innovators and shaping the next generation of entrepreneurs.
             </p>
           </div>
 

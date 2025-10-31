@@ -6,7 +6,7 @@ const AboutHome = ({ JPG }) => {
     
       <div className="w-full h-full flex flex-col justify-center lg:w-1/2">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center lg:text-left" style={{ fontFamily: "Montserrat" }}>
-          About eDC IIT Delhi?
+          Who We Are
         </h2>
         <p className="text-gray-300 text-base md:text-xl leading-relaxed lg:pb-50 text-center lg:text-left">
           We empower young minds, early-stage startups, and professionals to

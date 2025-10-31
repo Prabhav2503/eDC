@@ -72,7 +72,7 @@ const teamMembers = {
     image: JPG.Dishit
   },
   kabir: {
-    name: "Kabir", 
+    name: "Kabir Bhatia", 
     position: "Events",
     image: PNG.Kabir
   },
@@ -87,7 +87,7 @@ const teamMembers = {
     image: JPG.Sakshi
   },
   tejas: {
-    name: "tejas Kamble",
+    name: "Tejas Kamble",
     position: "Media",
     image: PNG.Tejas
   },
@@ -175,7 +175,7 @@ const TeamCard = ({ member, isCore = false }) => {
         </div>
 
         {/* Hover state content */}
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-8 pt-45 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <h3 className={`font-bold text-white text-center mb-2 ${
             isCore ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
           }`}>
