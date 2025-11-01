@@ -3,9 +3,9 @@ import Navbar from '../components/navbar';
 import initiatives from '../utility/initiative.jsx';
 
 const AboutSection = ({ image, title, description, reverse = false }) => {
-  const sectionClasses = reverse
-    ? 'w-full bg-[#101c30] rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-10'
-    : 'w-full bg-[#101c30] rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row items-center justify-between gap-10';
+  const sectionClasses = ` sticky top-10 ${reverse
+    ? 'w-full  bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70  rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-10'
+    : 'w-full bg-[#101c30] rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row items-center justify-between gap-10'}`;
 
   return (
     <section className={sectionClasses}>
@@ -40,7 +40,7 @@ const Initiative = ({ shrink, SVGs }) => {
         <Navbar SVGs={SVGs} shrink={true} />
       </div>
 
-      <div className="w-full bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] text-white flex flex-col items-center justify-center px-10 py-30">
+      <div className="w-full bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] text-white flex flex-col items-center justify-center  py-30">
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-7xl font-bold mb-6">Our Initiatives</h2>

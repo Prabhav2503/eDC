@@ -37,7 +37,7 @@ const Navbar = ({ SVGs, shrink }) => {
             Initiative
           </NavLink>
           <NavLink to='/becon' className={linkClass}>
-            BeCon
+            BECon
           </NavLink>
           <NavLink to='/resources' className={linkClass}>
             Resources
@@ -78,7 +78,7 @@ const Navbar = ({ SVGs, shrink }) => {
             Initiative
           </NavLink>
           <NavLink to='/becon' className={mobileLinkClass} onClick={toggleMenu}>
-            BeCon
+            BECon
           </NavLink>
           <NavLink to='/resources' className={mobileLinkClass} onClick={toggleMenu}>
             Resources

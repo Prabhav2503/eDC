@@ -40,7 +40,7 @@ const initiatives = [
 
 {
   title: 'Thesis to Venture',
-  description: '',
+  description: 'Thesis to Venture by eDC IIT Delhi transforms research potential into entrepreneurial success. Aimed at visionary scholars pushing the boundaries of innovation, it provides the guidance, funding access, and industry connections needed to turn breakthrough ideas into scalable startups or impactful technologies that make a real-world difference.',
   image: '',
 },
 

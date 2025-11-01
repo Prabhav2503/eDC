@@ -37,7 +37,7 @@ const Resource = ({JPG,SVGs}) => {
         </div>
 
        <div>
-        {/* <Resources JPG={JPG} /> */}
+        {/* <Resources JPG={JPG} />                                                                                                          */}
         <Blogs JPG={JPG} />
        </div>
       </div>
