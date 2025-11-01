@@ -47,6 +47,11 @@ import SachinBansal from "../assets/speakers/SachinBansal.png"
 import SanjeevBikhchandani from "../assets/speakers/SanjeevBikhchandani.png"
 import VijayShekharSharma from "../assets/speakers/VijayShekharSharma.png"
 
+export const IMAGES = import.meta.glob(
+  '../assets/gallery_pictures/*.{png,jpg,jpeg,webp,gif,svg}',
+  { eager: true, import: 'default' }
+);
+
 
 
 
@@ -112,9 +117,6 @@ export const Incentive={
   
 }
 
-export const IMAGES = {
-
-}
 
 export const SPEAKERS = {
   AlokMittal,
@@ -145,7 +147,7 @@ export const SPEAKERS = {
   RohitBansal,
   SachinBansal,
   SanjeevBikhchandani,
-  VijayShekharSharma
+  VijayShekharSharma,
 }
 
 

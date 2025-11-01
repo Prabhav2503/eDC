@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export default function Gallery({ IMAGES,SVGs }) {
+export default function Gallery({ IMAGES, SVGs }) {
   const scrollRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -10,29 +10,23 @@ export default function Gallery({ IMAGES,SVGs }) {
       scrollRef.current.scrollBy({
         left: direction === "left" ? -220 : 220,
         behavior: "smooth",
-
-
       });
     }
   };
 
-  // add your images here
-  const galleryItems = [
-    { id: 1, src: IMAGES.img8, span: "col-start-1 col-end-3 row-start-1 row-end-3" },
-    { id: 2, src: IMAGES.img9, span: "col-start-3 col-end-4 row-start-1 row-end-3" },
-    { id: 3, src: IMAGES.img10, span: "col-start-4 col-end-5 row-start-1 row-end-3" },
-    { id: 4, src: IMAGES.img6, span: "h-full" },
-    { id: 5, src: IMAGES.img11, span: "col-start-6 col-end-8" },
-    { id: 6, src: IMAGES.img1, span: "col-start-5 col-end-7" },
-    { id: 7, src: IMAGES.img3, span: "col-start-7 col-end-8" },
-  ];
+  // IMAGES is an object: { "<path>": "<url>", ... }
+  const galleryItems = Object.values(IMAGES).map((url, index) => ({
+    id: index + 1,
+    src: url, // ✅ direct URL now
+    span: "",
+  }));
 
   return (
     <section className="max-w-7xl mx-auto py-12">
       <div className="mx-8 relative pt-10 w-[90%] sm:w-[90%] md:w-[90%] lg:w-full">
         <div
           ref={scrollRef}
-          className="w-full h-[500px]  overflow-x-hidden overflow-y-hidden"
+          className="w-full h-[500px] overflow-x-hidden overflow-y-hidden" // 👈 allow horizontal scroll if desired
         >
           <div className="grid grid-flow-col auto-cols-[200px] md:auto-cols-[400px] gap-4 grid-rows-2 content-center h-full">
             {galleryItems.map((item) => (
@@ -46,8 +40,9 @@ export default function Gallery({ IMAGES,SVGs }) {
               >
                 <img
                   src={item.src}
-                  alt="Gallery item"
+                  alt={`Gallery item ${item.id}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -77,6 +72,7 @@ export default function Gallery({ IMAGES,SVGs }) {
             >
               <img
                 src={activeItem.src}
+                alt="Enlarged gallery item"
                 className="max-w-full max-h-full object-contain"
               />
             </div>
