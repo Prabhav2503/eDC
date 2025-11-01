@@ -25,7 +25,7 @@ const Home = ({ JPG,SVGs,shrink, setShrink, PNG }) => {
 return (
       <div>
         <div className={`sticky top-0 z-20 ${shrink ? 'bg-transparent' : 'bg-[#262626]/80'}`}>
-          <Navbar SVGs={SVGs} shrink={shrink} />
+          <Navbar SVGs={SVGs} shrink={true} />
         </div>
         <div className="sticky top-0">
           <Landing JPG={JPG} />
