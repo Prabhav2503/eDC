@@ -35,7 +35,7 @@ export const Speakers =
   },
   {
     "name": "Raghuram Rajan",
-    "position": "Former Governor of the Reserve Bank of India",
+    "position": "Former Governor of the RBI",
     "image": PNG.RaghuramRajan
   },
   {

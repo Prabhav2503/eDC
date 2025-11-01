@@ -1,145 +1,67 @@
-import React, { useEffect } from 'react';
 import IIT from '../assets/IIT.jpg';
-import { Code, TrendingUp, Users, GraduationCap, Rocket, Briefcase, ArrowRight } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
-import Navbar from "../components/navbar";
+import Navbar from '../components/navbar';
+import initiatives from '../utility/initiative.jsx';
 
-const initiatives = [
-  {
-    icon: <Code className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Venture Studio',
-    description: 'Intensive 24-48 hour coding competitions where teams build innovative solutions to real-world problems. Participants get to work with cutting-edge technologies, collaborate with talented peers, and showcase their technical prowess.',
-    image: IIT,
-    features: ['Cash prizes up to ₹1 Lakh', 'Mentorship from industry experts', 'Networking opportunities', 'Free food and swag'],
-  },
-  {
-    icon: <TrendingUp className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Industry Connect',
-    description: 'Platform for aspiring entrepreneurs to present their startup ideas to a panel of investors, industry veterans, and successful entrepreneurs. Winners receive funding, mentorship, and invaluable feedback.',
-    image: IIT,
-    features: ['Seed funding opportunities', 'Investor connections', 'Media coverage', 'Incubation support'],
-  },
-  {
-    icon: <Users className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Genesis',
-    description: 'Regular meetups, panel discussions, and social events designed to connect students with entrepreneurs, investors, and industry leaders. Build your professional network in a relaxed, engaging environment.',
-    image: IIT,
-    features: ['Meet successful founders', 'Industry insights', 'Career opportunities', 'Collaborative partnerships'],
-  },
-  {
-    icon: <GraduationCap className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Kinesis',
-    description: 'Get paired with experienced entrepreneurs and industry professionals who provide personalized guidance on your startup journey. From ideation to scaling, our mentors have been there and done that.',
-    image: IIT,
-    features: ['1-on-1 mentoring sessions', 'Expert guidance', 'Strategic planning help', 'Long-term support'],
-  },
-  {
-    icon: <Rocket className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Startup Incubator',
-    description: 'Comprehensive support system for early-stage startups including workspace, resources, funding connections, and operational guidance. Transform your idea into a viable business with our incubation program.',
-    image: IIT,
-    features: ['Co-working space', 'Legal & financial support', 'Tech infrastructure', 'Funding assistance'],
-  },
-  {
-    icon: <Briefcase className="w-7 h-7 text-[#306ee8]" />,
-    title: 'Workshop Series',
-    description: 'Hands-on training sessions covering essential entrepreneurial skills like business planning, financial modeling, marketing, product development, and more. Learn from practitioners and apply concepts immediately.',
-    image: IIT,
-    features: ['Expert instructors', 'Practical learning', 'Certificates', 'Networking sessions'],
-  },
-];
+const AboutSection = ({ image, title, description, reverse = false }) => {
+  const sectionClasses = ` sticky top-10 ${reverse
+    ? 'w-full  bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70  rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row-reverse items-center justify-between gap-10'
+    : 'w-full bg-[#101c30] rounded-2xl text-white py-12 px-6 flex flex-col lg:flex-row items-center justify-between gap-10'}`;
 
-const InitiativeCard = ({ title, icon, description, features, image }) => (
-  <div className="rounded-lg overflow-hidden shadow-lg flex items-center">
-    <img src={image} alt={title} className="h-100 hidden md:flex object-cover flex-11/20" />
-    <div className="h-100 bg-[#0d121c] p-8 flex-9/20">
-      <div className="flex items-center gap-3 pb-5">
-        <div className="w-[50px] h-[50px] rounded-2xl bg-[#101c30] flex items-center justify-center">
-          {icon}
-        </div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
+  return (
+    <section className={sectionClasses}>
+      <div className="w-full flex flex-col justify-center lg:w-60/100">
+        <h2
+          className="text-4xl md:text-5xl font-bold mb-6 text-center lg:text-left"
+          style={{ fontFamily: 'Montserrat' }}
+        >
+          {title}
+        </h2>
+        <p className="text-gray-300 text-base md:text-xl leading-relaxed text-center lg:text-left">
+          {description}
+        </p>
       </div>
-      <p className="text-gray-400 mb-4">{description}</p>
-      <h4 className="text-white font-bold text-base pb-2">Key Benefits:</h4>
-      <ul className="list-disc list-inside bullet-custom">
-        {features.map((point, index) => (
-          <li key={index} className="text-gray-300">{point}</li>
-        ))}
-      </ul>
-      <button className="flex items-center gap-2 text-white bg-[#306ee8] px-4 py-2 rounded mt-4">
-        Learn More <ArrowRight className="inline w-4 h-4" />
-      </button>
-    </div>
-  </div>
-);
 
-const InitiativeCardReverse = ({ title, icon, description, features, image }) => (
-  <div className="rounded-lg overflow-hidden shadow-lg flex items-center flex-row-reverse">
-    <img src={image} alt={title} className="h-100 hidden md:flex object-cover flex-11/20" />
-    <div className="h-100 bg-[#0d121c] p-8 flex-9/20">
-      <div className="flex items-center gap-3 pb-5">
-        <div className="w-[50px] h-[50px] rounded-2xl bg-[#101c30] flex items-center justify-center">
-          {icon}
-        </div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <div className="w-full lg:w-45/100 flex justify-center self-start">
+        <img
+          src={image || IIT}
+          alt={title}
+          className="rounded-2xl shadow-lg w-full object-cover"
+        />
       </div>
-      <p className="text-gray-400 mb-4">{description}</p>
-      <h4 className="text-white font-bold text-base pb-2">Key Benefits:</h4>
-      <ul className="list-disc list-inside bullet-custom">
-        {features.map((point, index) => (
-          <li key={index} className="text-gray-300">{point}</li>
-        ))}
-      </ul>
-      <button className="flex items-center gap-2 text-white bg-[#306ee8] px-4 py-2 rounded mt-4">
-        Learn More <ArrowRight className="inline w-4 h-4" />
-      </button>
-    </div>
-  </div>
-);
+    </section>
+  );
+};
 
-const Initiative = ({ setShrink,shrink, SVGs }) => {
-  const { ref, inView } = useInView();
-
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    console.log(inView);
-    setShrink(inView);
-  }, [inView]);
+const Initiative = ({ shrink, SVGs }) => {
 
   return (
     <div>
       <div className="absolute top-0 w-full z-20">
-          <Navbar SVGs={SVGs} shrink={shrink} />
+        <Navbar SVGs={SVGs} shrink={true} />
+      </div>
+
+      <div className="w-full bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] text-white flex flex-col items-center justify-center  py-30">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-7xl font-bold mb-6">Our Initiatives</h2>
+          <p className="text-3xl text-gray-400 max-w-3xl mx-auto">
+            Comprehensive programs designed to support every stage of your entrepreneurial journey
+          </p>
         </div>
-      <div className="w-full bg-black text-white flex flex-col items-center justify-center px-20 py-30">
-      {/* Heading */}
-      <div className="text-center mb-14">
-        <h2 className="text-7xl font-bold mb-6">Our Initiatives</h2>
-        <p className="text-3xl text-gray-400 max-w-3xl mx-auto">
-          Comprehensive programs designed to support every stage of your entrepreneurial journey
-        </p>
-      </div>
-      <div className="w-full flex flex-col items-center justify-center gap-10" ref={ref}>
-        {Array.from({ length: Math.ceil(initiatives.length / 2) }).map((_, pairIndex) => (
-          <div key={pairIndex} className="w-full flex flex-wrap items-center justify-center gap-10">
-            {initiatives[pairIndex * 2] && (
-              <InitiativeCard
-                {...initiatives[pairIndex * 2]}
+
+        <div className="w-full flex flex-col items-center justify-center gap-10">
+          {Array.isArray(initiatives) &&
+            initiatives.map((item, idx) => (
+              <AboutSection
+                key={`${item.title || 'initiative'}-${idx}`}
+                title={item.title}
+                description={item.description}
+                image={item.image}
+                reverse={idx % 2 === 1}
               />
-            )}
-            {initiatives[pairIndex * 2 + 1] && (
-              <InitiativeCardReverse
-                {...initiatives[pairIndex * 2 + 1]}
-              />
-            )}
-          </div>
-        ))}
+            ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
