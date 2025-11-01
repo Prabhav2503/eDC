@@ -17,23 +17,24 @@ const initiatives = [
     image: IIT,
   },
   {
-    title: 'Regionals',
-    description: ' Regionals takes eDC beyond IIT Delhi, to India’s top startup hubs including Hyderabad, Bengaluru, and Mumbai. With Blueprint, Moonshot, and the Startup Clinic, it brings funding, mentorship, and networking opportunities to student and early-stage founders nationwide.',
-    image: IIT,
-  },
-  {
-    title: 'Anastomosis ',
-    description: 'Anastomosis inspires young innovators by introducing school students to entrepreneurship through interactive bootcamps, competitions, and mentorship. It blends learning with real-world experience, empowering them to think creatively and take their first steps toward building ventures.',
-    image: IIT,
-  },
-  {
     title: 'Industry Connect',
     description: 'Industry Connect by eDC IIT Delhi bridges academia and industry, giving students real-world exposure through Trend Talks, industry visits, and global startup events. It empowers students to observe operations firsthand, engage with leaders, and apply critical thinking to innovate around real-world challenges.',
     image: IIT,
   },
   {
+    title: 'Regionals',
+    description: ' Regionals takes eDC beyond IIT Delhi, to India’s top startup hubs including Hyderabad, Bengaluru, and Mumbai. With Blueprint, Moonshot, and the Startup Clinic, it brings funding, mentorship, and networking opportunities to student and early-stage founders nationwide.',
+    image: IIT,
+  },
+  
+  {
     title: 'Kinesis ',
     description: 'Kinesis (Bootcamp, workshops, Musketeers, Hackathons)  is our skill-building entrepreneurship program that helps students turn ideas into ventures. Through bootcamps, workshops on MVP building and venture creation, hackathons, and competitions, it provides mentorship, guidance, and opportunities to innovate, collaborate, and bring ideas to life.',
+    image: IIT,
+  },
+  {
+    title: 'Anastomosis ',
+    description: 'Anastomosis inspires young innovators by introducing school students to entrepreneurship through interactive bootcamps, competitions, and mentorship. It blends learning with real-world experience, empowering them to think creatively and take their first steps toward building ventures.',
     image: IIT,
   },
 ];

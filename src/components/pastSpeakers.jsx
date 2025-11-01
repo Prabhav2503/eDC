@@ -2,12 +2,12 @@ import React, {useRef, useEffect} from "react";
 import ekansh from '../assets/ekansh_core.webp';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import {Speakers} from "../utility/teams"
+import {Speakers} from "../utility/teams.js"
 
 
 
 //Card Component
-const Card = ({ member, isCore = false }) => {
+const Card = ({ member, isCore = false },) => {
   return (
     <div className="group cursor-pointer">
       <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl border border-gray-700/30 ${
@@ -70,7 +70,7 @@ const Card = ({ member, isCore = false }) => {
   );
 };
 
-const pastSpeakers = () => {
+const pastSpeakers = ({PNG}) => {
   const splideRef = useRef(null);
 
   useEffect(() => {
