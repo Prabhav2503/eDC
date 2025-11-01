@@ -8,17 +8,17 @@ import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
 import Resource from './pages/Resource'
 import Gallery from './pages/Gallery'
+import Navbar from './components/navbar'
 
 import Footer from './components/footer'
 import Preloader from './components/preloader'
 
 function App() {
-  const [shrink, setShrink] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     setIsLoading(true)
-    // Simulate loading time for the preloader
+    // Simulate loading time for the preloader  
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 4600) // 5 seconds loading time
@@ -28,13 +28,14 @@ function App() {
 
   return (
         <div>
+          <div className='fixed top-0 z-30 w-full'><Navbar SVGs={SVGs} /></div>
           <Preloader isLoading={isLoading} />
           {!isLoading && (
             <>
               <Routes>
-                <Route path="/" element={<Home JPG={JPG} SVGs={SVGs} setShrink={setShrink} shrink={shrink} />} />
+                <Route path="/" element={<Home JPG={JPG} SVGs={SVGs} PNG={PNG}  />} />
                 <Route path="/about" element={<About JPG={JPG}  SVGs={SVGs} PNG={PNG} />} />
-                <Route path="/initial" element={<Initiative setShrink={setShrink} shrink={shrink} SVGs={SVGs} />} />
+                <Route path="/initial" element={<Initiative  />} />
                 <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
                 <Route path="/resources" element={<Resource SVGs={SVGs}/>} />
                 <Route path="/gallery" element={<Gallery SVGs={SVGs} IMAGES={IMAGES} />} />
