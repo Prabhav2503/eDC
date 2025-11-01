@@ -5,7 +5,7 @@ const AboutHome = ({ JPG }) => {
     <section className="w-full bg-transparent text-white py-12 px-6 sm:py-20 sm:px-12 flex flex-col lg:flex-row items-center justify-between gap-10">
     
       <div className="w-full h-full flex flex-col justify-center lg:w-1/2">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center lg:text-left" style={{ fontFamily: "Montserrat" }}>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6  w-full text-center" style={{ fontFamily: "Montserrat" }}>
           Who We Are
         </h2>
         <p className="text-gray-300 text-base md:text-xl leading-relaxed lg:pb-50 text-center lg:text-left">
