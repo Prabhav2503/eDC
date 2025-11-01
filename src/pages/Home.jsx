@@ -19,12 +19,12 @@ const Home = ({ JPG,SVGs, PNG }) => {
 
 
 return (
-      <div>
+      <div >
 
         <div className="sticky top-0">
           <Landing JPG={JPG} />
         </div>
-        <div className="sticky top-0">
+        <div className="sticky top-0 bg-white">
           {/* small divider gradient to visually separate landing and content on all sizes */}
           {/* <div className="w-full bg-gradient-to-t from-[#0F0C29] to-transparent h-4" /> */}
       <div  className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
@@ -32,7 +32,9 @@ return (
         <AboutHome JPG={JPG} />
         <Stats JPG={JPG} />
         <Incentive />
+        </div>
         <PastSpeakers PNG={PNG} />
+        <div  className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
         <Testimonial />
       </div>
         </div>

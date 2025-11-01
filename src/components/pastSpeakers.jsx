@@ -10,8 +10,8 @@ import {Speakers} from "../utility/teams.js"
 const Card = ({ member, isCore = false },) => {
   return (
     <div className="group cursor-pointer">
-      <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl border border-gray-700/30 ${
-        isCore ? 'min-h-[320px]' : 'min-h-[280px]'
+      <div className={`relative bg-[#D9D9D9]  overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl ${
+        isCore ? 'min-h-[30px]' : 'min-h-[10px]'
       }`}>
         {/* Background Image that expands on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
@@ -25,9 +25,9 @@ const Card = ({ member, isCore = false },) => {
         </div>
 
         {/* Normal state content */}
-        <div className="relative z-10 p-8 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
+        <div className="relative z-10 py-5 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
           {/* Profile Image with Zoom Effect */}
-          <div className={`mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 ${
+          <div className={`mx-auto mb-6 rounded-full overflow-hidden bg-white ${
             isCore ? 'w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40' : 'w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36'
           }`}>
             <img
@@ -53,7 +53,7 @@ const Card = ({ member, isCore = false },) => {
         </div>
 
         {/* Hover state content */}
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <h3 className={`font-bold text-white text-center mb-2 ${
             isCore ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
           }`}>
@@ -85,10 +85,10 @@ const pastSpeakers = ({PNG}) => {
             <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-16">
         {/* Core Team Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
             PAST SPEAKERS
           </h2>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto"/>
+          <div className="w-320 h-1 bg-black mx-auto"/>
         </div>
         <div className="w-full mx-auto px-8 ">
         <Splide
