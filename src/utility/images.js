@@ -1,5 +1,6 @@
 import logo from "../assets/edciitd.svg";
 import iitbuilding from "../assets/IIT.jpg"
+import statsbg from "../assets/statsbg.svg"
 import Ekansh from "../assets/ekansh_core.webp"  
 import edcteam from "../assets/edc-team.jpg"
 import chirag from "../assets/chirag_CR.png"
@@ -67,7 +68,8 @@ export const JPG = {
   Tanmay: Tanmay,
   Tripti: Tripti,
   Ekansh : Ekansh,
-  Vaibhav: Vaibhav
+  Vaibhav: Vaibhav,
+  statsbg: statsbg
 }
 
 export const PNG = {

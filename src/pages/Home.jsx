@@ -26,11 +26,11 @@ return (
         </div>
         <div className="sticky top-0">
           {/* small divider gradient to visually separate landing and content on all sizes */}
-          <div className="w-full bg-gradient-to-t from-[#0F0C29] to-transparent h-4" />
+          {/* <div className="w-full bg-gradient-to-t from-[#0F0C29] to-transparent h-4" /> */}
       <div  className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
         
         <AboutHome JPG={JPG} />
-        <Stats />
+        <Stats JPG={JPG} />
         <Incentive />
         <PastSpeakers PNG={PNG} />
         <Testimonial />
