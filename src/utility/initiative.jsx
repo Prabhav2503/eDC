@@ -9,8 +9,8 @@ const initiatives = [
 },
 
 {
-  title: 'Anastomosis',
-  description: 'Anastomosis is eDC IIT Delhi’s flagship program for school students across India, designed to ignite curiosity, creativity, and an entrepreneurial spirit early on. Through interactive bootcamps, workshops, and competitions, participants learn ideation, problem solving, and business fundamentals. Guided by IIT Delhi mentors and startup leaders, students gain hands-on exposure to innovation and teamwork. Open to students nationwide through a short quiz and nominal fee, Anastomosis nurtures young changemakers ready to dream big and create real impact.',
+  title: 'Industry Connect',
+  description: 'Industry Connect by eDC IIT Delhi bridges academia and industry through two key initiatives – Trend Talks and Industry Visits. Trend Talks are closed-room, Harvard-style discussions on emerging trends, market shifts, and technologies, fostering critical thinking and innovation. Industry Visits offer selected students firsthand exposure to real-world operations at companies like Vecmocon Technologies, Tsuyo Pvt. Ltd., and Chakr Innovations, enabling them to engage with professionals, understand challenges, and explore how ideas evolve into impactful, scalable solutions.',
   image: '',
 },
 
@@ -57,8 +57,8 @@ const initiatives = [
 },
 
 {
-  title: 'Industry Connect',
-  description: 'Industry Connect by eDC IIT Delhi bridges academia and industry through two key initiatives – Trend Talks and Industry Visits. Trend Talks are closed-room, Harvard-style discussions on emerging trends, market shifts, and technologies, fostering critical thinking and innovation. Industry Visits offer selected students firsthand exposure to real-world operations at companies like Vecmocon Technologies, Tsuyo Pvt. Ltd., and Chakr Innovations, enabling them to engage with professionals, understand challenges, and explore how ideas evolve into impactful, scalable solutions.',
+  title: 'Anastomosis',
+  description: 'Anastomosis is eDC IIT Delhi’s flagship program for school students across India, designed to ignite curiosity, creativity, and an entrepreneurial spirit early on. Through interactive bootcamps, workshops, and competitions, participants learn ideation, problem solving, and business fundamentals. Guided by IIT Delhi mentors and startup leaders, students gain hands-on exposure to innovation and teamwork. Open to students nationwide through a short quiz and nominal fee, Anastomosis nurtures young changemakers ready to dream big and create real impact.',
   image: '',
 },
 
