@@ -10,16 +10,14 @@ const Navbar = ({ SVGs, shrink }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   const linkClass = ({ isActive }) =>
-    `px-4 py-2 rounded-lg font-bold ${shrink ? 'text-sm lg:text-xl' : 'text-sm lg:text-lg'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 '}`
+    `px-4 py-2 rounded-lg font-bold text-sm lg:text-xl ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 '}`
 
   const mobileLinkClass = ({ isActive }) =>
-    `block px-4 py-3 ${shrink ? 'text-lg' : 'text-base'} ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 '}`
+    `block px-4 py-3 text-lg text-base ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 '}`
 
   return (
     <div
-      className={`w-full bg-[#262626]/80 backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 ${
-        shrink ? 'scale-80 rounded-3xl font-semibold text-xl opacity-90' : ''
-      }`} style={{fontFamily:"Montserrat"}}
+      className={`w-full bg-[#25233E] backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 scale-80 rounded-3xl font-semibold text-xl opacity-90`} style={{fontFamily:"Montserrat"}}
     >
       {/* Main Navbar */}
   <div className="flex items-center justify-between px-4">

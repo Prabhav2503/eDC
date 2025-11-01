@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import AboutEDC from '../components/aboutus'
-import Navbar from "../components/navbar";
+
 import Team from '../components/team';
 
 const About = ({JPG,SVGs,PNG}) => {
@@ -12,14 +12,9 @@ const About = ({JPG,SVGs,PNG}) => {
 
 
   return (
-    <div>
-      <div className="absolute top-0 w-full z-20">
-          <Navbar SVGs={SVGs} shrink={true} />
-        </div>
     <div  className="text-white bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] ">
       <AboutEDC JPG={JPG} />
       <Team  JPG={JPG} PNG={PNG} />
-    </div>
     </div>
   )
 }

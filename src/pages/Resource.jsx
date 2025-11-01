@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Navbar from "../components/navbar";
 import Blogs from '../components/blogs';
 import Resources from '../components/resources';
 
@@ -11,9 +10,6 @@ const Resource = ({JPG,SVGs}) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
-      <div className="absolute top-0 w-full z-20">
-        <Navbar SVGs={SVGs} shrink={true} />
-      </div>
       
       <div className="relative pt-24 px-6 sm:px-8 md:px-12 lg:px-20">
         {/* Header Section */}

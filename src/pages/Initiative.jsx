@@ -1,5 +1,4 @@
 import IIT from '../assets/IIT.jpg';
-import Navbar from '../components/navbar';
 import initiatives from '../utility/initiative.jsx';
 
 const AboutSection = ({ image, title, description, reverse = false }) => {
@@ -32,13 +31,10 @@ const AboutSection = ({ image, title, description, reverse = false }) => {
   );
 };
 
-const Initiative = ({ shrink, SVGs }) => {
+const Initiative = ({ SVGs }) => {
 
   return (
     <div>
-      <div className="absolute top-0 w-full z-20">
-        <Navbar SVGs={SVGs} shrink={true} />
-      </div>
 
       <div className="w-full bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] text-white flex flex-col items-center justify-center  py-30">
         {/* Heading */}
