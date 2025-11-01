@@ -23,11 +23,7 @@ const coreTeam = {
     position: "Overall Coordinator",
     image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
   },
-  pqr: {
-    name: "pqr",
-    position: "Overall Coordinator",
-    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM"
-  }
+
 };
 
 const teamMembers = {
@@ -35,11 +31,6 @@ const teamMembers = {
     name: "Tripti",
     position: "AnF",
     image: JPG.Tripti
-  },
-  lmn: {
-    name: "lmn", 
-    position: "AnF ",
-    image: "https://via.placeholder.com/400x400/6366F1/FFFFFF?text=PS"
   },
   chirag: {
     name: "Chirag Bhambri",
@@ -205,43 +196,17 @@ const Team = ({ JPG }) => {
         </div>
 
         {/* Core Team Members - custom layout: 3 on first row, 2 centered on second */}
-       {/* Core Team Members - 3 on first row, 2 centered on second */}
-{/* Core Team Members - 3 on first row, 2 centered on second */}
-{
-  (() => {
-    const coreKeys = Object.keys(coreTeam);
-    const firstRow = coreKeys.slice(0, 3);
-    const secondRow = coreKeys.slice(3);
-
-    return (
-      <div className="mb-20 space-y-8">
-        {/* First Row - exactly 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          {firstRow.map((key) => (
-            <div
-              key={key}
-              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px]"
-            >
-              <TeamCard member={coreTeam[key]} isCore={true} />
-            </div>
-          ))}
-        </div>
-
-        {/* Second Row - 2 cards centered */}
-        <div className="flex justify-center gap-8 flex-wrap">
-          {secondRow.map((key) => (
-            <div
-              key={key}
-              className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px]"
-            >
-              <TeamCard member={coreTeam[key]} isCore={true} />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  })()
-}
+                {/* Core Team Members - 4 in a row */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 justify-items-center">
+                  {Object.keys(coreTeam).map((key) => (
+                    <div
+                      key={key}
+                      className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px]"
+                    >
+                      <TeamCard member={coreTeam[key]} isCore={true} />
+                    </div>
+                  ))}
+                </div>
 
         {/* Additional Team Members Heading */}
         <div className="text-center mb-12">
