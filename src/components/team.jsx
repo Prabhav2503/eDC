@@ -52,11 +52,6 @@ const teamMembers = {
     position: "Design",
     image: PNG.Pratibha
   },
-  xyz: {
-    name: "xyz",
-    position: "Design",
-    image: "https://via.placeholder.com/400x400/0EA5E9/FFFFFF?text=DM"
-  },
   dishit: {
     name: "Dishit Johari",
     position: "Events",
@@ -82,8 +77,8 @@ const teamMembers = {
     position: "Media",
     image: PNG.Tejas
   },
-  pqr: {
-    name: "pqr",
+  saket: {
+    name: "Saket Saraswat",
     position: "Media", 
     image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SP"
   },
@@ -97,9 +92,19 @@ const teamMembers = {
     position: "Startup Support",
     image: JPG.Vaibhav
   },
-  mno: {
-    name: "mno",
+  harshit: {
+    name: "Harshit Verma",
     position: "Startup Support",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA"
+  },
+  nupur: {
+    name: "Nupur Jain",
+    position: "Publicity",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA"
+  },
+  shreya: {
+    name: "Shreya Yadav",
+    position: "Publicity",
     image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA"
   },
   // rituVerma: {
