@@ -90,7 +90,7 @@ const BlogCard = ({ blog }) => {
 
 const Blogs = ({ JPG }) => {
   return (
-    <div className="w-full bg-[#0A0E1A] text-white py-16">
+    <div className="w-full bg-transparent text-white py-16">
       <div className="px-6 sm:px-8 md:px-12 lg:px-20">
         {/* Header Section */}
         <div className="text-center mb-12">
