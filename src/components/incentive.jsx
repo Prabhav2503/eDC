@@ -22,13 +22,13 @@ const initiatives = [
   },
   {
     title: 'Regionals',
-    description: 'Taking eDC Pan India',
+    description: ' Taking eDC Pan India',
     image: IIT,
     logo: logo,
   },
   {
     title: 'Anastomosis ',
-    description: 'Entrepreneurship for School Students',
+    description: 'Enterpreneursh   for School Students',
     image: IIT,
     logo: logo,
   },
@@ -38,6 +38,7 @@ const initiatives = [
     image: IIT,
     logo: logo,
   },
+  
   {
     title: 'Kinesis ',
     description: 'Bootcamps. Workshops. Hackathons',

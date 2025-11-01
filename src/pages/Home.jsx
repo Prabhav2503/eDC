@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 import Navbar from "../components/navbar";
 import Testimonial from "../components/testimonial";
 
-const Home = ({ JPG,SVGs,shrink, setShrink }) => {
+const Home = ({ JPG,SVGs,shrink, setShrink, PNG }) => {
   const { ref, inView } = useInView();
 
   // Scroll to top when component mounts
@@ -38,7 +38,7 @@ return (
         <AboutHome JPG={JPG} />
         <Stats />
         <Incentive />
-        <PastSpeakers />
+        <PastSpeakers PNG={PNG} />
         <Testimonial />
       </div>
         </div>

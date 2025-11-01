@@ -17,6 +17,38 @@ import Tripti from "../assets/tripti_AnF.jpg"
 import Vaibhav from "../assets/VaibhavPandey_SS.jpg"
 import galleryleftarrow from "../assets/galleryleftarrow.svg"
 import galleryrightarrow from "../assets/galleryrightarrow.svg"
+import AlokMittal from "../assets/speakers/AlokMittal.png"
+import AmanGupta from "../assets/speakers/AmanGupta.png"
+import AnandChandrasekaran from "../assets/speakers/AnandChandrasekaran.png"
+import AshneerGrover from "../assets/speakers/AshneerGrover.png"
+import AzharIqubal from "../assets/speakers/AzharIqubal.png"
+import BillGates from "../assets/speakers/BillGates.png"
+import BryanJohnson from "../assets/speakers/BryanJohnson.png"
+import BVRMohanReddy from "../assets/speakers/BVRMohanReddy.png"
+import DaraKhosrowshahi from "../assets/speakers/DaraKhosrowshahi.png"
+import DeepinderGoyal from "../assets/speakers/DeepinderGoyal.png"
+import ElieSeidman from "../assets/speakers/ElieSeidman.png"
+import GauravChaudhary from "../assets/speakers/GauravChaudhary.png"
+import GurudevRaviShankar from "../assets/speakers/GurudevRaviShankar.png"
+import HemantTaneja from "../assets/speakers/HemantTaneja.png"
+import JackDorsey from "../assets/speakers/JackDorsey.png"
+import KiranBedi from "../assets/speakers/KiranBedi.png"
+import KunalBahl from "../assets/speakers/KunalBahl.png"
+import ManojKohli from "../assets/speakers/ManojKohli.png"
+import MarkZuckerberg from "../assets/speakers/MarkZuckerberg.png"
+import NitinGadkari from "../assets/speakers/NitinGadkari.png"
+import NuseirYassin from "../assets/speakers/NuseirYassin.png"
+import PrashantPitti from "../assets/speakers/PrashantPitti.png"
+import PrashantTandon from "../assets/speakers/PrashantTandon.png"
+import RaghuramRajan from "../assets/speakers/RaghuramRajan.png"
+import RajanAnandan from "../assets/speakers/RajanAnandan.png"
+import RohitBansal from "../assets/speakers/RohitBansal.png"
+import SachinBansal from "../assets/speakers/SachinBansal.png"
+import SanjeevBikhchandani from "../assets/speakers/SanjeevBikhchandani.png"
+import VijayShekharSharma from "../assets/speakers/VijayShekharSharma.png"
+
+
+
 
 export const SVGs = {
   logo:logo,
@@ -44,6 +76,36 @@ export const PNG = {
   Kabir: Kabir,
    Pratibha: Pratibha,
    Tejas: Tejas,
+   AlokMittal: AlokMittal,
+AmanGupta: AmanGupta,
+AnandChandrasekaran: AnandChandrasekaran,
+AshneerGrover: AshneerGrover,
+AzharIqubal: AzharIqubal,
+BillGates: BillGates,
+BryanJohnson: BryanJohnson,
+BVRMohanReddy: BVRMohanReddy,
+DaraKhosrowshahi: DaraKhosrowshahi,
+DeepinderGoyal: DeepinderGoyal,
+ElieSeidman: ElieSeidman,
+GauravChaudhary: GauravChaudhary,
+GurudevRaviShankar: GurudevRaviShankar,
+HemantTaneja: HemantTaneja,
+JackDorsey: JackDorsey,
+KiranBedi: KiranBedi,
+KunalBahl: KunalBahl,
+ManojKohli: ManojKohli,
+MarkZuckerberg: MarkZuckerberg,
+NitinGadkari: NitinGadkari,
+NuseirYassin: NuseirYassin,
+PrashantPitti: PrashantPitti,
+PrashantTandon: PrashantTandon,
+RaghuramRajan: RaghuramRajan,
+RajanAnandan: RajanAnandan,
+RohitBansal: RohitBansal,
+SachinBansal: SachinBansal,
+SanjeevBikhchandani: SanjeevBikhchandani,
+VijayShekharSharma: VijayShekharSharma,
+
 }
 
 export const Incentive={
@@ -52,6 +114,38 @@ export const Incentive={
 
 export const IMAGES = {
 
+}
+
+export const SPEAKERS = {
+  AlokMittal,
+  AmanGupta,
+  AnandChandrasekaran,
+  AshneerGrover,
+  AzharIqubal,
+  BillGates,
+  BryanJohnson,
+  BVRMohanReddy,
+  DaraKhosrowshahi,
+  DeepinderGoyal,
+  ElieSeidman,
+  GauravChaudhary,
+  GurudevRaviShankar,
+  HemantTaneja,
+  JackDorsey,
+  KiranBedi,
+  KunalBahl,
+  ManojKohli,
+  MarkZuckerberg,
+  NitinGadkari,
+  NuseirYassin,
+  PrashantPitti,
+  PrashantTandon,
+  RaghuramRajan,
+  RajanAnandan,
+  RohitBansal,
+  SachinBansal,
+  SanjeevBikhchandani,
+  VijayShekharSharma
 }
 
 
