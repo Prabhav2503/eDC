@@ -21,7 +21,7 @@ import galleryleftarrow from "../assets/galleryleftarrow.svg"
 import galleryrightarrow from "../assets/galleryrightarrow.svg"
 import landing1 from "../assets/landingPicture/landing_1.JPG"
 import landing2 from "../assets/landingPicture/landing_10.jpg"
-import landing3 from "../assets/landingPicture/landing_3.jpg"
+// import landing3 from "../assets/landingPicture/landing_3.jpg"
 import landing4 from "../assets/landingPicture/landing_4.JPG"
 import landing5 from "../assets/landingPicture/landing_9.jpg"
 import landing6 from "../assets/landingPicture/landing_6.jpg"
@@ -86,7 +86,7 @@ export const JPG = {
   statsbg: statsbg,
   landing1: landing1,
   landing2: landing2,
-  landing3: landing3,
+  // landing3: landing3,
   landing4: landing4,
   landing5: landing5,
   landing6: landing6,
