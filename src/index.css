@@ -31,3 +31,11 @@
   }
 }
 
+/* Remove Splide edge fade effect */
+.splide__track::before,
+.splide__track::after {
+  display: none !important;
+  background: none !important;
+}
+
+

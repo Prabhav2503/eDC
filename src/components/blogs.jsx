@@ -4,9 +4,9 @@ import blogsData from "../utility/edc_blogs.js";
 // Blog Card Component
 const BlogCard = ({ blog }) => {
   return (
-    <div className="group cursor-pointer bg-[#1A2332] rounded-2xl overflow-hidden border border-gray-700/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+    <div className="group cursor-pointer bg-[#2D1B66] rounded-xl overflow-hidden border border-gray-700/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       {/* Blog Image */}
-      <div className="relative h-48 sm:h-52 lg:h-66 overflow-hidden">
+      <div className="relative h-40 sm:h-52 lg:h-60 overflow-hidden">
         <img
           src={blog.image}
           alt={blog.title}
@@ -42,36 +42,8 @@ const BlogCard = ({ blog }) => {
         {/* Action Icons */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <button className="p-2 rounded-full border border-gray-600/50 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all duration-300">
-              <svg
-                className="w-4 h-4 text-gray-400 hover:text-yellow-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-            </button>
-            <button className="p-2 rounded-full border border-gray-600/50 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300">
-              <svg
-                className="w-4 h-4 text-gray-400 hover:text-blue-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                />
-              </svg>
-            </button>
+            
+            
           </div>
 
           <a
@@ -93,18 +65,23 @@ const Blogs = ({ JPG }) => {
     <div className="w-full bg-transparent text-white py-16">
       <div className="px-6 sm:px-8 md:px-12 lg:px-20">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Latest Blogs
+        
+          <div className="mb-8 text-center">
+          <h1 className="text-3xl sm:text-4xl text-black lg:text-5xl font-bold mb-2">
+            LATEST BLOGS
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
+          <div className="w-full h-0.5 bg-black"></div>
+        </div>
+        <div className="text-center">
+          <p className="text-black text-lg  md:text-xl max-w-3xl mx-auto">
             Stay updated with the latest insights, trends, and stories from the
-            entrepreneurship world
+           <p>entrepreneurship world</p>             
           </p>
+        </div>
         </div>
 
         {/* Blogs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-20 md:px-[60px] lg:gap-8">
           {blogsData.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
@@ -117,7 +94,7 @@ const Blogs = ({ JPG }) => {
           </button>
         </div> */}
       </div>
-    </div>
+    
   );
 };
 
