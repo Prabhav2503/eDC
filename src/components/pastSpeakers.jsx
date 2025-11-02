@@ -10,8 +10,8 @@ import {Speakers} from "../utility/teams.js"
 const Card = ({ member, isCore = false },) => {
   return (
     <div className="group cursor-pointer">
-      <div className={`relative bg-[#D9D9D9]  overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl ${
-        isCore ? 'min-h-[30px]' : 'min-h-[10px]'
+      <div className={`relative bg-[#D9D9D9]  overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl 0 ${
+        isCore ? 'min-h-[320px]' : 'min-h-[200px]'
       }`}>
         {/* Background Image that expands on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
@@ -25,7 +25,7 @@ const Card = ({ member, isCore = false },) => {
         </div>
 
         {/* Normal state content */}
-        <div className="relative z-10 py-5 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
+        <div className="relative z-10 p-8 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
           {/* Profile Image with Zoom Effect */}
           <div className={`mx-auto mb-6 rounded-full overflow-hidden bg-white ${
             isCore ? 'w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40' : 'w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36'
@@ -53,7 +53,7 @@ const Card = ({ member, isCore = false },) => {
         </div>
 
         {/* Hover state content */}
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <h3 className={`font-bold text-white text-center mb-2 ${
             isCore ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
           }`}>
