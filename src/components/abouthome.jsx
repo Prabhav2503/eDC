@@ -6,7 +6,7 @@ import React from "react";
       {/* Outer container: full width, with padding for spacing */}
       <div className="max-w-7xl mx-auto">
 
-```
+
     {/* Heading Section */}
     <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
       What is eDC

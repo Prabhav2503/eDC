@@ -5,6 +5,7 @@ import regionals from '../assets/regionals.jpg';
 import becon from '../assets/becon.jpg';
 import kinesis from '../assets/kinesis.jpg';
 import anastomosis from '../assets/anastomosis.jpg';
+import { useNavigate } from 'react-router-dom';
 
 // Sample images - replace with your actual image paths
 const initiatives = [
@@ -41,9 +42,10 @@ const initiatives = [
 ];
 
 export default function Incentive() {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const TRANSITION_DURATION = 5000; // 5 seconds per slide
+  const TRANSITION_DURATION = 3000; // 5 seconds per slide
 
   useEffect(() => {
     const progressInterval = setInterval(() => {
@@ -92,7 +94,7 @@ export default function Incentive() {
           </p>
 
           <button 
-            onClick={handleKnowMore}
+            onClick={() => (navigate('/initial'))}
             className="text-base sm:text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
           >
             Know More
