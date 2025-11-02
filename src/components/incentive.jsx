@@ -1,36 +1,42 @@
 import { useState, useEffect } from 'react';
+import venturestudio from '../assets/venturestudio.jpg';
+import industryconnect from '../assets/industryconnect.jpg';   
+import regionals from '../assets/regionals.jpg';
+import becon from '../assets/becon.jpg';
+import kinesis from '../assets/kinesis.jpg';
+import anastomosis from '../assets/anastomosis.jpg';
 
 // Sample images - replace with your actual image paths
 const initiatives = [
   {
     title: 'Venture Studio',
     description: 'Alumni-Powered Startup Accelerator',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop',
+    image: venturestudio,
   },
   {
     title: 'BECon',
     description: 'Business and Entrepreneurship Conclave',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop',
+    image:becon ,
   },
   {
     title: 'Regionals',
     description: 'Taking eDC Pan India',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    image: regionals,
   },
   {
     title: 'Anastomosis',
     description: 'Entrepreneurship for School Students',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop',
+    image: anastomosis,
   },
   {
     title: 'Industry Connect',
     description: 'Where Academia Meets Industry',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop',
+    image: industryconnect,
   },
   {
     title: 'Kinesis',
     description: 'Bootcamps. Workshops. Hackathons',
-    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop',
+    image: kinesis,
   },
 ];
 
@@ -78,11 +84,11 @@ export default function Incentive() {
       </div>
 
       {/* Main Content Container */}
-      <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-7xl relative mx-auto w-full">
+      <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-7xl relative mx-auto w-full bg-[#E8E4F3] rounded-3xl px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
         {/* Left Side - Text Content */}
         <div className="w-full lg:w-1/4 space-y-4 lg:space-y-6 lg:mt-55">
-          <p className="text-base sm:text-lg leading-relaxed mt-10">
-            We empower young minds, early-stage startups, and professionals to think big.
+          <p className="text-base sm:text-lg lg:text-md lg:font-bold leading-relaxed mt-10">
+            {currentInitiative.description}
           </p>
 
           <button 
@@ -95,11 +101,11 @@ export default function Incentive() {
 
         {/* Center - Image */}
         <div className="w-full lg:w-1/2 relative">
-          <div className="relative rounded-lg overflow-hidden shadow-2xl bg-gray-200">
+          <div className="relative rounded-md overflow-hidden shadow-2xl bg-gray-200">
             <img
               src={currentInitiative.image}
               alt={currentInitiative.title}
-              className="w-full h-64 sm:h-80 lg:h-[400px] object-cover transition-all duration-500"
+              className="w-full h-64 sm:h-80 lg:h-[330px] object-cover transition-all duration-500"
               key={currentIndex}
             />
           </div>
@@ -107,7 +113,7 @@ export default function Incentive() {
         <div className='w-1/4'/>
         {/* Right Side - Heading */}
         <div className=" absolute right-10 top-0 w-full lg:w-[35%] flex items-start">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-700 leading-tight text-left transition-all duration-500">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#3B2486] leading-tight text-right transition-all duration-500">
             {currentInitiative.title.toUpperCase()}
           </h2>
         </div>

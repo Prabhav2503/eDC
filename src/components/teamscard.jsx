@@ -18,6 +18,7 @@ const TeamsCard = ({ name, position, image, linkedin, gmail }) => {
         shadow-[0_10px_30px_rgba(0,0,0,0.2)]
         h-80 md:h-[304px] 
         flex items-start pt-6 justify-center
+        
       "
     >
       {/* Full-bleed image that FADES IN on hover */}

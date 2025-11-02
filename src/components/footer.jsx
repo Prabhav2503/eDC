@@ -1,11 +1,12 @@
 import React from 'react';
 import bird from "../assets/Vector.svg";
 import edc from  "../assets/edciitd.svg";
+import footeredc from "../assets/footeredc.png"
 import {Mail, MapPin, Instagram,Linkedin, Facebook } from "lucide-react"
 const footer = () => {
   return (
     <div className='flex flex-col relative md:min-h-[455px] md:px-[60px]'>
-      <img src={bird} alt="" className='absolute top-0 lg:right-[110px]' />
+      <img src={footeredc} alt="" className='absolute top-0 w-32 lg:right-[130px]' />
       <div className='lg:mt-[35px] bg-[#2D1B66] flex-1 flex-col  rounded-t-4xl'>
         <div className='flex justify-evenly md:px-[74px] md:pt-[65px]'>
           <div className='flex flex-col md:gap-[52px]'>

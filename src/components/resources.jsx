@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
+import tree from "../assets/Group.png";
 
 // Dummy resources data
 const resourcesData = [
@@ -154,54 +155,74 @@ const ResourceCard = ({ resource, index }) => {
 };
 
 const Resources = ({ JPG }) => {
+
   const [visibleResources, setVisibleResources] = useState(4);
   
   const { ref: headerRef, inView: headerInView } = useInView({
     threshold: 0.3,
     triggerOnce: true
   });
+  const handleClick = () => {
+  window.open("https://edciitd.notion.site/?v=d74695ec05bb4e98a9395ee263346b16", "_blank");
+};
 
   const loadMoreResources = () => {
     setVisibleResources(prev => Math.min(prev + 4, resourcesData.length));
   };
 
   return (
-    <div className="w-full bg-[#0A0E1A] text-white py-16">
-      <div className="px-6 sm:px-8 md:px-12 lg:px-20">
-        {/* Header Section */}
-        <div 
-          ref={headerRef}
-          className={`text-center mb-16 transform transition-all duration-1000 ${
-            headerInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Featured Resources
-          </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Explore our collection of case studies, tools, and insights that have helped thousands of entrepreneurs build successful ventures
-          </p>
-        </div>
-
-        {/* Resources List */}
-        <div className="space-y-8 mb-12">
-          {resourcesData.slice(0, visibleResources).map((resource, index) => (
-            <ResourceCard key={resource.id} resource={resource} index={index} />
-          ))}
-        </div>
-
-       
-        
+    <div className="w-full bg-white text-white">
+      
+      <div className="relative w-full min-h-screen bg-[#2D1B66] overflow-hidden">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 min-h-screen">
+    
+    {/* Left Side - Heading & Content */}
+        <div className="w-full lg:w-1/2 space-y-8 lg:space-y-10">
+      
+      {/* Heading with underline */}
+      <div>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          RESOURCES
+        </h1>
+        <div className="h-[3px] bg-white w-[850px]"></div>
       </div>
 
-      {/* Background Decoration */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl"></div>
+      {/* Subtext */}
+      <p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed max-w-xl">
+        Explore a curated list of resources to help you on your entrepreneurial journey.
+      </p>
+
+      {/* Notion Link Button */}
+      <div>
+        <button onClick={handleClick} className="border border-white text-white px-6 py-3 rounded-2xl text-base sm:text-lg font-medium hover:bg-white hover:text-[#221B52] transition-all duration-300">
+          KNOWLEDGE BASE
+        </button>
       </div>
     </div>
+
+    {/* Right Side - Tree Image */}
+    <div className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mb-0">
+      {/* Replace below line with your actual image */}
+      <img src={tree} alt="Resources Tree" className="size-150 object-contain" />
+    </div>
+  </div>
+
+
+
+        {/* Background Pattern/Decoration */}
+        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+            <div className="absolute top-20 left-10 w-32 h-32 border-2 border-cyan-400 rounded-full"></div>
+            <div className="absolute bottom-40 right-20 w-24 h-24 border-2 border-yellow-400 rounded-full"></div>
+            <div className="absolute top-1/3 right-1/4 w-16 h-16 border-2 border-purple-400 rounded-full"></div>
+          </div>
+        </div> */}
+      </div>
+
+      {/* Blogs Section - Keep as is */}
+      </div>
   );
 };
+
 
 export default Resources;

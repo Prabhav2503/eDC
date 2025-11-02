@@ -19,14 +19,7 @@ import React from "react";
       {/* Left Text Column */}
       <div className="md:w-2/3 text-sm md:text-base py-3 text-gray-800 leading-relaxed">
         <p>
-          We empower young minds, early-stage startups, and professionals to
-          think big, innovate fearlessly, and build impactful ventures. We
-          partner in your journey by providing the right blend of learning,
-          mentorship, and opportunities. Through workshops, bootcamps,
-          hackathons, competitions, mentorship programmes and funding
-          avenues, we create a thriving ecosystem to turn ideas into
-          reality. With a strong legacy since 2007, EDC continues to inspire
-          and shape the next generation of changemakers across India.
+          Entrepreneurship Development Cell (eDC), IIT Delhi is India’s largest student-driven organization committed to fostering a culture of innovation and entrepreneurship. Established in 2007, eDC has been at the forefront of empowering students, early-stage founders, and professionals to transform ideas into impactful ventures. Through a blend of experiential learning, mentorship, and industry engagement, eDC provides an enabling ecosystem where innovation thrives and ambition meets execution. At eDC, we don’t just encourage entrepreneurship - we enable it, empowering innovators to build what they believe in.
         </p>
       </div>
 
