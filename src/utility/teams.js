@@ -1,159 +1,152 @@
-import ekansh from '../assets/ekansh_core.webp';
-import {PNG} from "./images.js"
+import {JPG, PNG} from "./images.js"
 
-export const Speakers = 
-  [
-  {
-    "name": "Sachin Bansal",
-    "position": "Co-founder of Flipkart",
-    "image": PNG.SachinBansal
-  },
-  {
-    "name": "Kunal Bahl",
-    "position": "",
-    "image": PNG.KunalBahl
-  },
-  {
-    "name": "Azhar Iqbal",
-    "position": "",
-    "image": PNG.AzharIqubal
-  },
-  {
-    "name": "Alok Mittala",
-    "position": "",
-    "image": PNG.AlokMittal
-  },
-  {
-    "name": "Prashant (Bloom)",
-    "position": "",
-    "image": PNG.PrashantBloom
-  },
-  {
-    "name": "Rajan Anandan",
-    "position": "",
-    "image": PNG.RajanAnandan
-  },
-  {
-    "name": "Raghuram Rajan",
-    "position": "Former Governor of the RBI",
-    "image": PNG.RaghuramRajan
-  },
-  {
-    "name": "Anand Chandrasekaran",
-    "position": "Product leader and angel investor",
-    "image": PNG.AnandChandrasekaran
-  },
-  {
-    "name": "Sanjeev Bikhchandani",
-    "position": "Founder of Info Edge",
-    "image": PNG.SanjeevBikhchandani
-  },
-  {
-    "name": "Dara Khosrowshahi",
-    "position": "CEO of Uber",
-    "image": PNG.DaraKhosrowshahi
-  },
-  {
-    "name": "Deepinder Goyal",
-    "position": "Co-founder of Zomato",
-    "image": PNG.DeepinderGoyal
-  },
-  {
-    "name": "Mark Zuckerberg",
-    "position": "Founder of Meta (formerly Facebook)",
-    "image": PNG.MarkZuckerberg
-  },
-  {
-    "name": "Elie Seidman",
-    "position": "Former CEO of Tinder",
-    "image": PNG.ElieSeidman
-  },
-  {
-    "name": "Jack Dorsey",
-    "position": "Co-founder of Twitter and Block",
-    "image": PNG.JackDorsey
-  },
-  {
-    "name": "Aman Gupta",
-    "position": "Co-founder of boAt",
-    "image": PNG.AmanGupta
-  },
-  {
-    "name": "Ashneer Grover",
-    "position": "Co-founder of BharatPe",
-    "image": PNG.AshneerGrover
-  },
-  {
-    "name": "Kiran Bedi",
-    "position": "India's first female IPS Officer",
-    "image": PNG.KiranBedi
-  },
-  {
-    "name": "Hemant Taneja",
-    "position": "Managing Director at General Catalyst",
-    "image": PNG.HemantTaneja
-  },
-  {
-    "name": "Rohit Bansal",
-    "position": "Co-founder of Snapdeal",
-    "image": PNG.RohitBansal
-  },
-  {
-    "name": "Vijay Shekhar Sharma",
-    "position": "Founder of Paytm",
-    "image": PNG.VijayShekharSharma
-  },
-  {
-    "name": "Nitin Gadkari",
-    "position": "Minister for Road Transport & Highways of India",
-    "image": PNG.NitinGadkari
-  },
-  {
-    "name": "Bryan Johnson",
-    "position": "Founder of Kernel and Blueprint",
-    "image": PNG.BryanJohnson
-  },
-  {
-    "name": "Gaurav Chaudhary",
-    "position": "Creator of Technical Guruji",
-    "image": PNG.GauravChaudhary
-  },
-  {
-    "name": "Gurudev Ravi Shankar",
-    "position": "Founder of the Art of Living Foundation",
-    "image": PNG.GurudevRaviShankar
-  },
-  {
-    "name": "BVR Mohan Reddy",
-    "position": "Founder of Cyient",
-    "image": PNG.BVRMohanReddy
-  },
-  {
-    "name": "Nuseir Yassin",
-    "position": "Creator of Nas Daily",
-    "image": PNG.NuseirYassin
-  },
-  {
-    "name": "Manoj Kohli",
-    "position": "Country Head of SoftBank India",
-    "image": PNG.ManojKohli
-  },
-  {
-    "name": "Prashant Tandon",
-    "position": "Co-founder of Tata 1mg",
-    "image": PNG.PrashantTandon
-  },
-  {
-    "name": "Bill Gates",
-    "position": "",
-    "image": PNG.BillGates
-  }
+const coreTeam = [
+  {
+    name: "Ekansh Agarwal",
+    position: "Overall Coordinator",
+    image: JPG.Ekansh,
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+ {
+    name: "Tanmay Sharma",    
+    position: "Overall Coordinator",
+    image: JPG.Tanmay,
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+ {
+    name: "xyz",
+    position: "Overall Coordinator", 
+    image: "https://via.placeholder.com/400x400/374151/FFFFFF?text=SV",
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+ {
+    name: "abc",
+    position: "Overall Coordinator",
+    image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM",
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+
 ];
 
-export const Testimonials = [{
-  "name": "John Doe",
-  "position": "Founder, Example Corp",
-  "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure sed, animi soluta dolore incidunt, nihil aut rem reprehenderit eum aspernatur libero, facere atque. Omnis sequi ullam, id adipisci ea aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione voluptates veritatis, veniam qui nobis minus a sed delectus, ipsum velit maxime vero soluta saepe iste quo doloribus sapiente laborum.",
-  "image": ekansh
-}]
+const teamMembers = [
+  {
+    name: "Tripti",
+    position: "AnF",
+    image: JPG.Tripti,
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+  {
+    name: "Chirag Bhambri",
+    position: "Corporate Relations",
+    image: PNG.chirag,
+    gmail: "chirag.bhambri@gmail.com",
+    linkedin: "https://linkedin.com/in/chiragbhambri"
+  },
+  {
+    name: "Sarthak Gupta",
+    position: "Corporate Relations", 
+    image: PNG.Sarthak,
+    gmail: "sarthak.gupta@gmail.com",
+    linkedin: "https://linkedin.com/in/sarthakgupta"
+  },
+  {
+    name: "Nishka Murarka",
+    position: "Design",
+    image: JPG.Nishka,
+    gmail: "nishka.murarka@gmail.com",
+    linkedin: "https://linkedin.com/in/nishkamurarka"
+  },
+  {
+    name: "Pratibha Kashyap",
+    position: "Design",
+    image: PNG.Pratibha,
+    gmail: "pratibha.kashyap@gmail.com",
+    linkedin: "https://linkedin.com/in/pratibhakashyap"
+  },
+  {
+    name: "Dishit Johari",
+    position: "Events",
+    image: JPG.Dishit,
+    gmail: "dishit.johari@gmail.com",
+    linkedin: "https://linkedin.com/in/dishitjohari"
+  },
+  {
+    name: "Kabir", 
+    position: "Events",
+    image: PNG.Kabir,
+    gmail: "kabir@gmail.com",
+    linkedin: "https://linkedin.com/in/kabir"
+  },
+  {
+    name: "Lakshay Goel",
+    position: "Marketing",
+    image: JPG.Lakshay,
+    gmail: "lakshay.goel@gmail.com",
+    linkedin: "https://linkedin.com/in/lakshaygoel"
+  },
+  {
+    name: "Sakshi Sharma",
+    position: "Marketing",
+    image: JPG.Sakshi,
+    gmail: "sakshi.sharma@gmail.com",
+    linkedin: "https://linkedin.com/in/sakshisharma"
+  },
+  {
+    name: "Tejas Kamble",
+    position: "Media",
+    image: PNG.Tejas,
+    gmail: "tejas.kamble@gmail.com",
+    linkedin: "https://linkedin.com/in/tejaskamble"
+  },
+  {
+    name: "Saket Saraswat",
+    position: "Media", 
+    image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SP",
+    gmail: "saket.saraswat@gmail.com",
+    linkedin: "https://linkedin.com/in/saketsaraswat"
+  },
+  {
+    name: "Aghamarsh Chetluru",
+    position: "OC Office",
+    image: JPG.Aghamarsh,
+    gmail: "aghamarsh.chet@gmail.com",
+    linkedin: "https://linkedin.com/in/aghamarsh"
+  },
+  {
+    name: "Vaibhav Pandey",
+    position: "Startup Support",
+    image: JPG.Vaibhav,
+    gmail: "vaibhav.pandey@gmail.com",
+    linkedin: "https://linkedin.com/in/vaibhavpandey"
+  },
+  {
+    name: "Harshit Verma",
+    position: "Startup Support",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
+    gmail: "harshit.verma@gmail.com",
+    linkedin: "https://linkedin.com/in/harshitverma"
+  },
+  {
+    name: "Nupur Jain",
+    position: "Publicity",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
+    gmail: "nupur.jain@gmail.com",
+    linkedin: "https://linkedin.com/in/nupurjain"
+  },
+  {
+    name: "Shreya Yadav",
+    position: "Publicity",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
+    gmail: "shreya.yadav@gmail.com",
+    linkedin: "https://linkedin.com/in/shreyayadav"
+  }
+];
 
+
+
+export { coreTeam, teamMembers };

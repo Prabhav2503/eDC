@@ -16,7 +16,8 @@ const Navbar = ({ SVGs, shrink }) => {
     `block px-4 py-3 text-lg text-base ${isActive ? 'bg-[#1CB5E0]/5 text-[#1CB5E0] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 '}`
 
   return (
-    <div
+    <div className='w-full flex items-center'>
+      <div
       className={`w-full bg-[#25233E] backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 scale-80 rounded-3xl font-semibold text-xl opacity-90`} style={{fontFamily:"Montserrat"}}
     >
       {/* Main Navbar */}
@@ -34,9 +35,9 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/initial' className={linkClass}>
             Initiative
           </NavLink>
-          <NavLink to='/becon' className={linkClass}>
+          {/* <NavLink to='/becon' className={linkClass}>
             BECon
-          </NavLink>
+          </NavLink> */}
           <NavLink to='/resources' className={linkClass}>
             Resources
           </NavLink>
@@ -75,9 +76,9 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/initial' className={mobileLinkClass} onClick={toggleMenu}>
             Initiative
           </NavLink>
-          <NavLink to='/becon' className={mobileLinkClass} onClick={toggleMenu}>
+          {/* <NavLink to='/becon' className={mobileLinkClass} onClick={toggleMenu}>
             BECon
-          </NavLink>
+          </NavLink> */}
           <NavLink to='/resources' className={mobileLinkClass} onClick={toggleMenu}>
             Resources
           </NavLink>
@@ -91,6 +92,8 @@ const Navbar = ({ SVGs, shrink }) => {
           </div>
         </div>
       </div>
+    </div>
+
     </div>
   )
 }

@@ -12,8 +12,8 @@ const About = ({JPG,SVGs,PNG}) => {
 
 
   return (
-    <div  className="text-white bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] ">
-      <AboutEDC JPG={JPG} />
+    <div  className="bg-white">
+      {/* <AboutEDC JPG={JPG} /> */}
       <Team  JPG={JPG} PNG={PNG} />
     </div>
   )
