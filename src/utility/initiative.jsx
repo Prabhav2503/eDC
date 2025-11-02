@@ -8,7 +8,7 @@ import regionals from '../assets/regionals.jpg';
 import moonshot from '../assets/moonshot.jpg';
 import blueprint from '../assets/blueprint.jpg';
 import thesistoventure from '../assets/thesistoventure.jpg';
-import kinesis from '../assets/kinesis.jpg';
+import kinesis from '../assets/Kinesis.JPG';
 import anastomosis from '../assets/anastomosis.jpg';
 
 
