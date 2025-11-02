@@ -3,7 +3,7 @@ import venturestudio from '../assets/venturestudio.jpg';
 import industryconnect from '../assets/industryconnect.jpg';   
 import regionals from '../assets/regionals.jpg';
 import becon from '../assets/becon.jpg';
-import kinesis from '../assets/kinesis.jpg';
+import kinesis from '../assets/Kinesis.JPG';
 import anastomosis from '../assets/anastomosis.jpg';
 import { useNavigate } from 'react-router-dom';
 

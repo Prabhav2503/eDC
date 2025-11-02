@@ -3,9 +3,9 @@ import { Code, TrendingUp, Users, GraduationCap, Rocket, Briefcase, ArrowRight }
 import genesis from '../assets/genesis.jpg';
 import venturestudio from '../assets/venturestudio.jpg';
 import industryconnect from '../assets/industryconnect.jpg';   
-import startupclinic from '../assets/startupclinic.jpg';
+import startupclinic from '../assets/StartupClinic.JPG';
 import regionals from '../assets/regionals.jpg';
-import moonshot from '../assets/moonshot.jpg';
+import moonshot from '../assets/Moonshot.JPG';
 import blueprint from '../assets/blueprint.jpg';
 import thesistoventure from '../assets/thesistoventure.jpg';
 import kinesis from '../assets/Kinesis.JPG';
