@@ -1,101 +1,31 @@
-import React, {useRef, useEffect} from "react";
+import React from 'react';
 import ekansh from '../assets/ekansh_core.webp';
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
-import {Speakers} from "../utility/teams.js"
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
-
-
-//Card Component
-const Card = ({ member, isCore = false },) => {
+const Card = ({ image, name }) => {
   return (
-    <div className="group cursor-pointer">
-      <div className={`relative bg-[#D9D9D9]  overflow-hidden transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl 0 ${
-        isCore ? 'min-h-[320px]' : 'min-h-[200px]'
-      }`}>
-        {/* Background Image that expands on hover */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-full h-full object-cover"
-          />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-
-        {/* Normal state content */}
-        <div className="relative z-10 p-8 text-center group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
-          {/* Profile Image with Zoom Effect */}
-          <div className={`mx-auto mb-6 rounded-full overflow-hidden bg-white ${
-            isCore ? 'w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40' : 'w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36'
-          }`}>
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          {/* Member Info */}
-          <div className="space-y-2">
-            <h3 className={`font-bold text-white ${
-              isCore ? 'text-xl lg:text-2xl' : 'text-lg lg:text-xl'
-            }`}>
-              {member.name}
-            </h3>
-            <p className={`text-white font-medium ${
-              isCore ? 'text-base lg:text-lg' : 'text-sm lg:text-base'
-            }`}>
-              {member.position}
-            </p>
-          </div>
-        </div>
-
-        {/* Hover state content */}
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-          <h3 className={`font-bold text-white text-center mb-2 ${
-            isCore ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
-          }`}>
-            {member.name}
-          </h3>
-          <p className={`text-white font-medium text-center ${
-            isCore ? 'text-lg lg:text-xl' : 'text-base lg:text-lg'
-          }`}>
-            {member.position}
-          </p>
-        </div>
-      </div>
+    <div className="bg-[#D9D9D9] w-full md:max-w-[403px] md:h-[304px] flex flex-col items-center p-8 gap-5">
+      <img src={image} alt="" className="rounded-full md:size-48" />
+      <p className="text-white text-3xl font-semibold">{name}</p>
     </div>
   );
 };
 
-const pastSpeakers = ({PNG}) => {
-  const splideRef = useRef(null);
+// Capitalize component name for React
+const PastSpeakers = () => {
+  return (
+    <div className="flex flex-col w-full items-center bg-white relative overflow-x-hidden">
+      <h2 className="text-black font-bold md:text-[65px] w-full text-center">PAST SPEAKERS</h2>
+      <div className="bg-black md:mt-[10px] h-1 w-full" />
 
-  useEffect(() => {
-    const splide = splideRef.current?.splide;
-    if (splide) {
-      // Optional: Custom autoplay controls
-    }
-  }, []);
-  
-    return (
-        <div className="w-full bg-transparent text-white">
-            <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-16">
-        {/* Core Team Heading */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
-            PAST SPEAKERS
-          </h2>
-          <div className="w-320 h-1 bg-black mx-auto"/>
-        </div>
-        <div className="w-full mx-auto px-8 ">
+      {/* Constrain the carousel width + clip overflow */}
+      <div className="flex items-center justify-center w-full overflow-x-hidden">
         <Splide
-          ref={splideRef}
+          className="w-full max-w-[80vw] overflow-hidden" // <-- important
           options={{
-            type: "loop",
-            perPage: 4,
+            type: 'loop',
+            perPage: 3,
             perMove: 1,
             autoplay: true,
             interval: 3000,
@@ -104,39 +34,41 @@ const pastSpeakers = ({PNG}) => {
             speed: 800,
             arrows: true,
             pagination: false,
-            gap: "1rem",
+            gap: '1rem',
+            // Use descending breakpoints with smaller perPage as screen shrinks
             breakpoints: {
-              1024: { perPage: 4 },
-              768: { perPage: 3 },
-              640: { perPage: 2 },
-              480: { perPage: 1 },
+              1280: { perPage: 3 },
+              1024: { perPage: 3 },
+              768:  { perPage: 2 },
+              640:  { perPage: 1 },
             },
+            // Make sure widths are percentage-based
+            autoWidth: false,
+            width: '100%',
           }}
           aria-label="Auto rotating founder carousel"
         >
-          {Object.values(Speakers).map((item, index) => (
-            <SplideSlide key={index}>
-              <Card member={item} />
-            </SplideSlide>
-          ))}
+          <SplideSlide>
+            <div className="px-2"> {/* small inner padding to respect gap without pushing width */}
+              <Card name="Ekansh Gupta" image={ekansh} />
+            </div>
+          </SplideSlide>
+
+          {/* Add more slides to better test width behavior */}
+          <SplideSlide>
+            <div className="px-2">
+              <Card name="Speaker Two" image={ekansh} />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="px-2">
+              <Card name="Speaker Three" image={ekansh} />
+            </div>
+          </SplideSlide>
         </Splide>
       </div>
+    </div>
+  );
+};
 
-        {/* Core Team Members - 4 in a row */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
-          {Object.keys(coreTeam).map((key) => (
-            <Card 
-              key={key}
-              member={coreTeam[key]} 
-              isCore={true}
-            />
-          ))}
-        </div> */}
-        {/* Additional Team Members Heading */}
-        
-      </section>
-        </div>
-    )
-}
-
-export default pastSpeakers;
+export default PastSpeakers;
