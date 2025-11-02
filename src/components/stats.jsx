@@ -17,17 +17,17 @@ const Stats = ({JPG}) => {
   const statsData = [
     {
       icon: <TrendingUp className="w-12 h-12" />,
-      value: "10000+",
+      value: "10k+",
       label: "STARTUPS INCUBATED"
     },
     {
       icon: <Users className="w-12 h-12" />,
-      value: "2500000+",
-      label: "SOCIAL MEDIA REACH"
+      value: "25k+",
+      label: "STUDENTS ENGAGED"
     },
     {
       icon: <Calendar className="w-12 h-12" />,
-      value: "100000+",
+      value: "100+",
       label: "EVENTS HOSTED"
     }
   ];

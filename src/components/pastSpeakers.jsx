@@ -1,37 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import TeamsCard from "./teamscard";
+import { Speakers } from "../utility/speaker";
 
 const pastSpeakers = () => {
   const splideRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const Speakers = [
-    { name: "Speaker 1" },
-    { name: "Speaker 2" },
-    { name: "Speaker 3" },
-    { name: "Speaker 4" },
-    { name: "Speaker 5" },
-    { name: "Speaker 6" },
-    { name: "Speaker 7" },
-    { name: "Speaker 8" },
-  ];
-
-  const Card = ({ member, isActive }) => (
-    <div
-      className={`bg-gray-200 w-[320px] h-[300px] flex justify-center items-center rounded-lg shadow-md transition-transform duration-300 ease-out ${
-        isActive ? "scale-100 shadow-lg" : "scale-100"
-      }`}
-    >
-      <div
-        className={`text-lg font-semibold ${
-          isActive ? "text-black" : "text-gray-600"
-        }`}
-      >
-        {member.name}
-      </div>
-    </div>
-  );
+  
 
   useEffect(() => {
     const splide = splideRef.current?.splide;
@@ -79,7 +56,7 @@ const pastSpeakers = () => {
           >
             {Speakers.map((speaker, index) => (
               <SplideSlide key={index}>
-                <Card member={speaker} isActive={index === activeIndex} />
+                <TeamsCard key={index} {...speaker} isActive={index === activeIndex} />
               </SplideSlide>
             ))}
           </Splide>

@@ -1,16 +1,19 @@
 import React from 'react';
 import bird from "../assets/Vector.svg";
+import { useNavigate } from 'react-router-dom';
 import edc from  "../assets/edciitd.svg";
+import footeredc from "../assets/footeredc.png"
 import {Mail, MapPin, Instagram,Linkedin, Facebook } from "lucide-react"
 const footer = () => {
+  const navigate = useNavigate();
   return (
     <div className='flex flex-col relative md:min-h-[455px] md:px-[60px]'>
-      <img src={bird} alt="" className='absolute top-0 lg:right-[110px]' />
+      <img src={footeredc} alt="" className='absolute top-0 w-32 lg:right-[130px]' />
       <div className='lg:mt-[35px] bg-[#2D1B66] flex-1 flex-col  rounded-t-4xl'>
         <div className='flex justify-evenly md:px-[74px] md:pt-[65px]'>
-          <div className='flex flex-col md:gap-[52px]'>
+          <div className='flex flex-col'>
           <img src={edc} alt="" className='md:w-[233px] md:h-[144px]' />
-          <div className='flex md:gap-[29px] items-center'>
+          <div className='flex md:gap-[29px] justify-center items-center'>
             <a className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center cursor-pointer' onClick={() => window.open("https://www.instagram.com/edc_iitd/?hl=en", "_blank")}><Instagram size={35}/></a>
             <a className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center cursor-pointer' onClick={() => window.open("https://www.linkedin.com/company/edc-iit-delhi/?originalSubdomain=in", "_blank")}><Linkedin size={35}/></a>
             
@@ -19,12 +22,12 @@ const footer = () => {
         <div className='flex flex-col items-center text-white text-xl gap-2 '>
           <p className='font-bold text-2xl'>Quick Access</p>
           <div className='flex flex-col items-center flex-1 gap-2'>
-          <p>Home</p>
-          <p>About</p>
-          <p>Events</p>
-          <p>teams</p>
-          <p>Sponsors</p>
-          <p>Contact</p>
+          <button onClick={() => navigate("/")}>Home</button>
+          <button onClick={() => navigate("/about")}>About</button>
+          <button onClick={() => navigate("/events")}>Events</button>
+          <button onClick={() => navigate("/teams")}>teams</button>
+          <button onClick={() => navigate("/sponsors")}>Sponsors</button>
+          <button onClick={() => navigate("/contact")}>Contact</button>
           </div>
         </div>
         <div className='flex flex-col items-center text-white text-xl gap-3 '>
