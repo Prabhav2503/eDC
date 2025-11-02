@@ -44,9 +44,9 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
-          <button className='hidden md:block bg-white text-sm text-black px-4 py-2 rounded-md'>
+          <NavLink to='/joinus' className='hidden md:block bg-white text-sm text-black px-4 py-2 rounded-md'>
           Join Us
-        </button>
+        </NavLink>
         </div>
 
         {/* Desktop Join Us Button - Hidden on Mobile */}

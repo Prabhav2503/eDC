@@ -22,7 +22,7 @@ return (
       <div className="bg-white">
 
         <div className="sticky top-0">
-          <Landing JPG={JPG} />
+          <Landing JPG={JPG} Landing={Landing} SVGs={SVGs} />
         </div>
         <div className="sticky top-0">
           <div className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">

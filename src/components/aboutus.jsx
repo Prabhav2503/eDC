@@ -1,72 +1,89 @@
-import React from "react";
+import { useState } from "react";
 
-const AboutEDC = ({ JPG }) => {
+const CARDS = [
+  {
+    id: "edc",
+    title: "Our Work",
+    body: `We work to cultivate an entrepreneurial mindset among students, startups, and professionals by combining knowledge, mentorship, and real-world experience. As a trusted partner in the entrepreneurial journey, eDC IIT Delhi provides access to guidance, networking, and growth opportunities that help transform ideas into sustainable ventures and nurture the next generation of innovators and leaders..`,
+    position: "top-0",
+    bg: "bg-[#2D1B66]",
+  },
+  {
+    id: "mission",
+    title: "Our Mission",
+    body: `Fueled by the vision to inspire the next generation of entrepreneurs, eDC IIT Delhi is committed to cultivating a vibrant startup ecosystem on campus. Our mission is to transform innovative ideas into successful ventures by providing mentorship, resources, and experiential learning and empowering students to evolve into visionary leaders who drive meaningful impact and shape the future of business and society.`,
+    position: "top-10",
+    bg: "bg-[#321F72]",
+  },
+  {
+    id: "vision",
+    title: "Our Vision",
+    body: `At eDC IIT Delhi strive to empower young minds to create impactful startups that inspire change across the globe. We believe every dreamer, regardless of background, location, or prior experience, deserves the opportunity to pursue entrepreneurship. Standing with every risk-taker who dares to dream, eDC is committed to nurturing innovators and shaping the next generation of entrepreneurs.`,
+    position: "top-20",
+    bg: "bg-[#3B2486]",
+  },
+];
+
+export default function CardsShowcase() {
+  // Vision is the default "focused" card
+  const [active, setActive] = useState("vision");
+
   return (
-    <div className="w-full pt-10 bg-transparent text-white">
-      {/* Main Section with Heading */}
-      <section className="px-8 md:px-20 pt-16 pb-12">
-        {/* Top Heading */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-left">
-            About eDC IIT Delhi
-          </h1>
+    <div className="w-full md:h-[1152px] flex items-center justify-center bg-white">
+      <div
+        className="relative w-full px-18"
+        // when the mouse leaves the whole stack, snap back to Vision
+        onMouseLeave={() => setActive("vision")}
+      >
+        {/* Stacked cards */}
+        <div className="relative h-[380px] sm:h-[820px]">
+          {CARDS.map((card, i) => {
+            const isActive = active === card.id;
+
+            // position the three cards in a cascading row
+            const basePos =
+              card.id === "edc"
+                ? "left-0"
+                : card.id === "mission"
+                ? "left-[28%] sm:left-[33%]"
+                : "left-[56%] sm:left-[66%]";
+
+            return (
+              <article
+                key={card.id}
+                onMouseEnter={() => setActive(card.id)}
+                className={[
+                  `absolute ${card.position} h-[700px]`,
+                  basePos,
+                  "w-[56%] sm:w-[34%]",
+                  " p-6 sm:p-8 text-white",
+                  
+                  card.bg,
+                  "shadow-2xl border border-white/10",
+                  // motion / depth
+                  "transition-all duration-300 ease-out",
+                  isActive
+                    ? "z-20 scale-100 translate-y-0 blur-0 opacity-100"
+                    : "z-10 -translate-y-1 sm:translate-y-2 scale-[0.98] opacity-100 blur-[2px]",
+                ].join(" ")}
+                style={{
+                  backdropFilter: isActive ? "none" : undefined,
+                }}
+              >
+                <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight w-full text-center">
+                  {card.title}
+                </h2>
+
+                <p className="mt-4 text-sm md:text-2xl leading-relaxed text-white/90 w-full text-left">
+                  {card.body}
+                </p>
+
+                
+              </article>
+            );
+          })}
         </div>
-
-        {/* Content and Image Row */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
-          {/* Left Side - Text */}
-          <div className="w-full lg:w-1/2 text-left space-y-6">
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Entrepreneurship Development Cell (eDC) at IIT Delhi is India’s largest student-run body dedicated to nurturing the spirit of entrepreneurship since 2007. We empower young minds, early-stage startups, and professionals to think big, innovate fearlessly, and build impactful ventures. More than just promoting entrepreneurship, we partner in your journey by providing a dynamic ecosystem of learning, mentorship, and opportunities. Through workshops, bootcamps, hackathons, competitions, boardroom discussions, speaker sessions, and real-time funding avenues, we equip aspiring entrepreneurs with the skills, insights, and networks needed to transform ideas into reality. With a legacy of impact and a vibrant community, eDC continues to inspire and shape the next generation of changemakers across India.
-            </p>
-          </div>
-
-          {/* Right Side - Image */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <img
-              src={JPG.iitbuilding}
-              alt="eDC IIT Delhi Team"
-              className="rounded-2xl shadow-lg w-full md:w-[90%] object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Mission, Vision, Core Values, Innovation Section */}
-      <section className="px-8 md:px-20 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Mission Card */}
-          <div className="bg-[#1A2332] rounded-2xl p-8 border border-gray-700/30">
-            <div className="flex items-start gap-4 mb-6">
-              {/* <div className="bg-blue-600 rounded-full p-3">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div> */}
-              <h3 className="text-2xl font-bold text-white">Mission</h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              Fueled by the vision to inspire the next generation of entrepreneurs, eDC IIT Delhi is committed to cultivating a vibrant startup ecosystem on campus. Our mission is to transform innovative ideas into successful ventures by providing mentorship, resources, and experiential learning and empowering students to evolve into visionary leaders who drive meaningful impact and shape the future of business and society.
-            </p>
-          </div>
-
-          {/* Vision Card */}
-          <div className="bg-[#1A2332] rounded-2xl p-8 border border-gray-700/30">
-            <div className="flex items-start gap-4 mb-6">
-              
-              <h3 className="text-2xl font-bold text-white">Vision</h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              At eDC IIT Delhi strive to empower young minds to create impactful startups that inspire change across the globe. We believe every dreamer, regardless of background, location, or prior experience, deserves the opportunity to pursue entrepreneurship. Standing with every risk-taker who dares to dream, eDC is committed to nurturing innovators and shaping the next generation of entrepreneurs.
-            </p>
-          </div>
-
-        
-        </div>
-      </section>
-      
       </div>
+    </div>
   );
-};
-
-export default AboutEDC;
+}
