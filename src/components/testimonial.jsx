@@ -39,7 +39,7 @@ const Card = ({NAME,POR,description,image}) => {
 }
 const testimonial = () => {
   return (
-    <div className='flex flex-col min-h-[1797px] w-full bg-white relative '>
+    <div className='flex flex-col min-h-[1797px] w-full bg-white relative md:mb-[62px]'>
       <div className='bg-[#2D1B66] md:h-[1744px] w-full'>
         <p className='text-white lg:text-[96px] font-bold md:pl-[101px] md:pt-[114px]'>TESTIMONIAL</p>
       </div>

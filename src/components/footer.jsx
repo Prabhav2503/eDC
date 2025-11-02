@@ -1,122 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Facebook, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/edciitd.svg';
-
-const Footer = () => {
+import bird from "../assets/Vector.svg";
+import edc from  "../assets/edciitd.svg";
+import {Mail, MapPin, Instagram,Linkedin, Facebook } from "lucide-react"
+const footer = () => {
   return (
-    <footer className="bg-[linear-gradient(135deg,#000000_0%,#0F0C29_37%,#1F1E39_73%,#132653_96%,#072D6D_100%)] text-white py-12 px-6 md:px-8 lg:px-12">
-      <div className="w-full px-10">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          
-          {/* Left Section - Logo & Copyright */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
-            <div className="flex items-center space-x-3">
-              <img 
-                src={logo} 
-                alt="eDC IIT Delhi Logo" 
-                className="w-24 h-24 object-contain"
-              />
-              <div>
-                <h3 className="font-bold text-2xl">eDC IIT Delhi</h3>
-                <p className="text-lg opacity-90">Entrepreneurship Development Cell</p>
-              </div>
-            </div>
-            <p className="text-lg opacity-80 text-center md:text-left">
-              © Copyright eDC IIT Delhi.
-            </p>
-          </div>
-
-          {/* Middle-Left Section - Quick Access */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
-            <h4 className="font-semibold text-xl mb-2">Quick Access</h4>
-            <div className="flex flex-col space-y-2 text-center md:text-left">
-              <Link to="/" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                Home
-              </Link>
-              <Link to="/about" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                About
-              </Link>
-              <Link to="/initial" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                Events
-              </Link>
-              <Link to="/becon" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                Team
-              </Link>
-              <Link to="/resources" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                Sponsors
-              </Link>
-              <Link to="/gallery" className="hover:opacity-70 transition-opacity duration-200 text-base">
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          {/* Middle-Right Section - Follow Us */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
-            <h4 className="font-semibold text-xl mb-2">Follow Us</h4>
-            <div className="flex space-x-4 justify-center md:justify-start">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
-              >
-                <Instagram size={24} />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
-              >
-                <Facebook size={24} />
-              </a>
-            </div>
-          </div>
-
-          {/* Right Section - Contact Us */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
-            <h4 className="font-semibold text-xl mb-2">Contact Us</h4>
-            <div className="space-y-3 text-center md:text-left">
-              <div className="flex items-center space-x-2 justify-center md:justify-start">
-                <Mail size={20} className="flex-shrink-0" />
-                <a 
-                  href="mailto:info@edciitd.ac.in" 
-                  className="text-base hover:opacity-70 transition-opacity duration-200"
-                >
-                  info@edciitd.ac.in
-                </a>
-              </div>
-              <div className="flex items-start space-x-2 justify-center md:justify-start">
-                <MapPin size={20} className="flex-shrink-0 mt-0.5" />
-                <div className="text-base">
-                  <div>Indian Institute of Technology Delhi</div>
-                  <div>Hauz Khas, New Delhi-110016</div>
-                </div>
-              </div>
-            </div>
+    <div className='flex flex-col relative md:min-h-[455px] md:px-[60px]'>
+      <img src={bird} alt="" className='absolute top-0 lg:right-[110px]' />
+      <div className='lg:mt-[35px] bg-[#2D1B66] flex-1 flex-col  rounded-t-4xl'>
+        <div className='flex justify-evenly md:px-[74px] md:pt-[65px]'>
+          <div className='flex flex-col md:gap-[52px]'>
+          <img src={edc} alt="" className='md:w-[233px] md:h-[144px]' />
+          <div className='flex md:gap-[29px] items-center'>
+            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Instagram size={35}/></div>
+            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Linkedin size={35}/></div>
+            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Facebook size={35}/></div>
           </div>
         </div>
-
-        {/* Bottom Divider & Rights */}
-        <div className="mt-12 pt-6 border-t border-white/20">
-          <div className="flex justify-center md:justify-end">
-            <p className="text-base opacity-80">All Rights Reserved.</p>
+        <div className='flex flex-col items-center text-white text-xl gap-2 '>
+          <p className='font-bold text-2xl'>Quick Access</p>
+          <div className='flex flex-col items-center flex-1 gap-2'>
+          <p>Home</p>
+          <p>About</p>
+          <p>Events</p>
+          <p>teams</p>
+          <p>Sponsors</p>
+          <p>Contact</p>
           </div>
+        </div>
+        <div className='flex flex-col items-center text-white text-xl gap-3 '>
+          <p className='font-bold text-2xl'>Contact Us</p>
+          <div className='flex flex-col  flex-1 gap-2'>
+          <p><Mail className='inline mr-3' />info@edciitd.ac.in</p>
+          <p><MapPin className='inline mr-3' />Indian Institute of Technology Delhi <br />Hauz Khas, New Delhi, 110016</p>
+
+          </div>
+        </div>
+        </div>
+        <div className='md:mt-[44px] md:mx-[22px] bg-white h-1 z-10'/>
+        <div className='flex items-center justify-between text-white font-white md:px-[47px] md:pt-[18px]'>
+          <p>Copyright eDC IIT Delhi</p>
+          <p>All Rights Reserved</p>
         </div>
       </div>
-    </footer>
-  );
-};
+    </div>
+  )
+}
 
-export default Footer;
+export default footer

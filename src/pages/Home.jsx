@@ -33,7 +33,7 @@ return (
         <Stats JPG={JPG} />
         <Incentive />
         </div>
-        <PastSpeakers PNG={PNG} />
+        {/* <PastSpeakers PNG={PNG} /> */}
         <div  className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
         <Testimonial />
       </div>
