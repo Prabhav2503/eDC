@@ -1,23 +1,32 @@
 import logo from "../assets/edciitd.svg";
+
 import iitbuilding from "../assets/IIT.jpg"
 import statsbg from "../assets/statsbg.svg"
 import Ekansh from "../assets/ekansh_core.webp"  
-import edcteam from "../assets/edc-team.jpg"
-import chirag from "../assets/chirag_CR.png"
-import Aghamarsh from "../assets/AghamarshChetluru_OC.jpg"
-import Dishit from "../assets/DishitJohari_events.jpeg"
-import Kabir from "../assets/Kabir_events.png"
-import Lakshay from "../assets/LaskhayGoel_mark.jpg"
-import Nishka from "../assets/NishkaMurarka_design.jpg"
-import Pratibha from "../assets/PratibhaKashyap_design.png"
-import Sakshi from "../assets/SakshiSharma_mark.jpg"
-import Sarthak from "../assets/SarthakGupta_CR.png"
-import Tanmay from "../assets/TanmaySharma_core.jpg"
-import Tejas from "../assets/TejasKamble_media.png"
-import Tripti from "../assets/tripti_AnF.jpg"
-import Vaibhav from "../assets/VaibhavPandey_SS.jpg"
+import edcteam from "../assets/edc_team.jpg"
+import chirag from "../assets/teams/chirag_CR.png"
+import Aghamarsh from "../assets/teams/AghamarshChetluru_OC.jpg"
+import Dishit from "../assets/teams/DishitJohari_events.jpeg"
+import Kabir from "../assets/teams/Kabir_events.png"
+import Lakshay from "../assets/teams/LaskhayGoel_mark.jpg"
+import Nishka from "../assets/teams/NishkaMurarka_design.jpg"
+import Pratibha from "../assets/teams/PratibhaKashyap_design.png"
+import Sakshi from "../assets/teams/SakshiSharma_mark.jpg"
+import Sarthak from "../assets/teams/SarthakGupta_CR.png"
+import Tanmay from "../assets/teams/TanmaySharma_core.jpg"
+import Tejas from "../assets/teams/TejasKamble_media.png"
+import Tripti from "../assets/teams/tripti_AnF.jpg"
+import Vaibhav from "../assets/teams/VaibhavPandey_SS.jpg"
 import galleryleftarrow from "../assets/galleryleftarrow.svg"
 import galleryrightarrow from "../assets/galleryrightarrow.svg"
+import landing1 from "../assets/landingPicture/landing_1.JPG"
+import landing2 from "../assets/landingPicture/landing_10.JPG"
+import landing3 from "../assets/landingPicture/landing_3.JPG"
+import landing4 from "../assets/landingPicture/landing_4.JPG"
+import landing5 from "../assets/landingPicture/landing_9.jpg"
+import landing6 from "../assets/landingPicture/landing_6.JPG"
+import landing7 from "../assets/landingPicture/landing_7.jpg"
+import landing8 from "../assets/landingPicture/landing_8.jpg"
 import AlokMittal from "../assets/speakers/AlokMittal.png"
 import AmanGupta from "../assets/speakers/AmanGupta.png"
 import AnandChandrasekaran from "../assets/speakers/AnandChandrasekaran.png"
@@ -49,17 +58,17 @@ import SanjeevBikhchandani from "../assets/speakers/SanjeevBikhchandani.png"
 import VijayShekharSharma from "../assets/speakers/VijayShekharSharma.png"
 
 export const IMAGES = import.meta.glob(
-  '../assets/gallery_pictures/*.{png,jpg,jpeg,webp,gif,svg}',
+  '../assets/gallery_pictures/*.{png,jpg,jpeg,webp,gif,svg,JPG}',
   { eager: true, import: 'default' }
 );
-
 
 
 
 export const SVGs = {
   logo:logo,
   galleryleftarrow:galleryleftarrow,
-  galleryrightarrow:galleryrightarrow
+  galleryrightarrow:galleryrightarrow,  
+
 };
 
 export const JPG = {
@@ -74,7 +83,15 @@ export const JPG = {
   Tripti: Tripti,
   Ekansh : Ekansh,
   Vaibhav: Vaibhav,
-  statsbg: statsbg
+  statsbg: statsbg,
+  landing1: landing1,
+  landing2: landing2,
+  landing3: landing3,
+  landing4: landing4,
+  landing5: landing5,
+  landing6: landing6,
+  landing7: landing7,
+  landing8: landing8, 
 }
 
 export const PNG = {

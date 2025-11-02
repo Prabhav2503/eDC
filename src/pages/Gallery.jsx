@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Gallery from '../components/Gallery';
+import HoverCluster from '../components/hovercluster';
 
 const gallery = ({SVGs, IMAGES}) => {
   // Scroll to top when component mounts
@@ -9,23 +10,20 @@ const gallery = ({SVGs, IMAGES}) => {
 
   return (
     <div>
-    <div className="bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E]">
-      <div className="w-full bg-transparent text-white">
-            <section className="px-6 sm:px-8 md:px-12 lg:px-20 py-30">
-        {/* Core Team Heading */}
-        <div className="text-center mb-10">
-          <p className='text-gray-300 text-center w-full text-xl pb-5'>eDC IITD THROUGH THE YEARS</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Gallery
-          </h2>
-          <div className="w-30 h-1 bg-yellow-500 mx-auto"/>
+    <div className="bg-[#2D1B66] md:h-[1100px] w-full md:pt-[180px] px-18">
+
+      <div className='text-white  '>
+        <div className='flex items-end justify-between'>
+          <p className='text-7xl font-bold'>GALLERY</p>
+          <p className=' text-2xl '>eDC IITD THROUGH THE YEARS...</p>
         </div>
-        <div className="w-full mx-auto px-8 ">
-        <Gallery IMAGES={IMAGES} SVGs={SVGs} />
+        <div className='w-full bg-white h-1 mt-[10px]'/>
+      </div>
+        <div className="w-full mx-auto px-8 pt-10">
+        <HoverCluster IMAGES={IMAGES}  />
       </div>
         
-      </section>
-        </div>
+
       </div>
     </div>
   )

@@ -12,9 +12,9 @@ const footer = () => {
           <div className='flex flex-col md:gap-[52px]'>
           <img src={edc} alt="" className='md:w-[233px] md:h-[144px]' />
           <div className='flex md:gap-[29px] items-center'>
-            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Instagram size={35}/></div>
-            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Linkedin size={35}/></div>
-            <div className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center'><Facebook size={35}/></div>
+            <a className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center cursor-pointer' onClick={() => window.open("https://www.instagram.com/edc_iitd/?hl=en", "_blank")}><Instagram size={35}/></a>
+            <a className='bg-[#D9D9D9] rounded-full md:size-[56px] flex items-center justify-center cursor-pointer' onClick={() => window.open("https://www.linkedin.com/company/edc-iit-delhi/?originalSubdomain=in", "_blank")}><Linkedin size={35}/></a>
+            
           </div>
         </div>
         <div className='flex flex-col items-center text-white text-xl gap-2 '>

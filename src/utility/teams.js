@@ -2,29 +2,30 @@ import {JPG, PNG} from "./images.js"
 
 const coreTeam = [
   {
-    name: "Ekansh Agarwal",
-    position: "Overall Coordinator",
-    image: JPG.Ekansh,
-    gmail: "tripti@gmail.com",
-    linkedin: "https://linkedin.com/in/tripti"
-  },
- {
     name: "Tanmay Sharma",    
     position: "Overall Coordinator",
     image: JPG.Tanmay,
     gmail: "tripti@gmail.com",
     linkedin: "https://linkedin.com/in/tripti"
   },
+  {
+    name: "Ekansh Agarwal",
+    position: "Overall Advisor",
+    image: JPG.Ekansh,
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  },
+ 
  {
-    name: "xyz",
-    position: "Overall Coordinator", 
+    name: "Archit Tayal",
+    position: "Co-Overall Coordinator", 
     image: "https://via.placeholder.com/400x400/374151/FFFFFF?text=SV",
     gmail: "tripti@gmail.com",
     linkedin: "https://linkedin.com/in/tripti"
   },
  {
-    name: "abc",
-    position: "Overall Coordinator",
+    name: "Sanidhya Garg",
+    position: "Core Team Member",
     image: "https://via.placeholder.com/400x400/F59E0B/FFFFFF?text=VM",
     gmail: "tripti@gmail.com",
     linkedin: "https://linkedin.com/in/tripti"
@@ -34,7 +35,7 @@ const coreTeam = [
 
 const teamMembers = [
   {
-    name: "Tripti",
+    name: "Tripti ",
     position: "AnF",
     image: JPG.Tripti,
     gmail: "tripti@gmail.com",
@@ -76,7 +77,7 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/dishitjohari"
   },
   {
-    name: "Kabir", 
+    name: "Kabir Bhatia", 
     position: "Events",
     image: PNG.Kabir,
     gmail: "kabir@gmail.com",

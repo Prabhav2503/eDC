@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { SVGs } from "../utility/images";
 
-const Landing = ({ JPG }) => {
+const Landing = ({ JPG,Landing, SVGs }) => {
   const [hoveredCell, setHoveredCell] = useState(null);
   const [autoRevealedCells, setAutoRevealedCells] = useState([]);
 
   // Grid cell configuration with colors matching the image
   const gridCells = [
-    { id: 1, color: '#2D1B69', image: JPG.iitbuilding }, // Top-left - dark purple
-    { id: 2, color: '#3D2B79', image: JPG.edcteam }, // Top-center - purple
-    { id: 3, color: '#321f72', image: JPG.iitbuilding }, // Top-right - lighter purple
-    { id: 4, color: '#3B2486', image: JPG.edcteam }, // Middle-left - dark purple
+    { id: 1, color: '#2D1B69', image: JPG.landing1 }, // Top-left - dark purple
+    { id: 2, color: '#3D2B79', image: JPG.landing2 }, // Top-center - purple
+    { id: 3, color: '#321f72', image: JPG.landing3 }, // Top-right - lighter purple
+    { id: 4, color: '#3B2486', image: JPG.landing4 }, // Middle-left - dark purple
     { id: 5, color: 'center', image: null }, // Center - Logo
-    { id: 6, color: '#2D1B66', image: JPG.iitbuilding }, // Middle-right - purple
-    { id: 7, color: '#3B2486', image: JPG.edcteam }, // Bottom-left - lighter purple
-    { id: 8, color: '#2D1B66', image: JPG.iitbuilding }, // Bottom-center - dark purple
-    { id: 9, color: '#3B2486', image: JPG.edcteam }, // Bottom-right - purple
+    { id: 6, color: '#2D1B66', image: JPG.landing5 }, // Middle-right - purple
+    { id: 7, color: '#3B2486', image: JPG.landing6 }, // Bottom-left - lighter purple
+    { id: 8, color: '#2D1B66', image: JPG.landing7 }, // Bottom-center - dark purple
+    { id: 9, color: '#3B2486', image: JPG.landing8 }, // Bottom-right - purple
   ];
 
   // Auto-reveal cells randomly on page load
