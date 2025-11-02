@@ -9,7 +9,7 @@ const Landing = ({ JPG,Landing, SVGs }) => {
   const gridCells = [
     { id: 1, color: '#2D1B69', image: JPG.landing1 }, // Top-left - dark purple
     { id: 2, color: '#3D2B79', image: JPG.landing2 }, // Top-center - purple
-    { id: 3, color: '#321f72', image: JPG.landing8 }, // Top-right - lighter purple
+    { id: 3, color: '#321f72', image: JPG.landing3 }, // Top-right - lighter purple
     { id: 4, color: '#3B2486', image: JPG.landing4 }, // Middle-left - dark purple
     { id: 5, color: 'center', image: null }, // Center - Logo
     { id: 6, color: '#2D1B66', image: JPG.landing5 }, // Middle-right - purple
