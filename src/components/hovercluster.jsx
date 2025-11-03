@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 
 // Replace with your own images
 
-
 export default function HoverCluster({
   IMAGES,
   defaultIndex = 0,
@@ -10,8 +9,8 @@ export default function HoverCluster({
 }) {
   // Convert IMAGES object to array of image sources
   const imagesArray = useMemo(() => Object.values(IMAGES), [IMAGES]);
-  
-  const [active, setActive] = useState(null);
+
+  const [active, setActive] = useState(null); // <-- JS-safe
   const previewSrc = active != null ? imagesArray[active] : imagesArray[defaultIndex];
 
   const layout = useMemo(
@@ -50,7 +49,7 @@ export default function HoverCluster({
   const animName = effect === "fold" ? "foldIn" : "slideIn";
 
   return (
-    <section className="w-full bg-transparent py-16">
+    <section className="w-full bg-transparent py-8 sm:py-12 lg:py-16">
       {/* Local keyframes for preview animation */}
       <style>{`
         @keyframes slideIn {
@@ -64,13 +63,12 @@ export default function HoverCluster({
       `}</style>
 
       <div
-        className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 md:grid-cols-2"
+        className="grid grid-cols-1 items-center justify-center gap-8 sm:gap-10 px-4 sm:px-6 lg:grid-cols-2"
         onMouseLeave={() => setActive(null)}
       >
         {/* LEFT PREVIEW */}
         <div className="flex items-center justify-center">
-          <div className="relative w-full max-w-[560px] aspect-[16/10] overflow-hidden rounded-lg shadow-2xl ring-1 ring-white/10 bg-black/10">
-            {/* New image mounts with a key so the animation restarts every change */}
+          <div className="relative w-full max-w-[720px] md:max-w-[640px] lg:max-w-[560px] aspect-[16/10] overflow-hidden rounded-md md:rounded-lg shadow-2xl ring-1 ring-black/10 bg-black/5">
             <img
               key={previewSrc}
               src={previewSrc}
@@ -83,7 +81,7 @@ export default function HoverCluster({
         </div>
 
         {/* RIGHT CLUSTER */}
-        <div className="relative mx-auto h-[520px] w-[520px]">
+        <div className="relative mx-auto w-full max-w-[560px] aspect-square sm:aspect-[4/3] md:aspect-square">
           {imagesArray.map((src, i) => {
             const pos = layout[i % layout.length];
             const idx = i;
@@ -95,8 +93,9 @@ export default function HoverCluster({
                 key={src + i}
                 onMouseEnter={() => setActive(idx)}
                 className={[
-                  "absolute block h-32 w-40 overflow-hidden rounded-md shadow-xl ring-1 ring-black/10",
+                  "absolute block overflow-hidden rounded-md shadow-xl ring-1 ring-black/10",
                   "transition-transform duration-200 ease-out",
+                  "h-16 w-24 sm:h-20 sm:w-28 md:h-24 md:w-32 lg:h-28 lg:w-36 xl:h-32 xl:w-40",
                   isActive ? "scale-110" : "hover:scale-105",
                 ].join(" ")}
                 style={{
