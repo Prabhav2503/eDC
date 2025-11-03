@@ -86,7 +86,7 @@ const Navbar = ({ SVGs, shrink }) => {
             Gallery
           </NavLink>
           <div className="pt-3 pb-2">
-            <button className='w-full bg-white text-black px-4 py-2 rounded-md' onClick={toggleMenu}>
+            <button className='w-full bg-white text-black px-4 py-2 rounded-md' onClick={() => (navigate('/joinus'))} >
               Join Us
             </button>
           </div>
