@@ -174,36 +174,36 @@ const Resources = ({ JPG }) => {
     <div className="w-full bg-white text-white">
       
       <div className="relative w-full min-h-screen bg-[#2D1B66] overflow-hidden">
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 min-h-screen">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 lg:px-20 py-16 sm:py-20 lg:py-24 min-h-screen">
     
     {/* Left Side - Heading & Content */}
-        <div className="w-full lg:w-1/2 space-y-8 lg:space-y-10">
+        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 lg:space-y-10">
       
       {/* Heading with underline */}
       <div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3 sm:mb-4">
           RESOURCES
         </h1>
-        <div className="h-[3px] bg-white w-[850px]"></div>
+        <div className="h-[2px] sm:h-[3px] bg-white w-full max-w-[850px]"></div>
       </div>
 
       {/* Subtext */}
-      <p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed max-w-xl">
+      <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-xl">
         Explore a curated list of resources to help you on your entrepreneurial journey.
       </p>
 
       {/* Notion Link Button */}
       <div>
-        <button onClick={handleClick} className="border border-white text-white px-6 py-3 rounded-2xl text-base sm:text-lg font-medium hover:bg-white hover:text-[#221B52] transition-all duration-300">
+        <button onClick={handleClick} className="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-2xl text-sm sm:text-base lg:text-lg font-medium hover:bg-white hover:text-[#2D1B66] transition-all duration-300 transform hover:scale-105">
           KNOWLEDGE BASE
         </button>
       </div>
     </div>
 
     {/* Right Side - Tree Image */}
-    <div className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mb-0">
+    <div className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
       {/* Replace below line with your actual image */}
-      <img src={tree} alt="Resources Tree" className="size-150 object-contain" />
+      <img src={tree} alt="Resources Tree" className="w-full max-w-md sm:max-w-lg lg:max-w-xl object-contain" />
     </div>
   </div>
 
