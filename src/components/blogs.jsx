@@ -4,27 +4,27 @@ import blogsData from "../utility/edc_blogs.js";
 // Blog Card Component
 const BlogCard = ({ blog }) => {
   return (
-    <div className="group cursor-pointer bg-[#2D1B66] rounded-xl overflow-hidden border border-gray-700/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+    <div className="group cursor-pointer bg-[#2D1B66] rounded-lg sm:rounded-xl overflow-hidden border border-gray-700/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       {/* Blog Image */}
-      <div className="relative h-40 sm:h-52 lg:h-60 overflow-hidden">
+      <div className="relative h-36 sm:h-48 md:h-52 lg:h-60 overflow-hidden">
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full h-full object-fit transform transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </div>
 
       {/* Blog Content */}
-      <div className="p-6">
+      <div className="p-4 sm:p-5 md:p-6">
         {/* Title */}
-        <h3 className="text-white text-base font-semibold mb-3 line-clamp-2 ">
+        <h3 className="text-white text-sm sm:text-base font-semibold mb-2 sm:mb-3 line-clamp-2">
           {blog.title}
         </h3>
 
         {/* Author Info */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-8 bg-[#193fbe] rounded-full flex items-center justify-center">
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#193fbe] rounded-full flex items-center justify-center flex-shrink-0">
             <span className="text-white text-xs font-bold">
               {blog.author
                 .split(" ")
@@ -33,9 +33,9 @@ const BlogCard = ({ blog }) => {
                 .slice(0, 2)}
             </span>
           </div>
-          <div>
-            <p className="text-white text-sm font-medium">{blog.author}</p>
-            <p className="text-gray-400 text-xs">{blog.description}</p>
+          <div className="min-w-0">
+            <p className="text-white text-xs sm:text-sm font-medium truncate">{blog.author}</p>
+            <p className="text-gray-400 text-[10px] sm:text-xs truncate">{blog.description}</p>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ const BlogCard = ({ blog }) => {
             href={blog.postURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors duration-300"
+            className="text-blue-400 text-xs sm:text-sm font-medium hover:text-blue-300 transition-colors duration-300 whitespace-nowrap"
           >
             Read More →
           </a>
@@ -62,26 +62,26 @@ const BlogCard = ({ blog }) => {
 
 const Blogs = ({ JPG }) => {
   return (
-    <div className="w-full bg-transparent text-white py-16">
-      <div className="px-6 sm:px-8 md:px-12 lg:px-20">
+    <div className="w-full bg-white text-white py-12 sm:py-16">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
         {/* Header Section */}
         
-          <div className="mb-8 text-center">
-          <h1 className="text-3xl sm:text-4xl text-black lg:text-5xl font-bold mb-2">
+          <div className="mb-6 sm:mb-8 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-bold mb-2 sm:mb-3">
             LATEST BLOGS
           </h1>
-          <div className="w-full h-0.5 bg-black"></div>
+          <div className="w-full h-[2px] sm:h-[3px] bg-black"></div>
         </div>
-        <div className="text-center">
-          <p className="text-black text-lg  md:text-xl max-w-3xl mx-auto">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4">
             Stay updated with the latest insights, trends, and stories from the
-           <p>entrepreneurship world</p>             
+            entrepreneurship world            
           </p>
         </div>
         </div>
 
         {/* Blogs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-20 md:px-[60px] lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
           {blogsData.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
