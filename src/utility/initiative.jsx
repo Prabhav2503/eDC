@@ -62,8 +62,8 @@ const initiatives = [
 },
 
 {
-  title: 'Genesis',
-  description: 'Genesis is eDC IIT Delhi’s pre-incubation program designed to empower early-stage startups beyond the IIT Delhi campus. It offers personalized mentorship from IIT Delhi faculty, industry experts, and successful entrepreneurs, helping founders refine their ideas into scalable ventures. Startups gain exclusive networking access to early-stage VCs, angel investors, and corporate leaders, along with hands-on workshops on business planning, pitching, financial modeling, legal compliance, and marketing strategy. With the prestige of eDC and IIT Delhi’s brand, Genesis provides the perfect platform for innovators to grow, connect, and make an impact. If you have the vision and drive, Genesis is your launchpad to build what’s next.',
+  title: 'Emergence',
+  description: 'Emergence is eDC IIT Delhi’s pre-incubation program designed to empower early-stage startups beyond the IIT Delhi campus. It offers personalized mentorship from IIT Delhi faculty, industry experts, and successful entrepreneurs, helping founders refine their ideas into scalable ventures. Startups gain exclusive networking access to early-stage VCs, angel investors, and corporate leaders, along with hands-on workshops on business planning, pitching, financial modeling, legal compliance, and marketing strategy. With the prestige of eDC and IIT Delhi’s brand, Emergence provides the perfect platform for innovators to grow, connect, and make an impact. If you have the vision and drive, Emergence is your launchpad to build what’s next.',
   image: genesis,
 },
 

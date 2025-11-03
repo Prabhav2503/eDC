@@ -1,12 +1,16 @@
-import React from 'react'
-import ScrollCluster from '../components/scrollcluster'
-const joinus = () => {
-  return (
-    <div className='md:h-[1080px] bg-white  flex flex-col'>
-      <div className='bg-red-500 h-[100px] w-full'/>
-      <ScrollCluster />
-    </div>
-  )
-}
+import React from "react";
+import ScrollCluster from "../components/scrollcluster";
 
-export default joinus
+const JoinUs = () => {
+  return (
+    <div className="bg-white flex flex-col min-h-screen">
+      {/* Top bar */}
+      {/* Content */}
+      <div className="flex-1">
+        <ScrollCluster />
+      </div>
+    </div>
+  );
+};
+
+export default JoinUs;
