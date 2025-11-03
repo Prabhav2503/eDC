@@ -13,12 +13,16 @@ const About = ({JPG,SVGs,PNG}) => {
 
   return (
     <div  className="bg-white flex flex-col items-center ">
-      <header className='md:h-[360px] bg-[#2D1B66] flex flex-col items-start w-full px-18 md:pt-[196px] '>
-        <div className='text-6xl text-white md:pt-[10px] mb-2 font-bold'>ABOUT US</div>
-        <div className='h-1 w-full bg-white'/>
+      <header className='w-full bg-gradient-to-b from-[#2D1B69] via-[#3A2575] to-[#2D1B69] pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-8 sm:pb-10 md:pb-12 lg:pb-16'>
+        <div className='px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32'>
+          <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-3 sm:mb-4'>
+            ABOUT US
+          </h1>
+          <div className='h-[2px] sm:h-[3px] w-full bg-white'/>
+        </div>
       </header>
       <AboutEDC JPG={JPG} />
-      <img src={JPG.edcteam} alt="" className='size-full' />
+      <img src={JPG.edcteam} alt="eDC Team" className='w-full h-auto object-cover' />
       <Team  JPG={JPG} PNG={PNG} />
     </div>
   )

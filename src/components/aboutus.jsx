@@ -27,11 +27,97 @@ const CARDS = [
 export default function CardsShowcase() {
   // Vision is the default "focused" card
   const [active, setActive] = useState("vision");
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  // Handle touch events for mobile swipe
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      // Swipe left
+      setCurrentSlide((prev) => (prev + 1) % CARDS.length);
+    }
+
+    if (touchStart - touchEnd < -75) {
+      // Swipe right
+      setCurrentSlide((prev) => (prev - 1 + CARDS.length) % CARDS.length);
+    }
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <div className="w-full md:h-[1152px] flex items-center justify-center bg-white">
+      {/* Mobile Carousel View */}
+      <div className="block md:hidden w-full px-4 py-8">
+        <div
+          className="relative overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Cards Container */}
+          <div
+            className="flex transition-transform duration-300 ease-out"
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+            }}
+          >
+            {CARDS.map((card) => (
+              <div
+                key={card.id}
+                className="w-full flex-shrink-0 px-2"
+              >
+                <article
+                  className={[
+                    "w-full min-h-[400px] p-6 text-white rounded-lg",
+                    card.bg,
+                    "shadow-2xl border border-white/10",
+                  ].join(" ")}
+                >
+                  <h2 className="text-3xl font-extrabold tracking-tight w-full text-center mb-4">
+                    {card.title}
+                  </h2>
+
+                  <p className="text-sm leading-relaxed text-white/90 w-full text-left">
+                    {card.body}
+                  </p>
+                </article>
+              </div>
+            ))}
+          </div>
+
+          {/* Dots Navigation */}
+          <div className="flex justify-center gap-2 mt-6">
+            {CARDS.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index
+                    ? "bg-[#2D1B66] w-8"
+                    : "bg-gray-300"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Stacked View */}
       <div
-        className="relative w-full px-18"
+        className="hidden md:block relative w-full px-18"
         // when the mouse leaves the whole stack, snap back to Vision
         onMouseLeave={() => setActive("vision")}
       >
