@@ -86,38 +86,76 @@ export default function Incentive() {
       </div>
 
       {/* Main Content Container */}
-      <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-7xl relative mx-auto w-full bg-[#E8E4F3] rounded-3xl px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
-        {/* Left Side - Text Content */}
-        <div className="w-full lg:w-1/4 space-y-4 lg:space-y-6 lg:mt-55">
-          <p className="text-base sm:text-lg lg:text-md lg:font-bold leading-relaxed mt-10">
-            {currentInitiative.description}
-          </p>
-
-          <button 
-            onClick={() => (navigate('/initial'))}
-            className="text-base sm:text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
-          >
-            Know More
-          </button>
-        </div>
-
-        {/* Center - Image */}
-        <div className="w-full lg:w-1/2 relative">
-          <div className="relative rounded-md overflow-hidden shadow-2xl bg-gray-200">
-            <img
-              src={currentInitiative.image}
-              alt={currentInitiative.title}
-              className="w-full h-64 sm:h-80 lg:h-[330px] object-cover transition-all duration-500"
-              key={currentIndex}
-            />
-          </div>
-        </div>
-        <div className='w-1/4'/>
-        {/* Right Side - Heading */}
-        <div className=" absolute right-10 top-0 w-full lg:w-[35%] flex items-start">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#3B2486] leading-tight text-right transition-all duration-500">
+      <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-6xl relative mx-auto w-full bg-[#E8E4F3] rounded-3xl px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
+        
+        {/* Mobile/Tablet Layout - Title at Top */}
+        <div className="w-full lg:hidden flex flex-col gap-6">
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2486] leading-tight text-center transition-all duration-500">
             {currentInitiative.title.toUpperCase()}
           </h2>
+
+          {/* Image */}
+          <div className="w-full relative">
+            <div className="relative rounded-md overflow-hidden shadow-2xl bg-gray-200">
+              <img
+                src={currentInitiative.image}
+                alt={currentInitiative.title}
+                className="w-full h-64 sm:h-80 object-cover transition-all duration-500"
+                key={currentIndex}
+              />
+            </div>
+          </div>
+
+          {/* Description and Button */}
+          <div className="w-full space-y-4 text-center">
+            <p className="text-xl sm:text-lg leading-relaxed">
+              {currentInitiative.description}
+            </p>
+
+            <button 
+              onClick={() => (navigate('/initial'))}
+              className="text-base sm:text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
+            >
+              Know More
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Original 3-column layout */}
+        <div className="hidden lg:flex w-full relative">
+          {/* Left Side - Text Content */}
+          <div className="w-1/4 space-y-6">
+            <p className="text-md font-bold leading-relaxed">
+              {currentInitiative.description}
+            </p>
+
+            <button 
+              onClick={() => (navigate('/initial'))}
+              className="text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
+            >
+              Know More
+            </button>
+          </div>
+
+          {/* Center - Image */}
+          <div className="w-1/2 relative px-8">
+            <div className="relative rounded-md overflow-hidden shadow-2xl bg-gray-200">
+              <img
+                src={currentInitiative.image}
+                alt={currentInitiative.title}
+                className="w-full h-[330px] object-cover transition-all duration-500"
+                key={currentIndex}
+              />
+            </div>
+          </div>
+
+          {/* Right Side - Heading */}
+          <div className="w-1/4 flex items-start justify-end">
+            <h2 className="text-5xl xl:text-6xl font-bold text-[#3B2486] leading-tight text-right transition-all duration-500">
+              {currentInitiative.title.toUpperCase()}
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -137,23 +175,6 @@ export default function Incentive() {
               }}
             ></div>
           </div>
-        ))}
-      </div>
-
-      {/* Navigation Dots (Optional - for mobile clarity) */}
-      <div className="flex justify-center gap-2 mt-6 lg:hidden">
-        {initiatives.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setCurrentIndex(index);
-              setProgress(0);
-            }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'bg-white w-8' : 'bg-gray-600'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
         ))}
       </div>
     </div>
