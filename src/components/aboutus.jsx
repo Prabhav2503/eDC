@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CARDS = [
   {
@@ -31,6 +31,15 @@ export default function CardsShowcase() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
+  // Auto-slide effect for mobile carousel
+  useEffect(() => {
+    const autoSlideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % CARDS.length);
+    }, 2500); // Change slide every 4 seconds
+
+    return () => clearInterval(autoSlideInterval);
+  }, []);
+
   // Handle touch events for mobile swipe
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -54,6 +63,14 @@ export default function CardsShowcase() {
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
+  };
+
+  const goToPrevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + CARDS.length) % CARDS.length);
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % CARDS.length);
   };
 
   return (
@@ -89,7 +106,7 @@ export default function CardsShowcase() {
                     {card.title}
                   </h2>
 
-                  <p className="text-sm leading-relaxed text-white/90 w-full text-left">
+                  <p className="text-sm sm:text-xl leading-relaxed text-white/90 w-full text-left">
                     {card.body}
                   </p>
                 </article>
@@ -111,6 +128,42 @@ export default function CardsShowcase() {
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <button
+              onClick={goToPrevSlide}
+              className="bg-[#2D1B66] text-white p-3 rounded-full hover:bg-[#3B2486] transition-colors duration-300 shadow-lg"
+              aria-label="Previous slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={goToNextSlide}
+              className="bg-[#2D1B66] text-white p-3 rounded-full hover:bg-[#3B2486] transition-colors duration-300 shadow-lg"
+              aria-label="Next slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -160,7 +213,7 @@ export default function CardsShowcase() {
                   {card.title}
                 </h2>
 
-                <p className="mt-4 text-sm md:text-2xl leading-relaxed text-white/90 w-full text-left">
+                <p className="mt-4 text-md md:text-2xl leading-relaxed text-white/90 w-full text-left">
                   {card.body}
                 </p>
 

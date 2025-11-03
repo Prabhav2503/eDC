@@ -58,7 +58,7 @@ const TeamsCard = ({ name, position, image, linkedin, gmail }) => {
           <h3 className="text-white font-bold text-xl leading-tight truncate">
             {name}
           </h3>
-          <p className="text-white/95 text-sm md:text-[15px] leading-tight">
+          <p className="text-white/95 text-lg md:text-[15px] leading-tight">
             {position}
           </p>
         </div>
