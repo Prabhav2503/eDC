@@ -22,7 +22,7 @@ function App() {
     // Simulate loading time for the preloader  
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 4800) // 5 seconds loading time
+    },) // 5 seconds loading time
 
     return () => clearTimeout(timer)
   }, [])

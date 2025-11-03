@@ -56,6 +56,8 @@ import RohitBansal from "../assets/speakers/RohitBansal.png"
 import SachinBansal from "../assets/speakers/SachinBansal.png"
 import SanjeevBikhchandani from "../assets/speakers/SanjeevBikhchandani.png"
 import VijayShekharSharma from "../assets/speakers/VijayShekharSharma.png"
+import prabhav from "../assets/teams/prabhav_tech.jpg"
+import anushka from "../assets/teams/anushka_tech.jpg"
 
 export const IMAGES = import.meta.glob(
   '../assets/gallery_pictures/*.{png,jpg,jpeg,webp,gif,svg,JPG}',
@@ -129,6 +131,8 @@ RohitBansal: RohitBansal,
 SachinBansal: SachinBansal,
 SanjeevBikhchandani: SanjeevBikhchandani,
 VijayShekharSharma: VijayShekharSharma,
+prabhav:prabhav,
+anushka:anushka,
 
 }
 

@@ -145,7 +145,20 @@ const teamMembers = [
     image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
     gmail: "shreya.yadav@gmail.com",
     linkedin: "https://linkedin.com/in/shreyayadav"
-  }
+  },
+  {
+    name: "Prabhav",
+    position: "Technical Executive",
+    image: PNG.prabhav,
+    gmail: "prabhav589@gmail.com",
+    linkedin: "https://linkedin.com/in/prabhav"
+  },{
+    name: "Anushka Singh",
+    position: "Technical Executive",
+    image: PNG.anushka,
+    gmail: "anushka.singh020307@gmail.com",
+    linkedin: "https://linkedin.com/in/anushkasingh"
+  },
 ];
 
 
