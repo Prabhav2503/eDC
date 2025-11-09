@@ -15,7 +15,7 @@ const AboutSection = ({ image, title, description, reverse = false }) => {
         >
           {title}
         </h2>
-        <p className=" text-base md:text-xl w-[900px] lg:text-base leading-relaxed text-center lg:text-left">
+        <p className=" text-base md:text-xl lg:w-[90%] lg:text-base leading-relaxed text-center lg:text-left">
           {description}
         </p>
       </div>
