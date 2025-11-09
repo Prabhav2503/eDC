@@ -125,7 +125,7 @@ const footer = () => {
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-white  md:text-xs px-6 sm:px-8 md:px-[47px] pt-4 sm:pt-5 md:pt-[18px] pb-6 sm:pb-8 gap-2 sm:gap-0">
           <p>Copyright eDC IIT Delhi</p>
-          <p>Created and maintained by: Anushka and Prabhav</p>
+          {/* <p>Created and maintained by: Anushka and Prabhav</p> */}
           <p>All Rights Reserved</p>
         </div>
       </div>

@@ -39,8 +39,8 @@ const pastSpeakers = () => {
               perPage: 4,
               focus: "center",
               autoplay: true,
-              interval: 1800, // faster, smoother interval
-              speed: 700, // quick smooth slide
+              interval: 3500, // faster, smoother interval
+              speed: 800, // quick smooth slide
               pauseOnHover: false,
               pauseOnFocus: false,
               arrows: false,

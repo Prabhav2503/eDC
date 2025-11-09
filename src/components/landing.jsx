@@ -78,11 +78,7 @@ const Landing = ({ JPG,Landing, SVGs }) => {
                       alt="eDC Logo" 
                       className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:size-70 object-contain"
                     />
-                    <div className="text-center">
-                      <p className="text-gray-300 text-sm sm:text-base md:text-lg">
-                        Enterpreneurship Development Cell
-                      </p>
-                    </div>
+                    
                   </div>
                 </div>
               ) : (

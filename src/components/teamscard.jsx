@@ -66,7 +66,7 @@ const TeamsCard = ({ name, position, image, linkedin, gmail }) => {
         {/* Actions */}
         <div className="hidden group-hover:flex items-center gap-2">
           {/* Gmail */}
-          {gmail && (
+          {/* {gmail && (
             <a
               href={`mailto:${gmail}`}
               aria-label="Email"
@@ -81,7 +81,7 @@ const TeamsCard = ({ name, position, image, linkedin, gmail }) => {
             >
               <Mail size={20} strokeWidth={2.25} />
             </a>
-          )}
+          )} */}
 
           {/* LinkedIn */}
           {linkedin && (

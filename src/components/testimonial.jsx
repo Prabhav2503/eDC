@@ -83,8 +83,8 @@ const Card = ({ NAME, POR, description, image }) => {
 const Testimonial = () => {
   return (
     <div className="flex flex-col min-h-[1797px] w-full bg-white relative md:mb-[62px]">
-      <div className="bg-[#2D1B66] h-[2700px] sm:h-[2200px] md:h-[2200px] lg:h-[1750px] w-full">
-        <p className="text-white text-[50px] sm:text-[70px] md:text-[80px] lg:text-[96px] font-bold md:pl-[101px] pt-5 md:pt-10 lg:pt-[114px]">
+      <div className="bg-[#2D1B66] min-h-[1500px] sm:h-[2200px] md:h-[2200px] lg:h-[1750px] w-full">
+        <p className="text-white text-[50px] sm:text-[70px] md:text-[80px] lg:text-[96px] font-bold md:pl-[101px] pt-5 md:pt-10 lg:pt-[114px] px-5">
           TESTIMONIALS
         </p>
       </div>

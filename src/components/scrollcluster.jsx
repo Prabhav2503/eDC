@@ -11,8 +11,9 @@ const CARDS = [
     headingcolor: "text-white",
     heading: "Corporate Partnerships",
     body:
-      "Collaborate with eDC to co-create impactful initiatives—workshops, hackathons, innovation challenges, and campus engagements. Let’s work together to bridge industry and innovation.",
-    cta: "APPLY HERE",
+      "Partner with eDC to co-develop initiatives that inspire innovation and entrepreneurship, from hackathons and startup bootcamps to industry challenges and workshops. Together, let’s bridge academia and industry to shape India’s next generation of founders.",
+    cta: "Collaborate Now",
+    link:"https://docs.google.com/forms/d/e/1FAIpQLSdXoJPV-Pk2TYEirJs5UeJIY2HUotcRhlCXcgJaJdQzRiLA8Q/viewform?usp=publish-editor",
   },
   {
     id: "tr",
@@ -22,8 +23,10 @@ const CARDS = [
     headingcolor: "text-white",
     heading: "Incubation and Mentorship Support",
     body:
-      "Partner with us to empower student-led innovation at IIT Delhi. As a sponsor, your brand will gain visibility across flagship events, campus activations, and nationwide outreach. Join us in enabling India’s future founders.",
+      "Are you building a startup and need the right guidance, resources, or network to grow? Join eDC’s incubation and mentorship programs at IIT Delhi to access expert mentors, industry connections, workspace opportunities, and investor exposure. Get the support you need to refine your idea, scale your venture, and make real impact",
     cta: "LEARN MORE",
+    link:"https://docs.google.com/forms/d/e/1FAIpQLScyKj67FDVdXbba9mMoazX4qUWEmn7fHmVqOlyI9NsbClEJRQ/viewform?usp=dialog",
+
   },
   {
     id: "bl",
@@ -33,8 +36,10 @@ const CARDS = [
     headingcolor: "text-black",
     heading: "Become a Mentor",
     body:
-      "Share your experience, guide young entrepreneurs, and make a lasting impact. Join our mentor network to support student teams in strategy, tech, business, and growth.",
+      "Share your experience, expertise, and entrepreneurial journey with aspiring founders. As a mentor, you’ll help shape ideas, refine business strategies, and empower student teams to grow into real-world ventures.",
     cta: "GET STARTED",
+    link:"https://docs.google.com/forms/d/e/1FAIpQLSfvD5MlGJpoQBQ9215IoGRCKTS8LxEsjz7YTIJ3GUOYngNBBg/viewform?usp=publish-editor",
+
   },
   {
     id: "br",
@@ -44,8 +49,9 @@ const CARDS = [
     headingcolor: "text-black",
     heading: "Become a Sponsor",
     body:
-      "Partner with us to empower student-led innovation at IIT Delhi. As a sponsor, your brand will gain visibility across flagship events, campus activations, and nationwide outreach. Join us in enabling India’s future founders..",
+      "Support India’s premier student entrepreneurship ecosystem. As an eDC sponsor, your brand will be featured across IIT Delhi’s flagship events, startup programs, and nationwide outreach while contributing directly to the growth of India’s future founders.",
     cta: "BECOME A SPONSOR",
+    link:"https://docs.google.com/forms/d/e/1FAIpQLScIdbQoS1t3Jr2vobyhiqpnMeTByvDy2zdVG_fg2HH29oeKqA/viewform?usp=publish-editor",
   },
 ];
 
@@ -77,14 +83,19 @@ export default function ScrollCluster() {
 
   const titleScale = useTransform(scrollYProgress, [0, IN_END, HOLD_END], [1, 0.9, 0.88]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.18, HOLD_END], [1, 0.9, 0.85]);
+  const titleTop = useTransform(
+  scrollYProgress,
+  [0, IN_END],
+  ["15rem", "33rem"] // tweak these to taste
+);
 
   /** DESKTOP/TABLET positions (existing) */
   const finalPositionsDesktop = useMemo(
     () => ({
-      tl: { x: "-8vw", y: "-18vh" },
-      tr: { x: "22vw", y: "6vh" },
-      bl: { x: "-26vw", y: "10vh" },
-      br: { x: "0vw", y: "22vh" },
+      tl: { x: "-1vw", y: "-35vh" },
+      tr: { x: "30vw", y: "6vh" },
+      bl: { x: "-30vw", y: "10vh" },
+      br: { x: "0vw", y: "45vh" },
     }),
     []
   );
@@ -140,18 +151,22 @@ const startPositionsMobile = useMemo(
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white h-[340vh] sm:h-[380vh] lg:h-[420vh]"
+      className="relative bg-white h-[220vh] sm:h-[380vh] lg:h-[420vh]"
     >
       <div className="sticky top-0 sm:top-12 lg:top-20 h-[150vh] overflow-hidden relative">
         {/* Center heading */}
         <motion.h1
-          style={{ scale: titleScale, opacity: titleOpacity }}
-          className="pointer-events-none absolute inset-0 z-0 grid place-items-center select-none px-4"
-        >
-          <span className="font-extrabold tracking-tight leading-[0.9] text-[#321F72] text-[clamp(2.5rem,10vw,8rem)]">
-            Join Us
-          </span>
-        </motion.h1>
+  style={{ scale: titleScale, opacity: titleOpacity }}
+  className="relative pointer-events-none absolute inset-0 z-0 grid place-items-center select-none px-4"
+>
+  <motion.span
+    style={{ top: titleTop }}
+    className="absolute top-60 font-extrabold tracking-tight leading-[0.9] text-[#321F72] text-[clamp(3rem,12vw,12rem)]"
+  >
+    Join Us
+  </motion.span>
+</motion.h1>
+
 
         {/* Cards layer */}
         <div className="absolute inset-0 z-10 grid place-items-center">
@@ -183,6 +198,7 @@ const startPositionsMobile = useMemo(
                     cta={c.cta}
                     bodyBg={c.bodybg}
                     ctaText={c.ctaText}
+                    link={c.link}
                   />
                 </motion.div>
               );
@@ -203,6 +219,7 @@ function PartnershipCard({
   headingcolor,
   ctaBg = "bg-white",
   ctaText,
+  link,
 }) {
   return (
     <div
@@ -230,6 +247,7 @@ function PartnershipCard({
           type="button"
           className={`mt-5 w-full rounded-[16px] ${ctaBg} ${ctaText} font-semibold py-3 shadow-md hover:shadow-lg transition-all`}
           style={{ fontFamily: "Montserrat", fontSize: "clamp(14px, 3.6vw, 18px)" }}
+          onClick={() => link && window.open(link, "_blank", "noopener,noreferrer")}
         >
           {cta}
         </button>

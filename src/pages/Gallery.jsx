@@ -9,7 +9,7 @@ const GalleryPage = ({ SVGs, IMAGES }) => {
   }, []);
 
   return (
-    <div className="w-full bg-[#2D1B66]">
+    <div className="w-full pb-20 bg-[#2D1B66]">
       {/* Page section with flexible height + responsive top padding */}
       <section className="min-h-screen w-full pt-24 sm:pt-28 md:pt-32 lg:pt-44">
         {/* Page container */}

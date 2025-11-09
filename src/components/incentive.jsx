@@ -17,7 +17,7 @@ const initiatives = [
   {
     title: 'BECon',
     description: 'Business and Entrepreneurship Conclave',
-    image:becon ,
+    image: becon,
   },
   {
     title: 'Regionals',
@@ -45,14 +45,12 @@ export default function Incentive() {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const TRANSITION_DURATION = 3000; // 5 seconds per slide
+  const TRANSITION_DURATION = 3000; // 3 seconds per slide
 
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
-          return 0;
-        }
+        if (prev >= 100) return 0;
         return prev + (100 / (TRANSITION_DURATION / 50));
       });
     }, 50);
@@ -70,11 +68,6 @@ export default function Incentive() {
 
   const currentInitiative = initiatives[currentIndex];
 
-  const handleKnowMore = () => {
-    console.log('Navigate to:', currentInitiative.title);
-    // Add your navigation logic here
-  };
-
   return (
     <div className="w-full bg-white text-black min-h-screen flex flex-col px-4 sm:px-6 lg:px-20 py-10 lg:py-20">
       {/* Header */}
@@ -88,7 +81,7 @@ export default function Incentive() {
       {/* Main Content Container */}
       <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-6xl relative mx-auto w-full bg-[#E8E4F3] rounded-3xl px-6 sm:px-8 lg:px-12 py-8 lg:py-12">
         
-        {/* Mobile/Tablet Layout - Title at Top */}
+        {/* ---------- Mobile Layout ---------- */}
         <div className="w-full lg:hidden flex flex-col gap-6">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2486] leading-tight text-center transition-all duration-500">
@@ -107,14 +100,13 @@ export default function Incentive() {
             </div>
           </div>
 
-          {/* Description and Button */}
+          {/* Description & Button */}
           <div className="w-full space-y-4 text-center">
             <p className="text-xl sm:text-lg leading-relaxed">
               {currentInitiative.description}
             </p>
-
-            <button 
-              onClick={() => (navigate('/initial'))}
+            <button
+              onClick={() => navigate('/initial')}
               className="text-base sm:text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
             >
               Know More
@@ -122,36 +114,39 @@ export default function Incentive() {
           </div>
         </div>
 
-        {/* Desktop Layout - Original 3-column layout */}
+        {/* ---------- Desktop Layout ---------- */}
         <div className="hidden lg:flex w-full relative">
+          {/* === Bottom line extending under image === */}
+          <div className="pointer-events-none absolute bottom-0 left-0 w-3/4 border-b-[2px] border-black/80 z-0" />
+
           {/* Left Side - Text Content */}
-          <div className="w-1/4 space-y-6">
+          <div className="w-1/4 flex flex-col justify-end items-start space-y-6 z-10">
             <p className="text-md font-bold leading-relaxed">
               {currentInitiative.description}
             </p>
 
-            <button 
-              onClick={() => (navigate('/initial'))}
-              className="text-lg font-bold underline hover:opacity-70 transition-opacity duration-300 inline-block"
+            <button
+              onClick={() => navigate('/initial')}
+              className="text-lg font-bold hover:opacity-70 transition-opacity duration-300 inline-block"
             >
               Know More
             </button>
           </div>
 
           {/* Center - Image */}
-          <div className="w-1/2 relative px-8">
+          <div className="w-1/2 relative pt-25 pb-1 z-10">
             <div className="relative rounded-md overflow-hidden shadow-2xl bg-gray-200">
               <img
                 src={currentInitiative.image}
                 alt={currentInitiative.title}
-                className="w-full h-[330px] object-cover transition-all duration-500"
+                className="w-full h-[300px] object-cover transition-all duration-500"
                 key={currentIndex}
               />
             </div>
           </div>
 
           {/* Right Side - Heading */}
-          <div className="w-1/4 flex items-start justify-end">
+          <div className="absolute z-20 right-0 w-1/4 flex items-start justify-end">
             <h2 className="text-5xl xl:text-6xl font-bold text-[#3B2486] leading-tight text-right transition-all duration-500">
               {currentInitiative.title.toUpperCase()}
             </h2>

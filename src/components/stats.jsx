@@ -18,7 +18,7 @@ const Stats = ({JPG}) => {
     {
       icon: <TrendingUp className="w-12 h-12" />,
       value: "10k+",
-      label: "STARTUPS INCUBATED"
+      label: "STARTUPS"
     },
     {
       icon: <Users className="w-12 h-12" />,

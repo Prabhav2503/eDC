@@ -2,20 +2,19 @@ import {JPG, PNG} from "./images.js"
 
 const coreTeam = [
   {
-    name: "Tanmay Sharma",    
-    position: "Overall Coordinator",
-    image: JPG.Tanmay,
-    gmail: "tripti@gmail.com",
-    linkedin: "https://linkedin.com/in/tripti"
-  },
-  {
     name: "Ekansh Agarwal",
     position: "Overall Advisor",
     image: JPG.Ekansh,
     gmail: "tripti@gmail.com",
     linkedin: "https://linkedin.com/in/tripti"
   },
- 
+  {
+    name: "Tanmay Sharma",    
+    position: "Overall Coordinator",
+    image: JPG.Tanmay,
+    gmail: "tripti@gmail.com",
+    linkedin: "https://linkedin.com/in/tripti"
+  }, 
  {
     name: "Archit Tayal",
     position: "Co-Overall Coordinator", 
@@ -35,116 +34,123 @@ const coreTeam = [
 
 const teamMembers = [
   {
-    name: "Tripti ",
-    position: "AnF",
+    name: "Tripti Kumari",
+    position: "Admin and Finance",
     image: JPG.Tripti,
-    gmail: "tripti@gmail.com",
-    linkedin: "https://linkedin.com/in/tripti"
-  },
-  {
-    name: "Chirag Bhambri",
-    position: "Corporate Relations",
-    image: PNG.chirag,
-    gmail: "chirag.bhambri@gmail.com",
-    linkedin: "https://linkedin.com/in/chiragbhambri"
-  },
-  {
-    name: "Sarthak Gupta",
-    position: "Corporate Relations", 
-    image: PNG.Sarthak,
-    gmail: "sarthak.gupta@gmail.com",
-    linkedin: "https://linkedin.com/in/sarthakgupta"
-  },
-  {
-    name: "Nishka Murarka",
-    position: "Design",
-    image: JPG.Nishka,
-    gmail: "nishka.murarka@gmail.com",
-    linkedin: "https://linkedin.com/in/nishkamurarka"
-  },
-  {
-    name: "Pratibha Kashyap",
-    position: "Design",
-    image: PNG.Pratibha,
-    gmail: "pratibha.kashyap@gmail.com",
-    linkedin: "https://linkedin.com/in/pratibhakashyap"
-  },
-  {
-    name: "Dishit Johari",
-    position: "Events",
-    image: JPG.Dishit,
-    gmail: "dishit.johari@gmail.com",
-    linkedin: "https://linkedin.com/in/dishitjohari"
-  },
-  {
-    name: "Kabir Bhatia", 
-    position: "Events",
-    image: PNG.Kabir,
-    gmail: "kabir@gmail.com",
-    linkedin: "https://linkedin.com/in/kabir"
-  },
-  {
-    name: "Lakshay Goel",
-    position: "Marketing",
-    image: JPG.Lakshay,
-    gmail: "lakshay.goel@gmail.com",
-    linkedin: "https://linkedin.com/in/lakshaygoel"
-  },
-  {
-    name: "Sakshi Sharma",
-    position: "Marketing",
-    image: JPG.Sakshi,
-    gmail: "sakshi.sharma@gmail.com",
-    linkedin: "https://linkedin.com/in/sakshisharma"
-  },
-  {
-    name: "Tejas Kamble",
-    position: "Media",
-    image: PNG.Tejas,
-    gmail: "tejas.kamble@gmail.com",
-    linkedin: "https://linkedin.com/in/tejaskamble"
-  },
-  {
-    name: "Saket Saraswat",
-    position: "Media", 
-    image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SP",
-    gmail: "saket.saraswat@gmail.com",
-    linkedin: "https://linkedin.com/in/saketsaraswat"
+    gmail: "triptising44@gmail.com",
+    linkedin: "https://www.linkedin.com/in/tripti-kumari-945182293/"
   },
   {
     name: "Aghamarsh Chetluru",
     position: "OC Office",
     image: JPG.Aghamarsh,
     gmail: "aghamarsh.chet@gmail.com",
-    linkedin: "https://linkedin.com/in/aghamarsh"
+    linkedin: "https://www.linkedin.com/in/aghamarsh-chetluru/"
+  },
+  {
+    name: "Chirag Bhambri",
+    position: "Corporate Relations",
+    image: PNG.chirag,
+    gmail: "chiragbhambri191@gmail.com",
+    linkedin: "https://www.linkedin.com/in/chiragbhambri191/"
+  },
+  {
+    name: "Sarthak Gupta",
+    position: "Corporate Relations", 
+    image: PNG.Sarthak,
+    gmail: "guptasarthak0320@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sarthak-g-/"
+  },
+  {
+    name: "Dishit Johari",
+    position: "Events",
+    image: JPG.Dishit,
+    gmail: "dishitjohari8879@gmail.com",
+    linkedin: "https://www.linkedin.com/in/dishit-johari-001a76237"
+  },
+  {
+    name: "Kabir Bhatia", 
+    position: "Events",
+    image: PNG.Kabir,
+    gmail: "kabirsirsa12@gmail.com",
+    linkedin: "https://www.linkedin.com/in/kabir-bhatia-iitdelhi"
+  },
+  {
+    name: "Lakshya Goel",
+    position: "Marketing and Strategic Partnerships",
+    image: JPG.Lakshay,
+    gmail: "8059800706lakshya@gmail.com",
+    linkedin: "https://www.linkedin.com/in/goellakshay"
+  },
+  {
+    name: "Sakshi Sharma",
+    position: "Marketing and Strategic Partnerships",
+    image: JPG.Sakshi,
+    gmail: "sakshi20040701@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sakshisharma431"
+  },
+  {
+    name: "Nupur Jain",
+    position: "Publicity",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=NJ",
+    gmail: "jainnupur321@gmail.com",
+    linkedin: "https://in.linkedin.com/in/nupur-singhi-184b972b0"
+  },
+  {
+    name: "Shreya Yadav",
+    position: "Publicity",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=SY",
+    gmail: "Shreyayad.work@gmail.com",
+    linkedin: "https://www.linkedin.com/in/shreya-yadav-3427b5282"
   },
   {
     name: "Vaibhav Pandey",
     position: "Startup Support",
     image: JPG.Vaibhav,
-    gmail: "vaibhav.pandey@gmail.com",
-    linkedin: "https://linkedin.com/in/vaibhavpandey"
+    gmail: "vaibhavpandey1502@gmail.com",
+    linkedin: "https://www.linkedin.com/in/vaibhav-pandey-984504285"
   },
   {
     name: "Harshit Verma",
     position: "Startup Support",
-    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
-    gmail: "harshit.verma@gmail.com",
-    linkedin: "https://linkedin.com/in/harshitverma"
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=HV",
+    gmail: "onmailharshit@gmail.com",
+    linkedin: "" // not provided
   },
   {
-    name: "Nupur Jain",
-    position: "Publicity",
-    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
-    gmail: "nupur.jain@gmail.com",
-    linkedin: "https://linkedin.com/in/nupurjain"
+    name: "Tejas Kamble",
+    position: "Media",
+    image: PNG.Tejas,
+    gmail: "thetejaskamble2005@gmail.com",
+    linkedin: "https://in.linkedin.com/in/tejas-kamble-a992ba289"
   },
   {
-    name: "Shreya Yadav",
-    position: "Publicity",
-    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=AA",
-    gmail: "shreya.yadav@gmail.com",
-    linkedin: "https://linkedin.com/in/shreyayadav"
+    name: "Saket Saraswat",
+    position: "Media", 
+    image: "https://via.placeholder.com/400x400/D946EF/FFFFFF?text=SS",
+    gmail: "saketsaket0308@gmail.com",
+    linkedin: "https://www.linkedin.com/in/saket-saraswat/"
+  },
+  {
+    name: "Nishka Murarka",
+    position: "Design",
+    image: JPG.Nishka,
+    gmail: "nishkamurarka@gmail.com",
+    linkedin: "https://www.linkedin.com/in/nishka-murarka-6497602a6"
+  },
+  {
+    name: "Pratibha Kashyap",
+    position: "Design",
+    image: PNG.Pratibha,
+    gmail: "pratibhakashyap804@gmail.com",
+    linkedin: "https://www.linkedin.com/in/pratibha-kashyap"
+  },
+  {
+    name: "Dipen Bansal",
+    position: "Content",
+    image: "https://via.placeholder.com/400x400/22C55E/FFFFFF?text=DB",
+    gmail: "dipenbansal1@gmail.com",
+    linkedin: "https://www.linkedin.com/in/dipen-bansal"
   },
   {
     name: "Prabhav",
@@ -152,7 +158,8 @@ const teamMembers = [
     image: PNG.prabhav,
     gmail: "prabhav589@gmail.com",
     linkedin: "https://linkedin.com/in/prabhav"
-  },{
+  },
+  {
     name: "Anushka Singh",
     position: "Technical Executive",
     image: PNG.anushka,

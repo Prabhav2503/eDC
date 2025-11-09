@@ -10,7 +10,7 @@ const Navbar = ({ SVGs, shrink }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   const linkClass = ({ isActive }) =>
-    `px-4 py-2 rounded-lg font-bold text-sm lg:text-xl ${isActive ? 'bg-[#D1AEFF]/5 text-[#FFFFFF] underline decoration-2 underline-offset-2' : 'text-white hover:underline decoration-2 hover:underline-offset-2 hover:text-[#D1AEFF] '}`
+    `px-4 py-2 rounded-lg font-bold text-sm lg:text-xl ${isActive ? 'bg-[#D1AEFF]/5 text-[#1CB5E0] underline decoration-2 underline-offset-5 text-2xl' : 'text-white hover:underline decoration-2 hover:underline-offset-5 hover:text-[#D1AEFF] '}`
 
   const mobileLinkClass = ({ isActive }) =>
     `block px-4 py-3 text-lg text-base ${isActive ? 'bg-[#D1AEFF]/5 text-[#FFFFFF] underline decoration-2 underline-offset-2 ' : 'text-white hover:bg-white/10 decoration-white/50 hover:text-[#D1AEFF] '}`
@@ -18,7 +18,7 @@ const Navbar = ({ SVGs, shrink }) => {
   return (
     <div className='w-full flex items-center'>
       <div
-      className={`w-full bg-[#25233E] backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 scale-80 rounded-3xl font-semibold text-xl opacity-90`} style={{fontFamily:"Montserrat"}}
+      className={`w-full bg-[#25233E] backdrop-blur-md border border-white/10 shadow-sm z-30 transition-all duration-300 scale-80 rounded-3xl font-semibold text-xl opacity-80`} style={{fontFamily:"Montserrat"}}
     >
       {/* Main Navbar */}
   <div className="flex items-center justify-between px-4">
@@ -35,16 +35,16 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/initial' className={linkClass}>
             Initiative
           </NavLink>
-          {/* <NavLink to='/becon' className={linkClass}>
+          <NavLink to='/becon' className={linkClass}>
             BECon
-          </NavLink> */}
+          </NavLink>
           <NavLink to='/resources' className={linkClass}>
             Resources
           </NavLink>
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
-          <NavLink to='/joinus' className='hidden md:block bg-white text-sm text-black px-4 py-2 rounded-md'>
+          <NavLink to='/joinus' className='hidden md:block bg-white font-bold text-sm lg:text-xl text-black px-4 py-2 rounded-lg'>
           Join Us
         </NavLink>
         </div>
@@ -76,9 +76,9 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/initial' className={mobileLinkClass} onClick={toggleMenu}>
             Initiative
           </NavLink>
-          {/* <NavLink to='/becon' className={mobileLinkClass} onClick={toggleMenu}>
+          <NavLink to='/becon' className={mobileLinkClass} onClick={toggleMenu}>
             BECon
-          </NavLink> */}
+          </NavLink>
           <NavLink to='/resources' className={mobileLinkClass} onClick={toggleMenu}>
             Resources
           </NavLink>

@@ -30,7 +30,7 @@ return (
             <Stats JPG={JPG} />
             <Incentive />
             <PastSpeakers PNG={PNG} />
-            {/* <Testimonial /> */}
+            <Testimonial />
         </div>
         </div>
       </div>
