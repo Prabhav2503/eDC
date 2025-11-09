@@ -72,11 +72,11 @@ const Landing = ({ JPG,Landing, SVGs }) => {
                   className="w-full h-full flex items-center justify-center"
                   style={{ backgroundColor: '#2D1B69' }}
                 >
-                  <div className="flex flex-col items-center justify-center gap-2 px-16 z-20 relative">
+                  <div className="flex flex-col items-center justify-center gap-2  z-20 relative">
                     <img 
                       src={SVGs.logo} 
                       alt="eDC Logo" 
-                      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:size-70 object-contain"
+                      className="size-70 object-contain"
                     />
                     
                   </div>
