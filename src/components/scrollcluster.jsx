@@ -13,7 +13,7 @@ const CARDS = [
     body:
       "Partner with eDC to co-develop initiatives that inspire innovation and entrepreneurship, from hackathons and startup bootcamps to industry challenges and workshops. Together, let’s bridge academia and industry to shape India’s next generation of founders.",
     cta: "Collaborate Now",
-    link:"https://docs.google.com/forms/d/e/1FAIpQLSdXoJPV-Pk2TYEirJs5UeJIY2HUotcRhlCXcgJaJdQzRiLA8Q/viewform?usp=publish-editor",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdXoJPV-Pk2TYEirJs5UeJIY2HUotcRhlCXcgJaJdQzRiLA8Q/viewform?usp=publish-editor",
   },
   {
     id: "tr",
@@ -25,8 +25,7 @@ const CARDS = [
     body:
       "Are you building a startup and need the right guidance, resources, or network to grow? Join eDC’s incubation and mentorship programs at IIT Delhi to access expert mentors, industry connections, workspace opportunities, and investor exposure. Get the support you need to refine your idea, scale your venture, and make real impact",
     cta: "LEARN MORE",
-    link:"https://docs.google.com/forms/d/e/1FAIpQLScyKj67FDVdXbba9mMoazX4qUWEmn7fHmVqOlyI9NsbClEJRQ/viewform?usp=dialog",
-
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScyKj67FDVdXbba9mMoazX4qUWEmn7fHmVqOlyI9NsbClEJRQ/viewform?usp=dialog",
   },
   {
     id: "bl",
@@ -38,8 +37,7 @@ const CARDS = [
     body:
       "Share your experience, expertise, and entrepreneurial journey with aspiring founders. As a mentor, you’ll help shape ideas, refine business strategies, and empower student teams to grow into real-world ventures.",
     cta: "GET STARTED",
-    link:"https://docs.google.com/forms/d/e/1FAIpQLSfvD5MlGJpoQBQ9215IoGRCKTS8LxEsjz7YTIJ3GUOYngNBBg/viewform?usp=publish-editor",
-
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfvD5MlGJpoQBQ9215IoGRCKTS8LxEsj7YTIJ3GUOYngNBBg/viewform?usp=publish-editor",
   },
   {
     id: "br",
@@ -51,7 +49,7 @@ const CARDS = [
     body:
       "Support India’s premier student entrepreneurship ecosystem. As an eDC sponsor, your brand will be featured across IIT Delhi’s flagship events, startup programs, and nationwide outreach while contributing directly to the growth of India’s future founders.",
     cta: "BECOME A SPONSOR",
-    link:"https://docs.google.com/forms/d/e/1FAIpQLScIdbQoS1t3Jr2vobyhiqpnMeTByvDy2zdVG_fg2HH29oeKqA/viewform?usp=publish-editor",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScIdbQoS1t3Jr2vobyhiqpnMeTByvDy2zdVG_fg2HH29oeKqA/viewform?usp=publish-editor",
   },
 ];
 
@@ -59,13 +57,12 @@ const CARDS = [
 export default function ScrollCluster() {
   const sectionRef = useRef(null);
 
-  // Framer: target MUST be non-static. This <section> is "relative".
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  // Bring-to-front on mobile
+  // Mobile detection + bring-to-front
   const [frontId, setFrontId] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -76,20 +73,32 @@ export default function ScrollCluster() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  // timing
+  // viewport height for mobile hold shift
+  const [vh, setVh] = useState(0);
+  useEffect(() => setVh(window.innerHeight || 0), []);
+
+  // timings
   const IN_START = 0.12;
   const IN_END = 0.58;
   const HOLD_END = 0.86;
 
   const titleScale = useTransform(scrollYProgress, [0, IN_END, HOLD_END], [1, 0.9, 0.88]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.18, HOLD_END], [1, 0.9, 0.85]);
-  const titleTop = useTransform(
-  scrollYProgress,
-  [0, IN_END],
-  ["15rem", "33rem"] // tweak these to taste
-);
+  const titleTop = useTransform(scrollYProgress, [0, IN_END], ["15rem", "33rem"]);
 
-  /** DESKTOP/TABLET positions (existing) */
+  /**
+   * MOBILE HOLD SHIFT:
+   * After the cluster reaches final positions (IN_END -> 1),
+   * push the whole cluster UP so the FIRST card (tl) stays on screen.
+   * Tweak the -0.45 * vh value to center it exactly how you want.
+   */
+  const mobileHoldShift = useTransform(
+    scrollYProgress,
+    [IN_END, 1],
+    [0, -0.45 * vh]
+  );
+
+  /** Desktop/tablet final positions */
   const finalPositionsDesktop = useMemo(
     () => ({
       tl: { x: "-1vw", y: "-35vh" },
@@ -99,39 +108,37 @@ export default function ScrollCluster() {
     }),
     []
   );
-const startPositionsDesktop = useMemo(
-  () => ({
-    tl: { x: "-90vw", y: "80vh",  rotate: -22, scale: 0.96 },
-    tr: { x: "90vw",  y: "85vh",  rotate: 18,  scale: 0.96 },
-    bl: { x: "-95vw", y: "90vh",  rotate: 16,  scale: 0.96 },
-    br: { x: "95vw",  y: "95vh",  rotate: -20, scale: 0.96 },
-  }),
-  []
-);
+  const startPositionsDesktop = useMemo(
+    () => ({
+      tl: { x: "-90vw", y: "80vh", rotate: -22, scale: 0.96 },
+      tr: { x: "90vw", y: "85vh", rotate: 18, scale: 0.96 },
+      bl: { x: "-95vw", y: "90vh", rotate: 16, scale: 0.96 },
+      br: { x: "95vw", y: "95vh", rotate: -20, scale: 0.96 },
+    }),
+    []
+  );
 
-  /** PHONE positions — EDIT THESE to manually place each card on mobile */
+  /** Phone final positions (where the cards “land”) */
   const finalPositionsMobile = useMemo(
     () => ({
-      // examples (center-ish). Use values like "20vw", "120px", "-10vh", etc.
-      tl: { x: "0vw", y: "-25vh" },
+      tl: { x: "0vw", y: "-25vh" }, // first card high up
       tr: { x: "0vw", y: "0vh" },
       bl: { x: "0vw", y: "25vh" },
       br: { x: "0vw", y: "50vh" },
     }),
     []
   );
-const startPositionsMobile = useMemo(
-  () => ({
-    tl: { x: "0vw", y: "80vh", rotate: -8, scale: 0.96 },
-    tr: { x: "0vw", y: "80vh", rotate: 6,  scale: 0.96 },
-    bl: { x: "0vw", y: "80vh", rotate: 6,  scale: 0.96 },
-    br: { x: "0vw", y: "80vh", rotate: -6, scale: 0.96 },
-  }),
-  []
-);
+  const startPositionsMobile = useMemo(
+    () => ({
+      tl: { x: "0vw", y: "80vh", rotate: -8, scale: 0.96 },
+      tr: { x: "0vw", y: "80vh", rotate: 6, scale: 0.96 },
+      bl: { x: "0vw", y: "80vh", rotate: 6, scale: 0.96 },
+      br: { x: "0vw", y: "80vh", rotate: -6, scale: 0.96 },
+    }),
+    []
+  );
 
   const makeMotionFor = (id) => {
-    // choose positions based on device
     const s = (isMobile ? startPositionsMobile : startPositionsDesktop)[id];
     const f = (isMobile ? finalPositionsMobile : finalPositionsDesktop)[id];
 
@@ -151,26 +158,26 @@ const startPositionsMobile = useMemo(
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white h-[220vh] sm:h-[380vh] lg:h-[420vh]"
+      className="relative bg-white h-[180vh] sm:h-[380vh] lg:h-[420vh]"
     >
       <div className="sticky top-0 sm:top-12 lg:top-20 h-[150vh] overflow-hidden relative">
         {/* Center heading */}
         <motion.h1
-  style={{ scale: titleScale, opacity: titleOpacity }}
-  className="relative pointer-events-none absolute inset-0 z-0 grid place-items-center select-none px-4"
->
-  <motion.span
-    style={{ top: titleTop }}
-    className="absolute top-60 font-extrabold tracking-tight leading-[0.9] text-[#321F72] text-[clamp(3rem,12vw,12rem)]"
-  >
-    Join Us
-  </motion.span>
-</motion.h1>
-
+          style={{ scale: titleScale, opacity: titleOpacity }}
+          className="relative pointer-events-none absolute inset-0 z-0 grid place-items-center select-none px-4"
+        >
+          <motion.span
+            style={{ top: titleTop }}
+            className="absolute top-60 font-extrabold tracking-tight leading-[0.9] text-[#321F72] text-[clamp(3rem,12vw,12rem)]"
+          >
+            Join Us
+          </motion.span>
+        </motion.h1>
 
         {/* Cards layer */}
         <div className="absolute inset-0 z-10 grid place-items-center">
-          <div className="relative">
+          {/* Apply mobile hold shift to keep FIRST card visible through the hold */}
+          <motion.div className="relative" style={{ y: isMobile ? mobileHoldShift : 0 }}>
             {CARDS.map((c, idx) => {
               const m = makeMotionFor(c.id);
               const isFront = isMobile && frontId === c.id;
@@ -187,8 +194,8 @@ const startPositionsMobile = useMemo(
                     c.bg,
                   ].join(" ")}
                   style={{
-                    ...m,                                 // motion values
-                    zIndex: isFront ? 999 : 10 + idx,    // bring-to-front on mobile
+                    ...m,
+                    zIndex: isFront ? 999 : 10 + idx,
                   }}
                 >
                   <PartnershipCard
@@ -203,7 +210,7 @@ const startPositionsMobile = useMemo(
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
