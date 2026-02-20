@@ -92,7 +92,7 @@ export default function Hero() {
         {/* Section Header with underline - matching other pages */}
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 text-center">
-            OUR PARTNERS
+            OFFICIAL KNOWLEDGE PARTNER
           </h2>
           <div className="w-full h-[2px] bg-gradient-to-r from-indigo-400 via-purple-400 to-transparent" />
         </div>
