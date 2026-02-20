@@ -86,6 +86,42 @@ export default function Hero() {
           </button>
         </div>
       </section>
+
+      {/* ---- Partner Section ---- */}
+      <section className="relative mx-auto max-w-6xl px-6 sm:px-8 pb-24 sm:pb-32">
+        {/* Section Header with underline - matching other pages */}
+        <div className="mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 text-center">
+            OUR PARTNERS
+          </h2>
+          <div className="w-full h-[2px] bg-gradient-to-r from-indigo-400 via-purple-400 to-transparent" />
+        </div>
+        
+        <div className="flex justify-center items-center gap-6 sm:gap-8 flex-wrap">
+          {/* Partner Card with purple theme */}
+          <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#3B2486] to-[#2D1B66] p-1 transition-all duration-300 hover:scale-105">
+            {/* Inner card */}
+            <div className="relative rounded-xl bg-white overflow-hidden">
+              {/* Glow effect */}
+              <div 
+                className="absolute inset-0 rounded-xl bg-[radial-gradient(circle_at_50%_50%,rgba(129,140,248,0.15),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                aria-hidden="true" 
+              />
+              
+              {/* Content */}
+              <div className="relative h-24 sm:h-28 w-40 sm:w-48 flex items-center justify-center">
+                <img src="/fincharterted.svg" alt="Finchartered" className="h-full w-full object-contain" />
+              </div>
+            </div>
+            
+            {/* Border glow on hover */}
+            <div 
+              className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/0 via-purple-500/0 to-indigo-500/0 group-hover:from-indigo-500/30 group-hover:via-purple-500/20 group-hover:to-indigo-500/30 transition-all duration-300 -z-10 blur-sm" 
+              aria-hidden="true" 
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
