@@ -4,6 +4,20 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-foreground: #0a0a0a;
+  --color-muted-foreground: #737373;
+  --color-primary-foreground: #fafafa;
+  --color-border: #e5e5e5;
+}
+
+:root {
+  --foreground: #0a0a0a;
+  --muted-foreground: #737373;
+  --primary-foreground: #fafafa;
+  --border: #e5e5e5;
+}
+
 
 @layer utilities {
   .bullet-custom ::marker {

@@ -44,6 +44,9 @@ const Navbar = ({ SVGs, shrink }) => {
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
+          <NavLink to='/faq' className={linkClass}>
+            FAQ
+          </NavLink>
           <NavLink to='/joinus' className='hidden md:block bg-white font-bold text-sm lg:text-xl text-black px-4 py-2 rounded-lg'>
           Join Us
         </NavLink>
@@ -65,7 +68,7 @@ const Navbar = ({ SVGs, shrink }) => {
       </div>
 
       {/* Mobile Navigation Menu - Only visible on mobile when menu is open */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+      <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="px-4 py-2 bg-white/5 backdrop-blur-md border-t border-white/10">
           <NavLink to='/' className={mobileLinkClass} end onClick={toggleMenu}>
             Home  
@@ -84,6 +87,9 @@ const Navbar = ({ SVGs, shrink }) => {
           </NavLink>
           <NavLink to='/gallery' className={mobileLinkClass} onClick={toggleMenu}>
             Gallery
+          </NavLink>
+          <NavLink to='/faq' className={mobileLinkClass} onClick={toggleMenu}>
+            FAQ
           </NavLink>
           <div className="pt-3 pb-2">
             <button className='w-full bg-white text-black px-4 py-2 rounded-md' onClick={() => (navigate('/joinus'))} >

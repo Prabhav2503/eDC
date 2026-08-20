@@ -1,7 +1,6 @@
 import React from 'react'
-import ekansh from "../assets/ekansh_core.webp"
 import TeamCard from './teamscard';
-import {teamMembers, coreTeam} from "../utility/teams";
+import { teamMembers, coreTeam } from "../utility/teams";
 
 const team = () => {
   return (
@@ -31,8 +30,8 @@ const team = () => {
 
       {/* Team Members Cards - Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18">
-        {teamMembers.map((member, idx) => (
-          <TeamCard key={idx} {...member} />
+        {teamMembers.map((member) => (
+          <TeamCard key={member.name} {...member} />
         ))}
       </div>
     </div>

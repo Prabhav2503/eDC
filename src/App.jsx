@@ -8,6 +8,7 @@ import Initiative from './pages/Initiative'
 import BeCon from './pages/BeCon'
 import Resource from './pages/Resource'
 import Gallery from './pages/Gallery'
+import FAQ from './pages/FAQ'
 import Navbar from './components/navbar'
 import Test from "./components/scrollcluster"
 
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/becon" element={<BeCon SVGs={SVGs} />} />
                 <Route path="/resources" element={<Resource SVGs={SVGs}/>} />
                 <Route path="/gallery" element={<Gallery SVGs={SVGs} IMAGES={IMAGES} />} />
+                <Route path="/faq" element={<FAQ />} />
                 <Route path="/joinus" element={<Test />} />
               </Routes>
               <Footer SVGs={SVGs} />
